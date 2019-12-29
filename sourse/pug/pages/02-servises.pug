@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-docs/_s-docs.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-logo/_s-logo.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Наши услуги'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block()
+	+page-head(title,"Главная",'Наши услуги')
+	+s-menu
+	+s-about
+	+s-advantages
+	.container
+		.row
+			.col-6
+				+s-content
+			.col-6
+				+s-rews
+	+s-docs
+	+s-form()
+	.container
+		.col-6
+			+s-news
+		.col-6
+			+s-blog
+	+s-logo 
+	+footer()
