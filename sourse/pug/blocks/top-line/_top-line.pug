@@ -2,5 +2,22 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col
+					+e.logo
+						a(href="/")
+							img(src="img/svg/logo.svg", alt="")
+							| С-ПРОДЖЕКТ
+							+e.DIV.logo-text Организация строительства и&nbsp;дорожного движения
+
+				.col-auto
+					addr г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1
+				.col-auto
+					a(href="tel:8495971-3-971") 8 495 971-3-971
+					br
+					a(href="mailto:9713971@mail.ru") 9713971@mail.ru
+				.col-auto
+					+e.btn(href="#") Обратный звонок
+				
 	// end .top-line
+

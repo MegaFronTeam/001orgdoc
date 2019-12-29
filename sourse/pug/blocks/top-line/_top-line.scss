@@ -1,5 +1,22 @@
 .top-line {
-
+&__logo{
+max-width: rem(465);
+font-family: Montserrat;
+font-size: rem(20px);
+font-weight: 700;
+line-height: 0.9;
+text-decoration: none !important;
+img{
+  max-width: rem(46);
+}
+}
+&__logo-text{
+  color: $body-color !important;
+  font-family: $font-family-sans-serif;
+  font-size: $em-base;
+  font-weight: 300;
+  line-height: 1.33;
+}
 	
 // 
 @include media-breakpoint-up(xl) {}
