@@ -1,16 +1,28 @@
-// start .s-logo
-.s-logo {
+// start .s-blog
+.blog-item {
+	margin-bottom: rem(30);
 
-	.section-title {
-		padding-bottom: rem(20);
+	&__img-wrap {
+		display: block;
+		border-radius: 10px;
+		background-color: #0095da;
+		@include block(27, 20);
+		text-decoration: none !important;
+		overflow: hidden;
+		margin-top: rem(2);
+		margin-bottom: rem(30);
 	}
 
-	.slider {
+	&__date {
+		font-size: $small;
+		font-weight: 300;
+		margin-bottom: rem(10);
+	}
 
-		&__img-wrap {
-
-			@include block(213, 206);
-		}
+	&__title {
+		font-size: rem(16px);
+		font-weight: 700;
+		line-height: 1.56;
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -51,4 +63,4 @@
 
 }
 
-// end.s-logo
+// end.blog-item

@@ -1,9 +1,21 @@
+mixin blog-item(i,d,t)
+	.col-sm-6
+		+b.blog-item
+			+e.img-wrap.bg-wrap(href="#")
+				+pic(`blog-` + i,'bg')(class="picture-bg")
+			+e.date=d
+			+e.title
+				a(href="#")= t
 mixin s-blog()
 	// start s-blog
 	+b.SECTION.s-blog.section#s-blog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-blog
+			+b.section-title
+				h2 Блог 
+				a.link-more(href="#") /   Все статьи 
+					+icon('arrow-right')  
 				
 			.row
+				+blog-item("1","12.11.2019","ППР на монтаж оборудования. Необходимость разработки")
+				+blog-item("2","01.11.2019","Стоимость разработки ППР в строительстве")
 	// end s-blog

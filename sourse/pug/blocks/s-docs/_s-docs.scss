@@ -9,42 +9,7 @@
 		padding-bottom: rem(25);
 	}
 
-	.slick-track {
-		display: flex;
 
-		&::before,
-		&::after {
-			display: none;
-		}
-	}
-
-	&__slider {
-		margin-left: -15px;
-		margin-right: -15px;
-	}
-
-	&__slide {
-		height: initial;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	&__img-wrap {
-		border: 1px solid #e6e6e6;
-		background-color: #ffffff;
-		border-radius: 10px;
-		display: block;
-		height: 100%;
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-		@include block(208, 300);
-
-		img {
-			max-height: 100%;
-			@include a-cent;
-		}
-	}
 
 	@include media-breakpoint-up(xl) {}
 
@@ -85,3 +50,42 @@
 }
 
 // end.s-docs
+
+.slider {
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.slick-track {
+		display: flex;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	&__slide {
+		height: initial;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&__img-wrap {
+		border: 1px solid #e6e6e6;
+		background-color: #ffffff;
+		border-radius: 10px;
+		display: block;
+		height: 100%;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		@include block(208, 300);
+
+		img {
+			max-height: 100%;
+			@include a-cent;
+			@extend .res-i;
+			max-width: 90%;
+		}
+	}
+}

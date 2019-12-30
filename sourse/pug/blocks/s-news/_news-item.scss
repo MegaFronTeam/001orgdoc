@@ -1,16 +1,28 @@
-// start .s-logo
-.s-logo {
-
-	.section-title {
-		padding-bottom: rem(20);
+// start .s-news
+.news-item {
+	&__date {
+		font-size: $small;
+		font-weight: 300;
+		// line-height: 2.92;
+		margin-bottom: rem(10);
 	}
 
-	.slider {
+	&__title {
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.56;
+		margin-bottom: rem(20);
+	}
 
-		&__img-wrap {
+	p {
+		line-height: 1.67;
 
-			@include block(213, 206);
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(64);
 		}
+
+		margin-bottom: rem(30);
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -51,4 +63,4 @@
 
 }
 
-// end.s-logo
+// end.s-news
