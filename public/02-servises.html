@@ -27,33 +27,51 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-			</div>
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Услуги  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Подбор септика   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
-						</li>
+					<!-- меню в шапке-->
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 					</ul>
-					<div class="text-right"></div>
+					<div class="menu-mobile__menu-icons">
+						<!-- меню  с иконками-->
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/></div>Разработка ППР</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/></div>Разработка ПОДД</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/></div>Разработка ПОС</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/></div>Разработка ППРк</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/></div>Проектирование дорог</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/></div>Обследование зданий</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/></div>Оформление ордера ОАТИ</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/></div>Разработка Транспортных Схем </a></li>
+						</ul>
+					</div>
+					<div class="top-line">
+						<div class="col-12 mb-2">
+							<addr>г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1</addr>
+						</div>
+						<div class="top-line__cont col-12"><a class="top-line__tel" href="tel:8495971-3-971">8 495 971-3-971</a><br/><a class="top-line__mail" href="mailto:9713971@mail.ru">9713971@mail.ru</a>
+						</div>
+						<div class="col-12 d-none d-lg-block"><a class="top-line__btn" href="#">Обратный звонок</a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -64,43 +82,41 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<div class="top-line__logo"><a href="/"><img src="img/svg/logo.svg" alt=""/>С-ПРОДЖЕКТ
+								<div class="top-line__logo"><a href="/"><img src="img/svg/logo.svg" alt=""/>
+										<div class="top-line__logo-title">С-ПРОДЖЕКТ
+										</div>
 										<div class="top-line__logo-text">Организация строительства и&nbsp;дорожного движения
 										</div></a>
 								</div>
 							</div>
-							<div class="col-auto">
+							<div class="col-auto d-none d-xl-block">
 								<addr>г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1</addr>
 							</div>
-							<div class="col-auto"><a href="tel:8495971-3-971">8 495 971-3-971</a><br/><a href="mailto:9713971@mail.ru">9713971@mail.ru</a></div>
-							<div class="col-auto"><a class="top-line__btn" href="#">Обратный звонок</a>
+							<div class="top-line__cont col-auto"><a class="top-line__tel" href="tel:8495971-3-971">8 495 971-3-971</a><br/><a class="top-line__mail" href="mailto:9713971@mail.ru">9713971@mail.ru</a>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="top-line__btn" href="#">Обратный звонок</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end .top-line-->
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav block-with-lazy d-none d-lg-block">
 					<div class="container">
-						<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="/" itemprop="url">Главная</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Услуги  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Подбор септика   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Акции </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> О компании  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Доставка и оплата </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Клиентам  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Наши работы   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты </a>
-							</li>
+						<!-- меню в шапке-->
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -108,10 +124,27 @@
 			</header>
 			<!-- end HEADER.header-->
 			<!-- start header-block-->
-			<div class="header-block" id="header-block">
-				<div class="container">
-					<h1>header-block</h1>
-					<div class="row"></div>
+			<div class="header-block">
+				<div class="row">
+					<div class="header-block__block header-block__block--left col-sm-6">
+						<div class="header-block__img-wrap"><img class="active object-fit-js" src="img/@2x/head-1-active.jpg" alt=""/><img class="object-fit-js" src="img/@2x/head-1.jpg" alt=""/>
+						</div>
+						<div class="header-block__title">Организация строительства
+						</div>
+					</div>
+					<div class="header-block__center">
+						<div class="header-block__center-inner">
+							<div class="lg">13 </div>лет успешной работы
+						</div>
+					</div>
+					<div class="header-block__block header-block__block--right col-sm-6">
+						<div class="header-block__block-inner">
+							<div class="header-block__img-wrap"><img class="active object-fit-js" src="img/@2x/head-2-active.jpg" alt=""/><img class="object-fit-js" src="img/@2x/head-2.jpg" alt=""/>
+							</div>
+						</div>
+						<div class="header-block__title"> Организация дорожного движения
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end header-block-->
@@ -131,22 +164,52 @@
 				</div>
 			</div>
 			<!-- start s-menu-->
-			<section class="s-menu section" id="s-menu">
+			<div class="s-menu">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-menu</h2>
-					</div>
-					<div class="row"></div>
+					<!-- меню  с иконками-->
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/></div>Разработка ППР</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/></div>Разработка ПОДД</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/></div>Разработка ПОС</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/></div>Разработка ППРк</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/></div>Проектирование дорог</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/></div>Обследование зданий</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/></div>Оформление ордера ОАТИ</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
+								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/></div>Разработка Транспортных Схем </a></li>
+					</ul>
 				</div>
-			</section>
+			</div>
 			<!-- end s-menu-->
 			<!-- start s-about-->
 			<section class="s-about section" id="s-about">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>s-about</h2>
+						<h2>Разработка ППР, ППРк, ПОС или ПОДД от&nbsp;2-х дней со&nbsp;100% гарантией согласования!</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+						<div class="s-about__col col-lg-6">
+							<p>Проектное бюро С-Проджект более 10-ти лет оказывает свои услуги по разработке и согласованию Проектов производства работ (ППР), Проектов организации строительства (ПОС), Проектов организации дорожного движения (ПОДД), дорог, инженерных сетей <strong>для Москвы, Санкт-Петербурга и других регионов России</strong>.</p>
+							<p>Огромный опыт работы и успешное участие компании в проектировании уникальных объектов гарантирует нашим заказчикам качественно разработанную документацию в кратчайшие сроки. Несмотря на это, стоимость разработки ППР у нас выгодно отличается от стоимости подобных работ в других компаниях. Также, Вас приятно удивят сроки разработки проектов ППР, ПОС и ПОДД: от 2-х дней! <a href="#">Заказать ППР,</a><a href="#"> ПОС,</a><a href="#"> ПОДД, </a><a href="#">ППРк, </a><a href="#">Обследование</a> или <a href="#">Проекты дорог</a> и быстро! Доставим проект в любое удобное для Вас место совершенно бесплатно!</p>
+						</div>
+						<div class="s-about__col col-lg-6">
+							<div class="video-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/GmJlSQzpeno" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+						</div>
+						<div class="s-about__col col-lg-6 order-lg-last">
+							<p>В настоящее время большинство строительных организаций недооценивают всю необходимость разработки качественного ППР (Проект производства работ), хотя прекрасно понимают что осуществление строительно-монтажных работ без утверждённых ПОС (проект организации строительства) и ППР (проект производства работ) категорически запрещается и может значительно увеличить себестоимость строительства.</p>
+							<p>Помимо этого, 01.08.2015г. вступило в силу Постановление Правительства от 19.05.2015г. №284-ПП, в котором говорится о необходимости получения Заключения о соответствии проекта проведения (производства) земляных работ Сводному плану подземных коммуникаций и сооружений в городе Москве, а ОАТИ рекомендовано выдавать ордера на производство земляных и строительных работ при наличии положительного заключения ППР (проект производства работ). Обязанности по подготовке и оформлению заключения поручены ГУП г. Москвы «Мосгоргеотрест» (Отдел подземных сооружений ОПС).</p>
+							<p>При необходимости, Административно-технические инспекции могут потребовать согласование ППР (проект производтсва работ) с ГИБДД, Управами, Префектурами. Мы берём на себя все эти обязательства. Срок согласований от 2-х дней.</p>
+						</div>
+						<div class="s-about__col col-lg-6">
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end s-about-->
@@ -154,9 +217,45 @@
 			<section class="s-advantages section" id="s-advantages">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>s-advantages</h2>
+						<h2>Наши преимущества</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+								<div class="s-advantages__col col-12">
+									<div class="s-advantages__item">
+										<div class="s-advantages__icon-wrap"><img src="img/svg/advantages-1.svg" alt=""/>
+										</div>
+										<p>Разрабатываем ППР, ПОС, ПОДД, ППРк в&nbsp;Москве, МО&nbsp;и&nbsp;в&nbsp;других регионах&nbsp;РФ уже более 13&nbsp;лет одним и&nbsp;тем&nbsp;же названием компании, ИНН, телефоном и&nbsp;адресом</p>
+									</div>
+								</div>
+								<div class="s-advantages__col col-12">
+									<div class="s-advantages__item">
+										<div class="s-advantages__icon-wrap"><img src="img/svg/advantages-3.svg" alt=""/>
+										</div>
+										<p>Поможем быстро согласовать Проект с&nbsp;Мосгортранс, Мосгоргеотрест (ОПС), Департаментом транспорта, ЦОДД, ФСО, Мосавтодор, оформим Ордер ОАТИ или получим&nbsp;ТУ</p>
+									</div>
+								</div>
+								<div class="s-advantages__col col-12">
+									<div class="s-advantages__item">
+										<div class="s-advantages__icon-wrap"><img src="img/svg/advantages-2.svg" alt=""/>
+										</div>
+										<p>Мы&nbsp;находимся в&nbsp;Москве, наши специалисты бесплатно посетят Ваш объект, учтут все тонкости  и&nbsp;нюансы строительства  или организации движения.  Вы&nbsp;получите профессиональный Проект на&nbsp;100%</p>
+									</div>
+								</div>
+								<div class="s-advantages__col col-12">
+									<div class="s-advantages__item">
+										<div class="s-advantages__icon-wrap"><img src="img/svg/advantages-4.svg" alt=""/>
+										</div>
+										<p>Наличие курьеров, готовых привезти проекты в&nbsp;любое удобное для Вас место</p>
+									</div>
+								</div>
+								<div class="s-advantages__col col-12">
+									<div class="s-advantages__item">
+										<div class="s-advantages__icon-wrap"><img src="img/svg/advantages-5.svg" alt=""/>
+										</div>
+										<p>Решаем &laquo;нестандартные задачи&raquo; и&nbsp;никогда не&nbsp;просим доплат за&nbsp;корректировки Проекта</p>
+									</div>
+								</div>
+					</div>
 				</div>
 			</section>
 			<!-- end s-advantages-->
@@ -164,26 +263,34 @@
 				<div class="row">
 					<div class="col-6">
 						<!-- start s-content-->
-						<div class="s-content section block-with-lazy" id="s-content">
-							<div class="container">
-								<div class="section-title text-center">
-									<h2>s-content</h2>
-								</div>
-								<div class="row"></div>
-							</div>
+						<div class="s-content s-content--main"> 
+							<h3>Разработка ППР (на&nbsp;любые виды работ!)  оперативно от&nbsp;2-х дней, в&nbsp;том числе:</h3>
+							<p> <a href="#">Разработка ППР на подготовительный период</a><br/><a href="#">Разработка ППР на земляные работы</a><br/><a href="#">Проект организации работ (ПОР)</a><br/><a href="#">Разработка ППР на монолитные работы</a></p><br/>
+							<h3>Составление ППР на отдельные виды работ</h3>
+							<p><strong>Инженеры Проектного бюро ООО С-Проджект разработали ППР для строительных работ на объектах Государственных организаций:</strong></p>
+							<ol>
+								<li>ФГУК ГКД Управления Делами Пезидента РФ. Разработка ППР на реконструкцию кровли.</li>
+								<li>Объекты Кавалерийского почётного эскорта Президентского полка СКМК ФСО России. Разработка ППР на 	монтажные работы.</li>
+								<li>ФГУП "ТТЦ "Останкино". Разработка ППР на снос.</li>
+								<li>МИД РФ. Разработка ППР на демонтаж, демонтажные работы.</li>
+								<li>ФГУ ФИПС (РОСПАТЕНТ). Разработка ППР на капитальный ремонт конференц-зала с заменой инженерных 	коммуникаций.</li>
+								<li>ОАО РЖД. Административное здание: </li>
+							</ol>
 						</div>
 						<!-- end s-content-->
 					</div>
 					<div class="col-6">
 						<!-- start s-rews-->
-						<section class="s-rews section" id="s-rews">
-							<div class="container">
-								<div class="section-title text-center">
-									<h2>s-rews</h2>
-								</div>
-								<div class="row"></div>
+						<div class="s-rews section" id="s-rews"> 
+							<div class="section-title text-center">
+								<h2>Отзывы о нас</h2><a class="link-more" href="#">/   Все отзывы
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg></a>
 							</div>
-						</section>
+							<div class="s-rews__block"><a class="s-rews__img-wrap" href="img/@2x/man-rew.jpg" data-fancybox="rews"><img class="lazy" src="#" data-src="img/@2x/man-rew.jpg" alt=""/></a>
+							</div>
+						</div>
 						<!-- end s-rews-->
 					</div>
 				</div>
@@ -192,9 +299,31 @@
 			<section class="s-docs section" id="s-docs">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>s-docs</h2>
+						<h2>Сертификаты, СРО, удостоверения</h2>
+						<div class="arrow-wrap"></div>
 					</div>
-					<div class="row"></div>
+					<div class="s-docs__slider s-docs__slider--js">
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-1.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-1.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-2.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-2.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-3.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-3.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-4.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-4.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-5.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-5.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-1.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-1.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-2.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-2.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-3.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-3.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-4.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-4.jpg" alt=""/></a>
+						</div>
+						<div class="s-docs__slide"><a class="s-docs__img-wrap" href="img/@2x/doc-5.jpg"><img class="object-fit-js" src="#" data-lazy="img/@2x/doc-5.jpg" alt=""/></a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end s-docs-->

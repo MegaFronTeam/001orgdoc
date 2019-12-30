@@ -33,6 +33,7 @@
  		&::before {
  			content: counter(num);
  			counter-increment: num;
+
  		}
  	}
  }
@@ -51,6 +52,7 @@
  			padding-left: rem(12);
  			padding-right: rem(12);
  			font-weight: bold;
+ 			max-width: rem(1000);
 
  			&::before,
  			&::after {

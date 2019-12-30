@@ -3,7 +3,22 @@ mixin s-advantages()
 	+b.SECTION.s-advantages.section#s-advantages&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-advantages
-				
+				h2 Наши преимущества
 			.row
+				mixin item(i)
+					+e.col.col-12
+						+e.item
+							+e.icon-wrap
+								img(src=`img/svg/advantages-${i}.svg`, alt="")
+							block
+				+item("1")
+					p Разрабатываем ППР, ПОС, ПОДД, ППРк в&nbsp;Москве, МО&nbsp;и&nbsp;в&nbsp;других регионах&nbsp;РФ уже более 13&nbsp;лет одним и&nbsp;тем&nbsp;же названием компании, ИНН, телефоном и&nbsp;адресом
+				+item("3")
+					p Поможем быстро согласовать Проект с&nbsp;Мосгортранс, Мосгоргеотрест (ОПС), Департаментом транспорта, ЦОДД, ФСО, Мосавтодор, оформим Ордер ОАТИ или получим&nbsp;ТУ
+				+item("2")
+					p Мы&nbsp;находимся в&nbsp;Москве, наши специалисты бесплатно посетят Ваш объект, учтут все тонкости  и&nbsp;нюансы строительства  или организации движения.  Вы&nbsp;получите профессиональный Проект на&nbsp;100%
+				+item("4")
+					p Наличие курьеров, готовых привезти проекты в&nbsp;любое удобное для Вас место
+				+item("5")
+					p Решаем &laquo;нестандартные задачи&raquo; и&nbsp;никогда не&nbsp;просим доплат за&nbsp;корректировки Проекта
 	// end s-advantages

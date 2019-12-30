@@ -1,18 +1,26 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
-			.text-right
+			+e.menu-icons
+				+mnu2()
+			+b.top-line
+				.col-12.mb-2
+					addr г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1
+				+e.cont.col-12
+					+e.tel(href="tel:8495971-3-971") 8 495 971-3-971
+					br
+					+e.mail(href="mailto:9713971@mail.ru") 9713971@mail.ru
+				.col-12.d-none.d-lg-block
+					+e.btn(href="#") Обратный звонок
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-lg-block
 		.container
 			+mnu()
 					
