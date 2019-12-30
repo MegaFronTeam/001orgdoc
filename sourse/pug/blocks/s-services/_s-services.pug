@@ -1,0 +1,25 @@
+mixin s-services()
+	// start s-services
+	+b.SECTION.s-services.section#s-services&attributes(attributes)
+		.container
+			.row
+				mixin prod(i,  p)
+					+e.col.col-lg-4.col-md-6
+						+e.item.img-bg(href="#")
+							+pic("services-1",'bg')
+								img.object-fit-js.lazy(src="#" data-src="img/services-1.jpg", alt="#")
+							+e.DIV.title--sm= p
+
+				+prod('1','Разработка ППР')
+				+prod('2','Разработка ПОДД')
+				+prod('3','Разработка ПОС')
+				+prod('4','Разработка ППРк')
+				+prod('5','Проектирование дорог')
+				+prod('6','Обследование зданий')
+				+prod('7','Оформление ордера ОАТИ')
+				+prod('8','Разработка Транспортных Схем')
+				+prod('9','Проектирование сетей')
+				+prod('10','Проектирование АСУДД')
+				+prod('11','Обустройство парковок')
+				+prod('12','Разработка ПОР')
+	// end s-services

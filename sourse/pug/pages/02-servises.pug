@@ -11,6 +11,7 @@ include ../blocks/s-docs/_s-docs.pug
 include ../blocks/s-news/_s-news.pug
 include ../blocks/s-blog/_s-blog.pug
 include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-services/_s-services.pug
 
 block variables
 	- let  mainPage= null
@@ -24,6 +25,7 @@ block pagecontent
 		+top-nav()
 	+header-block()
 	+page-head(title,"Главная",'Наши услуги')
+	+s-services
 	+s-menu
 	+s-about
 	+s-advantages
@@ -37,7 +39,7 @@ block pagecontent
 	+s-form()
 	.container
 		.col-6
-			//- +s-news
+			+s-news
 		.col-6
 			+s-blog
 	+s-logo 
