@@ -33,6 +33,10 @@ var JSCCommon = {
 				}
 			}
 		});
+		$().fancybox({
+			selector: '.slick-slide:not(.slick-cloned) a',
+			hash: false
+		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});
@@ -116,18 +120,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -163,7 +156,7 @@ function eventHandler() {
 		}, 1100);
 		return false;
 	});
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg width = "18" height = "13" xmlns = "http://www.w3.org/2000/svg" version = "1.1" xmlns: xlink = "http://www.w3.org/1999/xlink" xmlns: avocode = "https://avocode.com/" viewBox = "0 0 18 13" > <defs></defs> <g><g><path d="M-0.00018,6.99896v-1.00096l16.20587,0l-5.19071,-5.19059l0.79388,-0.79371l6.1758,6.17591l-0.30905,0.3088l0.30905,0.30894l-6.1758,6.17591l-0.79388,-0.79371l5.1904,-5.19059z" fill="#90c336" fill-opacity="1"></path></g></g></svg> ';
 	var arrl2 = ' <div class="r">' + icon,
 			arrr2 = ' <div class="l">' + icon; // // карусель
 
@@ -178,22 +171,23 @@ function eventHandler() {
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
 	};
-	$('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
-		slidesToShow: 1,
+	$('.s-docs__slider--js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 2,
+		appendArrows: '.s-docs .arrow-wrap',
 		responsive: [{
 			breakpoint: 1200,
 			settings: {
-				slidesToShow: 4
+				slidesToShow: 5
 			}
 		}, {
 			breakpoint: 992,
 			settings: {
-				slidesToShow: 3
+				slidesToShow: 4
 			}
 		}, {
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 3,
 				arrows: true
 			}
 		}]
@@ -225,48 +219,30 @@ function eventHandler() {
 	// modal window
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();
+	//Replace all SVG images with inline SVG
 
-	var gets = function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
+	$('img.img-svg').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
 
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-
-		return b;
-	}(); // form
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			} // Remove any invalid XML tags as per http://validator.w3.org
 
 
-	$("form").submit(function (e) {
-		e.preventDefault();
-		var th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data
-		}).done(function (data) {
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			}); // window.location.replace("/thanks.html");
+			$svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
 
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset"); // $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () {});
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+			} // Replace image with new SVG
+
+
+			$img.replaceWith($svg);
+		}, 'xml');
 	});
 }
 
