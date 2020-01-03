@@ -171,27 +171,29 @@ function eventHandler() {
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
 	};
-	$('.s-docs__slider--js').slick(_objectSpread({}, defaultSlide, {
-		slidesToShow: 2,
-		appendArrows: '.s-docs .arrow-wrap',
-		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 5
-			}
-		}, {
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 4
-			}
-		}, {
-			breakpoint: 576,
-			settings: {
-				slidesToShow: 3,
-				arrows: true
-			}
-		}]
-	})); // $('.s-gal__slider\
+	$('.section').each(function () {
+		$(this).find('.slider--js').slick(_objectSpread({}, defaultSlide, {
+			slidesToShow: 2,
+			appendArrows: $(this).find('.arrow-wrap'),
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5
+				}
+			}, {
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4
+				}
+			}, {
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3,
+					arrows: true
+				}
+			}]
+		}));
+	}); // $('.s-gal__slider\
 	// ,.slider-for2 ')
 	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
 	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');

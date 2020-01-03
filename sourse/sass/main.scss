@@ -38,6 +38,10 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
+  font-size: $small;
+  justify-content: center;
+  line-height: 1.67;
+  text-transform: uppercase;
   .active{
     a{
       color: $breadcrumb-active-color;

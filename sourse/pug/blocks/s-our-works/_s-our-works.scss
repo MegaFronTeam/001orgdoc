@@ -1,8 +1,8 @@
 
-	// start .s-services
-	.s-services {
+	// start .s-our-works
+	.s-our-works {
 
-		border-bottom: 1px solid #e5e5e5;
+		// border-bottom: 1px solid #e5e5e5;
 		padding-bottom: rem(89);
 		&__col {
 			margin-bottom: rem(30);
@@ -37,15 +37,16 @@
 		}
 
 		&__title {
-			text-align: center;
+			// text-align: center;
 			position: absolute;
-			font-size: rem(24);
+			// font-size: rem(24);
 			left: 0;
 			bottom: 0;
 			color: #ffffff;
 			width: 100%;
 			padding: rem(29) rem(20);
 		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -70,4 +71,4 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
-} // end.s-services
+} // end.s-our-works

@@ -12,6 +12,7 @@ include ../blocks/s-news/_s-news.pug
 include ../blocks/s-blog/_s-blog.pug
 include ../blocks/s-logo/_s-logo.pug
 include ../blocks/s-services/_s-services.pug
+include ../blocks/s-cases/_s-cases.pug
 
 block variables
 	- let  mainPage= null
@@ -26,21 +27,22 @@ block pagecontent
 	+header-block()
 	+page-head(title,"Главная",'Наши услуги')
 	+s-services
-	+s-menu
-	+s-about
-	+s-advantages
+	//- +s-menu
+	//- +s-about
+	//- +s-advantages
 	.container
 		.row
 			.col-6
-				+s-content
+				+s-cases
 			.col-6
 				+s-rews
 	+s-docs
-	+s-form()
-	.container
-		.col-6
-			+s-news
-		.col-6
-			+s-blog
-	+s-logo 
+	//- +s-form()
+	.section-wrap.container
+		.row
+			.col-lg-6
+				+s-news
+			.col-lg-6
+				+s-blog
+	//- +s-logo 
 	+footer()

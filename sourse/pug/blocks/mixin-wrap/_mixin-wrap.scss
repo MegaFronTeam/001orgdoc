@@ -1,13 +1,21 @@
  .soc {
- 	margin: 0 rem(-5px);
+ 	margin: 0 rem(-5px) rem(25);
  	display: flex;
 
  	&__item {
  		text-decoration: none !important;
  		margin: 0 rem(5px);
  		vertical-align: middle;
+ 		width: rem(30px);
+ 		height: rem(30px);
+ 		border-radius: 7px;
+ 		background-color: #ffffff;
  		@include mt;
  		display: block;
+ 		text-align: center;
+ 		display: flex;
+ 		align-items: center;
+ 		justify-content: center;
 
  		&:hover {
  			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
@@ -17,7 +25,7 @@
  	}
 
  	.icon {
- 		font-size: rem(30);
+ 		font-size: rem(15);
  	}
 
 

@@ -3,7 +3,16 @@ mixin s-logo()
 	+b.SECTION.s-logo.section#s-logo&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-logo
-				
-			.row
+				h2 Наши партнёры
+				.arrow-wrap
+			+b.slider--js
+				- for (var x = 1; x < 6; x++)
+					+e.slide
+						+e.img-wrap
+							img.object-fit-js(src="#" data-lazy=`img/@2x/logo-${x}.png`, alt="")
+					
+				- for (var x = 1; x < 6; x++)
+					+e.slide
+						+e.img-wrap
+							img.object-fit-js(src="#" data-lazy=`img/@2x/logo-${x}.png`, alt="")
 	// end s-logo
