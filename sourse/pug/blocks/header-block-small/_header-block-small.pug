@@ -1,0 +1,16 @@
+mixin header-block-small()
+	// start header-block-small
+	+b.header-block-small
+			.row
+				+e.block--left.col-sm-6
+					+e.img-wrap
+						img.active.object-fit-js(src="img/@2x/head-1-active.jpg", alt="")
+						img.object-fit-js(src="img/@2x/head-1.jpg", alt="")
+					+e.title Организация строительства
+				+e.block--right.col-sm-6
+					+e.block-inner
+						+e.img-wrap
+							img.active.object-fit-js(src="img/@2x/head-2-active.jpg", alt="")
+							img.object-fit-js(src="img/@2x/head-2.jpg", alt="")
+					+e.title  Организация дорожного движения
+	// end header-block-small

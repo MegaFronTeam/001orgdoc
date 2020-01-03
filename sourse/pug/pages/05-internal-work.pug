@@ -14,6 +14,8 @@ include ../blocks/s-logo/_s-logo.pug
 include ../blocks/s-our-works/_s-our-works.pug
 include ../blocks/s-menu-right/_s-menu-right.pug
 include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-about-work/_s-about-work.pug
+include ../blocks/header-block-small/_header-block-small.pug
 
 
 block variables
@@ -26,22 +28,18 @@ block pagecontent
 	+header()
 		+top-line()
 		+top-nav()
-	+header-block()
+	+header-block-small()
 	+page-head(title,"Главная",'Наши работы')
-	//- +s-services
 	.container
 		.row
-			.col-8
+			.col-lg-8
 				+s-our-works
-			.col-4
+			.col-lg-4
 				+s-menu-right
-	//- +s-menu
-	//- +s-about
-	//- +s-advantages
 	.container
 		.row
 			.col-6
-				+s-cases
+				+s-about-work
 			.col-6
 				+s-rews
 	+s-docs

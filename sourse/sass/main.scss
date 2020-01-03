@@ -40,8 +40,11 @@ $output-bourbon-deprecation-warnings: false;
 .breadcrumb{
   font-size: $small;
   justify-content: center;
-  line-height: 1.67;
   text-transform: uppercase;
+  padding-bottom: rem(5);
+  a {
+    padding-right: rem(10);
+  }
   .active{
     a{
       color: $breadcrumb-active-color;

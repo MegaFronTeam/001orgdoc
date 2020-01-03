@@ -48,7 +48,7 @@
 
 
  .page-head {
- 	padding-top: rem(60);
+ 	padding-top: rem(57);
 
  	// padding-bottom: rem(60);
  	&__title {
@@ -57,16 +57,16 @@
  		h1 {
  			display: inline-block;
  			position: relative;
- 			padding-left: rem(12);
- 			padding-right: rem(12);
+ 			padding-left: rem(20);
+ 			padding-right: rem(20);
  			font-weight: bold;
  			max-width: rem(1000);
 
  			&::before,
  			&::after {
  				content: '';
- 				top: rem(15);
- 				width: em(24);
+ 				top: rem(21);
+ 				width: em(30);
  				height: em(2);
  				border-radius: rem(3px);
  				position: absolute;
