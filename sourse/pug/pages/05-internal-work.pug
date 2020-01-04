@@ -38,9 +38,13 @@ block pagecontent
 				+s-menu-right
 	.container
 		.row
-			.col-6
-				+s-about-work
-			.col-6
+			.col-lg-6.col-sm-12
+				+s-cases-2
+					+b.section-title.text-center
+						h2 Наши работы
+						a.link-more(href="#") /   Все работы
+							+icon('arrow-right') 
+			.col-lg-6.col-sm-12
 				+s-rews
 	+s-docs
 	//- +s-form()

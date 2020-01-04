@@ -2,7 +2,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "mq";
 @import "bourbon/app/assets/stylesheets/bourbon";
 // @import "../../node_modules/rfs/scss";
- 
+
 @import "mixin";
 @import "fonts";
 @import "./public/img/svg/_sprite";
@@ -10,13 +10,11 @@ $output-bourbon-deprecation-warnings: false;
 
 // Option B: Include parts of Bootstrap
 
-
 @import "vars";
 @import "./node_modules/bootstrap/scss/vendor/rfs";
-@import "./node_modules/bootstrap/scss/functions"; 
+@import "./node_modules/bootstrap/scss/functions";
 @import "./node_modules/bootstrap/scss/variables";
 @import "./node_modules/bootstrap/scss/mixins";
-
 
 // $theme-colors: map-remove($theme-colors, "info", "light", "dark",'warning');
 @import "./node_modules/bootstrap/scss/root";
@@ -37,7 +35,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
-.breadcrumb{
+.breadcrumb {
   font-size: $small;
   justify-content: center;
   text-transform: uppercase;
@@ -45,37 +43,54 @@ $output-bourbon-deprecation-warnings: false;
   li {
     // padding-left: rem(3);
   }
-  .active{
-    a{
+  .active {
+    a {
       color: $breadcrumb-active-color;
       pointer-events: none;
     }
   }
 }
-@import "./node_modules/bootstrap/scss/pagination"; 
-  .pagination-wrapper ul{
-    @extend .pagination;
-    display: flex;
-    justify-content: flex-end;
+@import "./node_modules/bootstrap/scss/pagination";
 
+.pagination-wrapper ul {
+  @extend .pagination;
+  .prev {
+    svg {
+      transform: rotate(180deg);
+    }
   }
-  .pagination-wrapper li .page-numbers{ 
-    @extend .page-link;
+  .next, .prev {
+    svg {
+      height: rem(7);
+    }
+  }
+  .page-numbers {
+    font-size: 1rem;
+    text-transform: uppercase;
+    span {
+      padding: 0;
+    }
+  }
+}
+.pagination-wrapper li .page-numbers {
+  @extend .page-link;
+  border: none;
+  &:hover {
+    background-color: transparent;
+  }
+}
+.pagination-wrapper li {
+  @extend .page-item;
+  .active {
+    color: $body-color;
+  }
+  .current {
+    z-index: 1;
+    color: $body-color;
+    // background-color: $pagination-active-bg;
     border: none;
-    &:hover {
-      background-color: transparent;
-    }
   }
-  .pagination-wrapper li{ 
-    @extend .page-item;
-    .current{
-      z-index: 1;
-      color: $body-color;
-      // background-color: $pagination-active-bg;
-      border: none;
-
-    }
-  }
+}
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/jumbotron";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -91,7 +106,6 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/spinners";
 @import "./node_modules/bootstrap/scss/utilities";
 
- 
 // @import "print";
 
 // @import "../libs/animate";
@@ -106,9 +120,9 @@ $output-bourbon-deprecation-warnings: false;
 // @import "../libs/dropzone";
 // @import "../libs/gijgo-master/dist/combined/css/gijgo";
 // @import "../libs/gijgo-master/dist/combined/css/demo.min";
- 
+
 // @import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
 
-@import "base"; 
-@import '../pug/blocks/**/*.scss';
-@import "media";// Всегда в конце
+@import "base";
+@import "../pug/blocks/**/*.scss";
+@import "media"; // Всегда в конце

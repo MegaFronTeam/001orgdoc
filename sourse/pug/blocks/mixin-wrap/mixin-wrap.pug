@@ -52,30 +52,60 @@ mixin pugin()
 	//- 		li.page-item
 	//- 			a.page-link(href='#') 
 	//- 				i(class="fas fa-chevron-right")
+
+	//- Старая пагинация
+	//- .pagination-wrapper
+	//- 	ul.page-numbers
+	//- 		mixin li(n)
+	//- 			li
+	//- 				if n
+	//- 					a.page-numbers(href='#')= n 
+	//- 				else
+	//- 					block
+	//- 		+li()
+	//- 			span.prev.page-numbers( )
+	//- 				img(src="img/svg/prev.svg", alt="")
+	//- 		+li()
+	//- 			span.prev.page-numbers( )
+	//- 				img(src="img/svg/prev-double.svg", alt="")
+	//- 		+li()
+	//- 			span.page-numbers.current  1
+	//- 		- for (var x = 1; x < 8; x++)
+	//- 			+li(x)
+	//- 		+li()
+	//- 			a.next.page-numbers(href='#')
+	//- 				img(src="img/svg/next.svg", alt="")
+	//- 		+li()
+	//- 			a.next.page-numbers(href='#')
+	//- 				img(src="img/svg/next-double.svg", alt="")
+
+	//- Переделаная пагинация
 	.pagination-wrapper
 		ul.page-numbers
-			mixin li(n)
-				li
-					if n
-						a.page-numbers(href='#')= n 
-					else
-						block
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev.svg", alt="")
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
-			+li()
-				span.page-numbers.current  1
-			- for (var x = 1; x < 8; x++)
-				+li(x)
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+			li
+				a.page-numbers(href='#')
+					span.prev.page-numbers() 
+						+icon('arrow2-right') 
+						| Назад
+			li
+				a.page-numbers.active(href='#') 1
+			li
+				a.page-numbers(href='#') 2
+			li
+				a.page-numbers(href='#') 3
+			li
+				a.page-numbers(href='#') 4
+			li
+				a.page-numbers(href='#') 5
+			li
+				a.page-numbers(href='#') ...
+			li
+				a.page-numbers(href='#') 28
+			li
+				a.page-numbers(href='#')
+					span.next.page-numbers() Далее
+						+icon('arrow2-right')
+
 //- +pugin()
 //- /pugination
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
