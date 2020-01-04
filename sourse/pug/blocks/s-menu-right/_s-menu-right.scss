@@ -5,12 +5,13 @@
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {
+		padding-top: rem(33);
 		display: flex;
 		li {
 			border-bottom: 1px solid #e6e6e6;
-			padding-top: rem(21);
-			padding-bottom: rem(18);
-			padding-left: rem(18);
+			padding-top: rem(24);
+			padding-bottom: rem(7);
+			padding-left: rem(20);
 		}
 		ul {
 			border: 1px solid #e6e6e6;
@@ -30,18 +31,19 @@
 			display: inline-block;
 			width: 25%;
 			@include media-breakpoint-up(xl) {
-				width: 22%;
+				width: 21%;
 			}
 			height: rem(48);
 
 		}
 		&__need-project {
 			position: relative;
-			padding: rem(70) rem(51) rem(0) rem(51);
+			padding: rem(87) rem(51) rem(0) rem(51);
 			h3 {
 				font-size: $h5-font-size;
 				font-weight: 700;
-				line-height: 1.67;
+				line-height: 1.5;
+				margin-bottom: rem(10);
 			}
 			p {
 				line-height: 1.67;
@@ -61,17 +63,18 @@
 				@include a-cent;
 				display: block;
 				z-index: -1;
+				top: rem(213); //я очень не уверен в данном решении (может и не страшко т.к этот блок есть только в десктопе)
 			}
 	
 			&::before {
-				width: 92%;
+				width: 100%;
 				background-image: -webkit-linear-gradient(30deg, rgba(82, 167, 216, 1) 50%, rgba(158, 200, 86, 1) 50%, rgba(158, 200, 86, 1) 100%);
 				height: rem(380);
 				border-radius: rem(10px);
 			}
 	
 			&::after {
-				width: calc(92% - #{rem(20)});
+				width: calc(100% - #{rem(20)});
 				background-color: #ffffff;
 				height: rem(380 - 20);
 				border-radius: rem(6px);
