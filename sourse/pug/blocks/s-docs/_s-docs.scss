@@ -1,91 +1,110 @@
 // start .s-docs
 .s-docs {
-	@include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: rem(180);
+  }
 
-		padding-bottom: rem(180);
-	}
+  .section-title {
+    padding-bottom: rem(25);
+  }
 
-	.section-title {
-		padding-bottom: rem(25);
-	}
+  @include media-breakpoint-up(xl) {
+  }
 
+  @include media-breakpoint-up(lg) {
+  }
 
+  @include media-breakpoint-up(md) {
+  }
 
-	@include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(sm) {
+  }
 
-	@include media-breakpoint-up(lg) {}
+  @include media-breakpoint-up(xs) {
+  }
 
-	@include media-breakpoint-up(md) {}
+  //
+  @include media-breakpoint-between(md, xl) {
+  }
 
-	@include media-breakpoint-up(sm) {}
+  //
+  @include media-breakpoint-only(xs) {
+  }
 
-	@include media-breakpoint-up(xs) {}
+  @include media-breakpoint-only(sm) {
+  }
 
-	//
-	@include media-breakpoint-between(md, xl) {}
+  @include media-breakpoint-only(md) {
+  }
 
+  @include media-breakpoint-only(lg) {
+  }
 
-	//
-	@include media-breakpoint-only(xs) {}
+  @include media-breakpoint-only(xl) {
+  }
 
-	@include media-breakpoint-only(sm) {}
+  //
+  @include media-breakpoint-down(xl) {
+  }
 
-	@include media-breakpoint-only(md) {}
+  @include media-breakpoint-down(lg) {
+  }
 
-	@include media-breakpoint-only(lg) {}
+  @include media-breakpoint-down(md) {
+  }
 
-	@include media-breakpoint-only(xl) {}
+  @include media-breakpoint-down(sm) {
+  }
 
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
+  @include media-breakpoint-down(xs) {
+  }
 }
 
 // end.s-docs
 
 .slider {
-	margin-left: -15px;
-	margin-right: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
 
-	.slick-track {
-		display: flex;
+  .slick-track {
+    display: flex;
 
-		&::before,
-		&::after {
-			display: none;
-		}
-	}
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 
-	&__slide {
-		height: initial;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+  &__slide {
+    height: initial;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-	&__img-wrap {
-		border: 1px solid #e6e6e6;
-		background-color: #ffffff;
-		border-radius: 10px;
-		display: block;
-		height: 100%;
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-		@include block(208, 300);
+  &__img-wrap {
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @include block(208, 300);
 
-		img {
-			max-height: 100%;
-			@include a-cent;
-			@extend .res-i;
-			max-width: 90%;
-		}
-	}
+    img {
+      max-height: 100%;
+      @include a-cent;
+      @extend .res-i;
+      max-width: 90%;
+    }
+  }
+}
+
+.inner-page {
+  .s-docs {
+    @include media-breakpoint-up(xl) {
+      padding-bottom: rem(0);
+    }
+  }
 }

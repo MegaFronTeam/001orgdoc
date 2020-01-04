@@ -14,10 +14,10 @@ include ../blocks/s-logo/_s-logo.pug
 include ../blocks/s-services/_s-services.pug
 include ../blocks/s-cases/_s-cases.pug
 include ../blocks/header-block-small/_header-block-small.pug
-include ../blocks/s-about-work/_s-about-work.pug
+//- include ../blocks/s-about-work/_s-about-work.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= "inner-page"
 block title
 	- let  title= 'Наши услуги'
 	title= title
@@ -34,9 +34,13 @@ block pagecontent
 	//- +s-advantages
 	.container
 		.row
-			.col-6
-				+s-about-work
-			.col-6
+			.col-lg-6.col-sm-12
+				+s-cases-2
+					+b.section-title.text-center
+						h2 Наши работы
+						a.link-more(href="#") /   Все работы
+							+icon('arrow-right') 
+			.col-lg-6.col-sm-12
 				+s-rews
 	+s-docs
 	//- +s-form()

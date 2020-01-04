@@ -36,7 +36,8 @@
 
 		}
 		&__need-project {
-			padding: rem(72) rem(51) rem(0) rem(51);
+			position: relative;
+			padding: rem(70) rem(51) rem(0) rem(51);
 			h3 {
 				font-size: $h5-font-size;
 				font-weight: 700;
@@ -47,7 +48,13 @@
 			}
 			a {
 				display: inline;
+				&:nth-last-child(1) {
+					color: $primary;
+					text-decoration: underline !important;
+				}
 			}
+
+			// Разобратся с бордером!!! Ведет себя как буд-то он зафиксирован
 			&::after,
 			&::before {
 				content: '';

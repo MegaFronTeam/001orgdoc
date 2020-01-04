@@ -1,9 +1,9 @@
 
 	// start .s-services
 	.s-services {
-
+		padding-top: rem(36);
 		border-bottom: 1px solid #e5e5e5;
-		// padding-bottom: rem(89);
+		padding-bottom: rem(89);
 		&__col {
 			margin-bottom: rem(30);
 		}
@@ -44,7 +44,7 @@
 			bottom: 0;
 			color: #ffffff;
 			width: 100%;
-			padding: rem(29) rem(20);
+			padding: rem(26) rem(20);
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

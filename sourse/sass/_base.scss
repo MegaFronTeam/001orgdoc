@@ -104,6 +104,11 @@ html {
 		}
 	}
 }
+.inner-page {
+	.section-wrap {
+		padding-top: rem(22);
+	}
+}
 
 body {
 	min-width: 320px;

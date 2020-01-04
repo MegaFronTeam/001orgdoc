@@ -12,7 +12,7 @@ mixin icon(name,mod)
 //- breadcrumb
 mixin breadcrumb(...items)
 	nav(aria-label="breadcrumb" )
-		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+		ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
@@ -68,7 +68,7 @@ mixin pugin()
 					img(src="img/svg/prev-double.svg", alt="")
 			+li()
 				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
+			- for (var x = 1; x < 8; x++)
 				+li(x)
 			+li()
 				a.next.page-numbers(href='#')
@@ -110,7 +110,7 @@ mixin mnu()
 			"Наши работы":"#",
 			"Сертификаты и СРО":"#",
 			"Калькулятор":"#" ,
-			"Заказать":"#",
+			"Отзывы":"#",
 			"Новости":"#",
 			"Блог":"#",
 			"Контакты":"#",
@@ -142,6 +142,32 @@ mixin mnu2()
 						img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
 					= linkName
 
+mixin mnu3()
+	-
+		var nav= { 
+			"Разработка ППР":"1",
+			"Разработка ПОДД":"2",
+			"Разработка ПОС":"3",
+			"Разработка ППРк":"4" ,
+			"Проектирование дорог":"5",
+			"Обследование зданий":"6",
+			"Оформление ордера ОАТИ":"7",
+			"Разработка Транспортных Схем":"8",
+			"Проектирование сетей ":"9",
+			"Проектирование АСУДД":"10",
+			"Обустройство парковок":"11",
+			"Разработка ПОР":"12",
+			
+			}
+	// меню  с иконками
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		 
+		each linkPatch, linkName in nav
+			li.menu-item(itemprop="item" )
+				a(href='#' itemprop="url")
+					.menu-icon
+						img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
+					= linkName
 //- menu
 //- mixin mnu()
 //- 	-

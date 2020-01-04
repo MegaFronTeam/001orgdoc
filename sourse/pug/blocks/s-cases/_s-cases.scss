@@ -1,6 +1,16 @@
 // start .s-cases
-.s-cases {
-
+.s-cases, .s-cases-2 {
+	.section-title {
+		padding-top: rem(75);
+		padding-bottom: rem(30);
+		text-align: left !important;
+		h2 {
+			padding-left: rem(0);
+			&::after, &::before {
+				display: none;
+			}
+		}
+	}
 
 	&__col {
 		margin-bottom: 30px;
