@@ -15,27 +15,22 @@
 	
 		img {
 			position: absolute;
-			left: 0;
+			left: 0px;
 			top: 0;
 			height: 100%;
-			width: 100%;
-	
+			width: 105%;
 			@include media-breakpoint-up(sm) {
 				// width: inherit;
 				// width: calc(100% + #{rem(65)});
-				width: 100%;
+				width: 105%;
 				// left: rem(-65);
 			}
-	
-			left: 0;
-			// @import mt;
 			@include mt;
-	
-	
-	
+
 			&.active {
 				z-index: 2;
 				opacity: 0;
+				left: rem(-50);
 			}
 		}
 	
@@ -73,9 +68,21 @@
 			}
 	
 			&--right {
-	
-	
+				left: rem(50);
 				z-index: 2;
+				&::before {
+					content: '';
+					width: 110%;
+					height: 100%;
+					display: block;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					position: absolute;
+					background-image: $green-gradient;
+					opacity: 0.7;
+				}
+	
 	
 				// img {
 				// 	left: auto;
@@ -84,6 +91,18 @@
 			}
 	
 			&--left {
+				&::before {
+					content: '';
+					width: 110%;
+					height: 100%;
+					display: block;
+					z-index: 2;
+					top: 0;
+					left: 0;
+					position: absolute;
+					background-image: $blue-gradient;
+					opacity: 0.7;
+				}
 				@include media-breakpoint-up(sm) {
 	
 					text-align: right;
@@ -114,7 +133,7 @@
 			img {
 				@include media-breakpoint-up(sm) {
 					transform: skewX(-10deg);
-	
+					// right: rem(100);
 					// width: 110%;
 				}
 			}

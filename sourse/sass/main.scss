@@ -75,6 +75,11 @@ $output-bourbon-deprecation-warnings: false;
     span {
       padding: 0 rem(15);
     }
+    @include media-breakpoint-down(xs) {
+      .text-arrow {
+        display: none;
+      }
+    }
   }
 }
 .pagination-wrapper li .page-numbers {

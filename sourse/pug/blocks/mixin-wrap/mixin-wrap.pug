@@ -86,7 +86,7 @@ mixin pugin()
 				a.page-numbers(href='#')
 					span.prev.page-numbers() 
 						+icon('arrow2-right') 
-						| Назад
+						span.text-arrow Назад
 			li
 				a.page-numbers.active(href='#') 1
 			li
@@ -103,7 +103,8 @@ mixin pugin()
 				a.page-numbers(href='#') 28
 			li
 				a.page-numbers(href='#')
-					span.next.page-numbers() Далее
+					span.next.page-numbers() 
+						span.text-arrow Далее
 						+icon('arrow2-right')
 
 //- +pugin()
