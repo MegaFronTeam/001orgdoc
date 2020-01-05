@@ -9,8 +9,7 @@
 		display: flex;
 		li {
 			border-bottom: 1px solid #e6e6e6;
-			padding-top: rem(17);
-			padding-bottom: rem(10);
+			padding: rem(16);
 			padding-left: rem(13);
 		}
 		ul {
@@ -19,7 +18,8 @@
 			list-style: none;
 		}
 		a{
-			display: block;
+			display: flex;
+			align-items: center;
 			color: $body-color;
 			text-decoration: none !important;
 			&:hover {
@@ -33,15 +33,11 @@
 			margin-right: rem(10);
 			height: rem(48);
 			width: rem(68);
-			svg {
-				text-align: center;
-			}
 
 		}
 		.menu-item {
-			display: flex;
-			align-items: center;
 			position: relative;
+			overflow: hidden;
 			a{
 				@include mt(.36);
 				&:hover{
@@ -54,6 +50,7 @@
 						top: 0;
 						left: 0;
 						background-image: linear-gradient(to right, #548e46 0%, $primary 100%);
+
 						box-shadow: 0 5px $em-base rgba(158, 200, 86, 0.5);
 					}
 					color: #fff;
@@ -92,7 +89,6 @@
 				}
 			}
 
-			// Разобратся с бордером!!! Ведет себя как буд-то он зафиксирован
 			&::after,
 			&::before {
 				content: '';

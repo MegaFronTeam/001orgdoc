@@ -51,7 +51,12 @@ $output-bourbon-deprecation-warnings: false;
   }
 }
 @import "./node_modules/bootstrap/scss/pagination";
-
+.pagination-wrapper {
+  padding-top: rem(20);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .pagination-wrapper ul {
   @extend .pagination;
   .prev {
@@ -61,14 +66,14 @@ $output-bourbon-deprecation-warnings: false;
   }
   .next, .prev {
     svg {
-      height: rem(7);
+      margin: rem(0) rem(7) rem(4);
+      font-size: rem(8);
     }
   }
   .page-numbers {
-    font-size: 1rem;
     text-transform: uppercase;
     span {
-      padding: 0;
+      padding: 0 rem(15);
     }
   }
 }

@@ -2,12 +2,15 @@
 	// start .s-development
 	.s-development {
 		padding-top: rem(32);
+		padding-bottom: rem(7);
 		&__descr, &__subspecies {
 			ul {
 				padding-left: rem(40);
 				li {
 					list-style: none;
 					position: relative;
+					padding-bottom: rem(10);
+					line-height: 1.67;
 					&::after {
 						content: "";
 						width: $em-base;
@@ -25,7 +28,10 @@
 		}
 
 		&__descr {
-			padding-bottom: rem(20);
+			// padding-bottom: rem(20);
+			ul {
+				padding-bottom: rem(7);
+			}
 			p {
 			padding-bottom: rem(10);
 			&:nth-last-of-type(1) {
@@ -35,9 +41,23 @@
 		}
 
 		&__subspecies {
-			padding-bottom: rem(20);
+			padding-bottom: rem(4);
+			h3 {
+				margin-bottom: rem(14);
+			}
 			p {
 				padding-bottom: rem(0);
+				margin-bottom: rem(10);
+			}
+		}
+		&__initial-data {
+			h4 {
+				font-size: $h5-font-size;
+				padding-bottom: rem(8);
+			}
+			li {
+				line-height: 1.67;
+				padding-bottom: rem(10);
 			}
 		}
 
