@@ -3,7 +3,9 @@
 	.section-title {
 		padding-top: rem(75);
 		padding-bottom: rem(30);
-		text-align: left !important;
+		@include media-breakpoint-up(lg) {
+			text-align: left !important;
+		}
 		h2 {
 			padding-left: rem(0);
 			&::after, &::before {

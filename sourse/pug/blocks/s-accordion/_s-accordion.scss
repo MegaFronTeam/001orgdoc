@@ -1,7 +1,10 @@
 
 	// start .s-accordion
 	.s-accordion {
-		padding-bottom: rem(90);
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(90);
+		}
 		.accordion-item{
 			border-radius: 10px;
 			border: 1px solid #e6e6e6;
