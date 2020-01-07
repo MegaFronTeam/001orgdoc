@@ -2,7 +2,10 @@
 	// start .s-questions
 	.s-questions {
 		padding-top: rem(0);
-		margin-top: rem(-30);
+		margin-top: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-30);
+		}
 		.form-wrap {
 			padding: rem(34) rem(30) rem(23);
 			box-shadow: 0 5px 20px rgba(93, 145, 0, 0.15);
