@@ -1,0 +1,59 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-docs/_s-docs.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
+include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-about-work/_s-about-work.pug
+include ../blocks/header-block-small/_header-block-small.pug
+include ../blocks/s-blog-article/_s-blog-article.pug
+
+
+block variables
+	- let  mainPage= "inner-page"
+block title
+	- let  title= 'Стоимость разработки ППР в строительстве или от чего зависит цена разработки Проекта производства работ'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-small()
+	+page-head(title,"Главная","Услуги",'Стоимость разработки ППР в строительстве')
+	.section-border-bottom
+		.container
+			.row
+				.col-lg-8
+					+s-blog-article
+				.col-lg-4
+					+s-menu-right
+	.container
+		.row
+			.col-lg-6.col-sm-12
+				+s-cases-2
+					+b.section-title.text-center
+						h2 Наши работы
+						a.link-more(href="#") /   Все работы
+							+icon('arrow-right') 
+			.col-lg-6.col-sm-12
+				+s-rews
+	+s-docs
+	//- +s-form()
+	.section-wrap.container
+		.row
+			.col-lg-6
+				+s-news
+			.col-lg-6
+				+s-blog
+	//- +s-logo 
+	+footer()

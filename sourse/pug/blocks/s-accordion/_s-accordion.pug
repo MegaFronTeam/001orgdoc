@@ -1,9 +1,10 @@
-mixin accordion-item(t,p,i)
-	+b.accordion-item
+mixin accordion-item(t,p,i,f)
+	+b.accordion-item&attributes(attributes)
+		+icon('accordion-arrow')= f
 		+e.title= t
 		+e.description= p
-			+pic('example-' +i,'bg') 
-			// Скорее всего картинку нужно будет переделать
+			+e.img-wrap.bg-wrap
+				+pic('example-' +i,'bg')
 
 mixin s-accordion()
 	// start s-accordion
@@ -15,3 +16,16 @@ mixin s-accordion()
 
 
 	// end s-accordion
+
+
+mixin s-accordion2()
+	// start s-accordion
+	// Дан дополнительный класс для вопросов, находится в стилях данного блока
+	+b.s-accordion.accordion-questions&attributes(attributes) 
+		+accordion-item("Кто согласовывает проекты организации дорожного движения?","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")(class="attributes")
+		+accordion-item("Требуется ли СРО на разработку ппр?","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+		+accordion-item("Требуется ли СРО на разработку ппр?","При разработке Проекта производства работ крайне важно соблюдать действующие на территории Российской Федерации нормы и правила. Их можно разделить на те, которые являются рекомендательными, и те, которые являются обязательными. Основной документ, который является обязательным при разработке ППР, и который необходимо неукоснительно соблюдать- это СП 48.13330.2011 Организация строительства. Актуализированная редакция СНиП 12-01-2004.")
+		+accordion-item("Здравствуйте! Мы заказывали разработку ППР в другой компании для оати, но они не могут согласовать, можете помочь??","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+		+accordion-item("Необходимо открыть ордер оати. Можете помочь? Что от нас необходимо","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+		+accordion-item("Дайте консультацию- мы слышали, что сейчас не нужно в обязательном порядке проходить экспертизу ППРк в Ростехнадзоре. Это так?","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+		+accordion-item("Мы строим Торговый центр на Северо-Востоке Москвы, что необходимо для разработки Проекта организации дорожного движения и согласования его в Департаменте транспорта города Москвы.","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")

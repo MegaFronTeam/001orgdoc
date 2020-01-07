@@ -74,9 +74,10 @@
 		}
 		&__need-project {
 			position: relative;
-			padding: rem(50) rem(51) rem(0) rem(51);
-			margin-bottom: rem(60);
+			padding: rem(20) rem(30) rem(0) rem(30);
+			margin-bottom: rem(110);
 			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(218);
 				padding: rem(78) rem(51) rem(0) rem(51);
 			}
 			h3 {
