@@ -1,7 +1,7 @@
 mixin accordion-item(t,p,i,f)
 	+b.accordion-item&attributes(attributes)
-		+icon('accordion-arrow')= f
 		+e.title= t
+			+icon('accordion-arrow')= f
 		+e.description= p
 			+e.img-wrap.bg-wrap
 				+pic('example-' +i,'bg')

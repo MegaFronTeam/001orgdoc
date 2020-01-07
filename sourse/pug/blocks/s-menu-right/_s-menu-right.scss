@@ -74,11 +74,11 @@
 		}
 		&__need-project {
 			position: relative;
-			padding: rem(20) rem(30) rem(0) rem(30);
+			padding: rem(35) rem(30);
 			margin-bottom: rem(110);
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(218);
-				padding: rem(78) rem(51) rem(0) rem(51);
+				margin-bottom: rem(128);
+				padding: rem(73) rem(51);
 			}
 			h3 {
 				font-size: $h5-font-size;
@@ -103,20 +103,19 @@
 				@include a-cent;
 				display: block;
 				z-index: -1;
-				top: 62%; //я очень не уверен в данном решении
 			}
 			
 			&::before {
 				width: 100%;
 				background-image: -webkit-linear-gradient(30deg, rgba(82, 167, 216, 1) 50%, rgba(158, 200, 86, 1) 50%, rgba(158, 200, 86, 1) 100%);
-				height: calc(100% + 60px);
+				height: 100%;
 				border-radius: rem(10);
 			}
 	
 			&::after {
 				width: calc(100% - #{rem(20)});
 				background-color: #ffffff;
-				height: calc(100% + (60px - 20px));
+				height: calc(100% - #{rem(20)});
 				border-radius: rem(6);
 			}
 		}

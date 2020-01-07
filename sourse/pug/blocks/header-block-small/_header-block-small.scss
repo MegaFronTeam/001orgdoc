@@ -35,14 +35,8 @@
 		}
 	
 		&__block {
-	
-			// @include media-breakpoint-up(sm)
-			@include media-breakpoint-down(xs) {}
-	
-			height: rem(200);
-	
+
 			@include media-breakpoint-up(sm) {
-	
 	
 				text-align: left;
 				display: block;
@@ -64,7 +58,7 @@
 				padding: rem(55) rem(40) rem(65);
 			}
 	
-			padding: rem(35) rem(15) rem(35);
+			padding: rem(30) rem(15) rem(35);
 	
 			&:hover {
 				.active {
@@ -123,10 +117,11 @@
 				width: 120%;
 			}
 			width: 100%;
-			height: 99%;
-			@include media-breakpoint-up (lg) {
-				height: 100%;
+			height: 100%;
+			@include media-breakpoint-between(sm, md) { 
+				height: 99.9%; // странный момент, непонятно откуда взялся
 			}
+
 			overflow: hidden;
 			&::before {
 				content: '';

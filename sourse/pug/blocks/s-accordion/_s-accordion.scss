@@ -63,35 +63,32 @@
 .accordion-questions {
 	padding-top: rem(34);
 	// padding-bottom: rem(10);
+	.active svg{
+		transform: rotate(180deg);
+	}
 	.accordion-item {
 		position: relative;
-		padding: rem(27) rem(42) rem(30) rem(62);
-
+		padding: rem(30);
+		@include media-breakpoint-up(lg) {
+			padding: rem(27) rem(42) rem(30) rem(62);
+		}
 		.icon {
 			display: block;
 			position: absolute;
-			left: rem(30);
-			top: rem(36);
-			width: rem(14);
-		
+			left: rem(20);
+			top: rem(26);
+			width: rem(30);
+			height: rem(30);
+			border: 1px solid #e6e6e6;
+			border-radius: 50%;
+			color: $body-color;
+			padding: rem(6);
+			@include media-breakpoint-down (md) {
+				display: none;
+			}
 		}
 		&__description {
 			display: none;
-		}
-		&__title {
-			position: relative;
-			&::after {
-				display: block;
-				position: absolute;
-				width: rem(30);
-				height: rem(30);
-				left: rem(-40);
-				top: rem(-2);
-				content: '';
-				border: 1px solid #e6e6e6;
-				border-radius: 50%;
-				z-index: 1;
-			}
 		}
 	}
 }

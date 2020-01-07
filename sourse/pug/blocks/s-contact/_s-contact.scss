@@ -18,6 +18,9 @@
 		background-color: #edf6fb;
 		border-radius: rem(10);
 	}
+	a {
+		color: $body-color;
+	}
 	h3 {
 		padding-top: rem(50);
 		@include media-breakpoint-up (lg) {
@@ -25,7 +28,11 @@
 		}
 	}
 	.form-wrap {
-		padding: rem(34) rem(30) rem(23);
+		padding: rem(30) rem(15);
+		@include media-breakpoint-up (lg) {
+
+			padding: rem(34) rem(30) rem(23);
+		}
 		box-shadow: 0 5px 20px rgba(93, 145, 0, 0.15);
 		.row{
 			@include roww(5);

@@ -6,11 +6,11 @@
 		@include media-breakpoint-up (lg) {
 			padding-bottom: rem(85);
 		}
-		&__img-wrap {
+		img {
+			width: 100%;
+			height: auto;
 			margin-bottom: rem(20);
-			img {
-				border-radius: rem(10)
-			}
+			border-radius: rem(10)
 		}
 		h3 {
 			padding-top: rem(13);

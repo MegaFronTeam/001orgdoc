@@ -121,7 +121,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/10.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/6.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 	// /закрыть/открыть мобильное меню
@@ -277,6 +277,13 @@ function eventHandler() {
 
 	});
 
+		// accordion
+	$('.accordion-item__title').click(function() {
+		let $this = $(this);
+		$this.next().slideToggle();
+		$this.toggleClass("active");
+	});
+
 
 
 };
@@ -285,13 +292,3 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// accordion 
-(function($) {
-				
-	$('.accordion-item__title').click(function() {
-			let $this = $(this);
-			$this.next().slideToggle();
-	});
-
-})(jQuery);

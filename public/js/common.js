@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/10.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/6.png);"></div>')
 	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
@@ -245,6 +245,12 @@ function eventHandler() {
 
 			$img.replaceWith($svg);
 		}, 'xml');
+	}); // accordion
+
+	$('.accordion-item__title').click(function () {
+		var $this = $(this);
+		$this.next().slideToggle();
+		$this.toggleClass("active");
 	});
 }
 
@@ -254,12 +260,4 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // accordion 
-
-
-(function ($) {
-	$('.accordion-item__title').click(function () {
-		var $this = $(this);
-		$this.next().slideToggle();
-	});
-})(jQuery);
+}
