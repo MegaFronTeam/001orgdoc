@@ -1,7 +1,7 @@
 
 mixin mob-mnu()
 	
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -15,7 +15,8 @@ mixin mob-mnu()
 					+e.tel(href="tel:8495971-3-971") 8 495 971-3-971
 					br
 					+e.mail(href="mailto:9713971@mail.ru") 9713971@mail.ru
-				.col-12.d-none.d-lg-block
+					br
+				.col-12.d-none.d-lg-block.pt-1
 					+e.btn(href="#") Обратный звонок
 	//  мобильное меню
 mixin top-nav() 

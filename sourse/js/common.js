@@ -145,9 +145,9 @@ function eventHandler() {
 			}
 		});
 		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
-			JSCCommon.closeMenu();
-		}
+		// if (window.matchMedia("(min-width: 992px)").matches) {
+		// 	JSCCommon.closeMenu();
+		// }
 	}
 
 	$(window).resize(function () {
@@ -289,7 +289,7 @@ function eventHandler() {
 	});
 	wow.init();
 
-	$('.top-nav').hcSticky({
+	$('.top-line').hcSticky({
 		stickTo: 'body'
 	});
 
