@@ -1,5 +1,12 @@
 .top-nav {
 
+	background-color: #ffffff;
+
+	&.sticky {
+		box-shadow: 0 0px 1px $primary;
+	}
+
+	z-index: 200;
 
 	ul {
 		text-align: center;

@@ -277,14 +277,21 @@ function eventHandler() {
 
 	});
 
-		// accordion
-	$('.accordion-item__title').click(function() {
+	// accordion
+	$('.accordion-item__title').click(function () {
 		let $this = $(this);
 		$this.next().slideToggle();
 		$this.toggleClass("active");
 	});
 
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
 
+	$('.top-nav').hcSticky({
+		stickTo: 'body'
+	});
 
 };
 if (document.readyState !== 'loading') {

@@ -24,7 +24,7 @@ mixin page-head(t, ...items)
 	+b.page-head
 		.container
 			+breadcrumb(...items)
-			+e.title
+			+e.title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
 				h1= t
 //- pugination
 mixin pugin()

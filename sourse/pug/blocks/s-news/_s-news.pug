@@ -7,7 +7,7 @@ mixin news-item(d,t,p)
 mixin s-news()
 	// start s-news
 	+b.SECTION.s-news.section#s-news&attributes(attributes) 
-		+b.section-title
+		+b.section-title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
 			h2 Новости 
 			a.link-more(href="#") /   Все новости 
 				+icon('arrow-right')  

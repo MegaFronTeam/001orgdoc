@@ -99,8 +99,7 @@ $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1440px) !default;
+  xl: 1200px) !default;
 
 // Grid containers
 //
@@ -110,8 +109,7 @@ $container-max-widths: (xs: 480px,
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px,
-  xxl: 1300px) !default;
+  xl: 1200px) !default;
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
@@ -879,16 +877,16 @@ $custom-file-text: (en: "Browse"
 
 // // Breadcrumbs
 
-$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-y: 0 !default;
 // $breadcrumb-padding-x:              1rem !default;
 // $breadcrumb-item-padding-x:         .5rem !default;
 
 // $breadcrumb-margin-bottom:          1rem !default;
 
-$breadcrumb-bg:                     transparent !default;
+$breadcrumb-bg: transparent !default;
 // $breadcrumb-divider-color:          $gray-600 !default;
 // $breadcrumb-active-color:           $gray-600 !default;
-$breadcrumb-divider:                quote(" ") !default;
+$breadcrumb-divider: quote(" ") !default;
 
 // // $breadcrumb-border-radius:          $border-radius !default;
 

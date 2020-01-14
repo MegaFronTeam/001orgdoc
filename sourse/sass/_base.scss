@@ -19,10 +19,7 @@ html {
 
 body,
 html {
-	@include media-breakpoint-up(xxl) {
 
-		font-size: 16px;
-	}
 
 	@include media-breakpoint-up(xl) {
 
@@ -104,6 +101,7 @@ html {
 		}
 	}
 }
+
 .inner-page {
 	.section-wrap {
 		padding-top: rem(22);

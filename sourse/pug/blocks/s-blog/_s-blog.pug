@@ -10,7 +10,7 @@ mixin s-blog()
 	// start s-blog
 	+b.SECTION.s-blog.section#s-blog&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
 				h2 Блог 
 				a.link-more(href="#") /   Все статьи 
 					+icon('arrow-right')  

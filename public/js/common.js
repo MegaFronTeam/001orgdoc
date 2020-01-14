@@ -252,6 +252,13 @@ function eventHandler() {
 		$this.next().slideToggle();
 		$this.toggleClass("active");
 	});
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
+	$('.top-nav').hcSticky({
+		stickTo: 'body'
+	});
 }
 
 ;
