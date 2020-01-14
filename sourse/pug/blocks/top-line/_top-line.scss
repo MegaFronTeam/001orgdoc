@@ -1,8 +1,8 @@
 .top-line {
   @include media-breakpoint-up(sm) {
 
-    padding-top: rem(16);
-    padding-bottom: rem(20);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
   }
 
   padding-top: rem(6);

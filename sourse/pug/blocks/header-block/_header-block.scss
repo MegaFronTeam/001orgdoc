@@ -42,6 +42,7 @@
 		// @include media-breakpoint-up(sm)
 		@include media-breakpoint-down(xs) {}
 
+		// height: rem(280);
 		height: rem(280);
 
 		@include media-breakpoint-up(sm) {
@@ -56,10 +57,17 @@
 		justify-content: center;
 		align-items: center;
 
-		@include media-breakpoint-up(sm) {
-			height: rem(600);
+		@media (min-width: 1440px) {
+			padding: rem(30) rem(35) rem(35);
 
-			padding: rem(70) rem(35) rem(65);
+		}
+
+		@include media-breakpoint-up(sm) {
+			// height: rem(600);
+			height: 65vh;
+
+			// padding: rem(35) rem(35) rem(35);
+			padding: rem(35) rem(45) rem(35);
 		}
 
 		padding: rem(50) rem(15) rem(35);
