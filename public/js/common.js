@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty2(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function ownKeys(object, enumerableOnly) {
 	var keys = Object.keys(object);
 
@@ -305,20 +307,14 @@ function eventHandler() {
 	$('.header').hcSticky({
 		stickTo: 'body'
 	});
-	var tabsSl = new Swiper('.top-nav__menu-wrap', {
+	var tabsSl = new Swiper('.top-nav__menu-wrap', _defineProperty2({
 		slidesPerView: 'auto',
 		spaceBetween: 10,
 		freeMode: true,
 		freeModeMomentum: true,
 		// spaceBetween: 30, 
-		watchOverflow: true,
-		breakpoints: {
-			// when window width is >= 320px
-			576: {
-				spaceBetween: 30
-			}
-		}
-	});
+		watchOverflow: true
+	}, "spaceBetween", 10));
 	window.bioEp = {
 		// Private variables
 		bgEl: {},

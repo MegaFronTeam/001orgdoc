@@ -312,13 +312,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 		// spaceBetween: 30, 
 		watchOverflow: true,
-		breakpoints: {
-			// when window width is >= 320px
-			576: {
-
-				spaceBetween: 30
-			}
-		}
+		spaceBetween: 10 
 	});
 
 

@@ -1,5 +1,9 @@
 .header{
-  z-index: 200;
+  z-index: 800;
+  &:not(.sticky){
+
+    position: relative !important;
+  }
   &.sticky {
     box-shadow: 0 1px 5px $primary;
   }

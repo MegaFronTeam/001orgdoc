@@ -37,8 +37,10 @@
 		font-size: rem(16);
 		color: $body-color;
 		font-weight: bold;
-		padding: rem(15) rem(10);
+		padding: rem(5) rem(10);
 		text-decoration: none !important;
+		border: 1px solid $primary;
+		border-radius: rem(10);
 		white-space: nowrap;
 
 		&:hover {
@@ -49,6 +51,8 @@
 	li {
 		// display: inline-block;
 		// list-style-type: none;
+		padding-top: rem(15px);
+		padding-bottom: rem(15);
 	position: relative;
 	}
 	&__sub-menu{
@@ -97,11 +101,16 @@
 			>li{
 				@extend .swiper-slide;
 				width: auto;
-
 				ul{
+					li{
+						padding: 0;
+						margin: 0;
+					}
 
 					a{
+						border: none;
 						padding-left: 1rem;
+						white-space: normal;
 					}
 				}
 				&:hover{
@@ -146,7 +155,11 @@
 
 	@include media-breakpoint-down(xs) {}
 	.menu-item-has-children{
-		padding-right: rem(10);
+		// padding-right: rem(10);
+		&> a{
+			padding-right: rem(30);
+			color: $primary;
+		}
 		&::before{
 			content: '';
 			position: absolute;
@@ -160,7 +173,7 @@
 			content: '';
 			position: absolute;
 			@include a-cent(y);
-			right: 0;
+			right: rem(10);
 			@include triangle(1rem, $primary, down);
 			@include mt;
 			cursor: pointer;
