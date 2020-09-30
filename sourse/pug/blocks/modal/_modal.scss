@@ -14,6 +14,23 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	&--lg {
+		max-width: 870px;
+
+		@include media-breakpoint-up(lg) {
+			padding: rem(30) rem(30) 0;
+		}
+
+		.form-wrap__inner {
+			max-width: 440px;
+			margin-bottom: 15px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 20px;
+			padding-bottom: rem(20);
+		}
+	}
 }
 
 a {

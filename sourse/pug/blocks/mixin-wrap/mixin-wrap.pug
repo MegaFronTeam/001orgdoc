@@ -133,24 +133,7 @@ mixin soc()
 			+icon('instagram')
 	 
 //- /scial buttons
-//- WP menu
-mixin mnu()
-	-
-		var nav= { 
-			"Наши услуги":"#",
-			"Наши работы":"#",
-			"Сертификаты и СРО":"#",
-			"Калькулятор":"#" ,
-			"Отзывы":"#",
-			"Новости":"#",
-			"Блог":"#",
-			"Контакты":"#",
-			}
-	// меню в шапке
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		 
-		each linkPatch, linkName in nav
-			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+
 mixin mnu2()
 	-
 		var nav= { 
@@ -162,6 +145,8 @@ mixin mnu2()
 			"Обследование зданий":"6",
 			"Оформление ордера ОАТИ":"7",
 			"Разработка Транспортных Схем ":"8",
+			"Разработка Транспортных Схем ":"8",
+			"азработка Транспортных Схем ":"8",
 			}
 	// меню  с иконками
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
@@ -169,9 +154,9 @@ mixin mnu2()
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" )
 				a(href='#' itemprop="url")
-					.menu-icon
-						img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
-					= linkName
+					
+					img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
+					span(class="menu-image-title-after menu-image-title")= linkName
 
 mixin mnu3()
 	-
@@ -196,26 +181,34 @@ mixin mnu3()
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" )
 				a(href='#' itemprop="url")
-					.menu-icon
-						img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
-					= linkName
-//- menu
-//- mixin mnu()
-//- 	-
-//- 		var nav= {
-//- 			"Главная":"/",
-//- 			"Услуги  ":"#",
-//- 			"Подбор септика   ":"#",
-//- 			"Акции ":"#"," О компании  ":"#",
-//- 			" Доставка и оплата ":"#",
-//- 			" Клиентам  ":"#",
-//- 			" Наши работы   ":"#",
-//- 			"Контакты ":"#"
-//- 			}
-//- 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-//- 		each linkPatch, linkName in nav
-//- 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
-//- /menu
+					img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
+					span(class="menu-image-title-after menu-image-title")= linkName
+
+
+//- WP menu
+mixin mnu()
+	-
+		var nav= { 
+			"Наши услуги":"#",
+			"Наши работы 1":"#",
+			"Наши работы 2":"#",
+			"Наши работы 3":"#",
+			"Наши работы 4":"#",
+			"Сертификаты и СРО":"#",
+			"Калькулятор":"#" ,
+			"Отзывы":"#",
+			"Новости":"#",
+			"Блог":"#",
+			"Контакты":"#",
+			}
+	// меню в шапке
+	ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		 
+		li.menu-item.menu-item-has-children.swiper-slide(itemprop="item" )
+			a(href="#" itemprop="url") Услуги
+			+mnu2()
+		each linkPatch, linkName in nav
+			li.menu-item.swiper-slide(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 
 
 

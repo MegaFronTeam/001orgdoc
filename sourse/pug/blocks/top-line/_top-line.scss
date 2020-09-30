@@ -43,17 +43,21 @@
 
   &__logo-title {
     font-family: Montserrat;
-    font-size: rem(20px);
     font-weight: 700;
     line-height: 0.9;
     flex-shrink: 0;
     margin-left: rem(-5);
 
     @include media-breakpoint-up(sm) {
-      display: block;
+
+      font-size: rem(20px);
     }
 
-    display: none;
+    font-size: rem(14px);
+
+    display: block;
+
+    // display: none;
 
   }
 
@@ -100,6 +104,10 @@
     @extend .h5;
     @extend .text-body;
     text-decoration: none !important;
+
+    span {
+      color: $primary;
+    }
 
   }
 
@@ -166,5 +174,14 @@
 
   @include media-breakpoint-down(sm) {}
 
-  @include media-breakpoint-down(xs) {}
+  @include media-breakpoint-down(xs) {
+    .row {
+      @include roww(5);
+    }
+  }
+}
+
+
+.bio_ep_close {
+  display: none !important;
 }

@@ -10,6 +10,10 @@
 		margin-bottom: rem(10);
 	}
 
+	li li {
+		margin-left: rem(15);
+	}
+
 	&--main {}
 
 	//
@@ -49,4 +53,33 @@
 
 	@include media-breakpoint-down(xs) {}
 
+}
+
+.col-lg-6 {
+	.s-content--main {
+		max-height: 690px;
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: rem(50);
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+		}
+
+		+.btn-toggle-js {
+			@extend .btn;
+			@extend .btn-sm;
+			@extend .btn-accent;
+			margin-left: auto;
+			margin-right: auto;
+			width: rem(160);
+			display: block;
+		}
+
+	}
 }

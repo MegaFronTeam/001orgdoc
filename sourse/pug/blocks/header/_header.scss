@@ -1,5 +1,8 @@
 .header{
-	
+  z-index: 200;
+  &.sticky {
+    box-shadow: 0 1px 5px $primary;
+  }
   // 
   @include media-breakpoint-up(xl) {}
 

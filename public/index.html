@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
@@ -33,35 +34,45 @@
 				</div>
 				<div class="menu-mobile__inner">
 					<!-- меню в шапке-->
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отзывы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+					<ul class="menu swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item menu-item-has-children swiper-slide" itemprop="item"><a href="#" itemprop="url">Услуги</a>
+							<!-- меню  с иконками-->
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППР</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОДД</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОС</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППРк</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/><span class="menu-image-title-after menu-image-title">Проектирование дорог</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/><span class="menu-image-title-after menu-image-title">Обследование зданий</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/><span class="menu-image-title-after menu-image-title">Оформление ордера ОАТИ</span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка Транспортных Схем </span></a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">азработка Транспортных Схем </span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 1</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 2</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 3</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 4</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Отзывы</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
+						<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 					</ul>
 					<div class="menu-mobile__menu-icons">
 						<!-- меню  с иконками-->
 						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/></div>Разработка ППР</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/></div>Разработка ПОДД</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/></div>Разработка ПОС</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/></div>Разработка ППРк</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/></div>Проектирование дорог</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/></div>Обследование зданий</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/></div>Оформление ордера ОАТИ</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-									<div class="menu-icon"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/></div>Разработка Транспортных Схем </a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППР</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОДД</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОС</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППРк</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/><span class="menu-image-title-after menu-image-title">Проектирование дорог</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/><span class="menu-image-title-after menu-image-title">Обследование зданий</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/><span class="menu-image-title-after menu-image-title">Оформление ордера ОАТИ</span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка Транспортных Схем </span></a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">азработка Транспортных Схем </span></a></li>
 						</ul>
 					</div>
 					<div class="top-line">
@@ -93,7 +104,7 @@
 							<div class="col-auto d-none d-xl-block">
 								<addr>г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1</addr>
 							</div>
-							<div class="top-line__cont col-auto"><a class="top-line__tel" href="tel:8495971-3-971">8 495 971-3-971</a>
+							<div class="top-line__cont col-auto"><a class="top-line__tel" href="tel:8495971-3-971">8 <span>495</span> 971-3-971</a>
 								<div class="d-none d-lg-block"><a class="top-line__mail" href="mailto:9713971@mail.ru">9713971@mail.ru</a>
 								</div>
 								<div class="d-lg-none"><a class="top-line__mail link-modal" href="#modal-call">Обратный звонок</a>
@@ -110,19 +121,38 @@
 				</div>
 				<!-- end .top-line-->
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy d-none d-lg-block">
+				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<!-- меню в шапке-->
-						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отзывы</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-						</ul>
+						<div class="top-nav__menu-wrap swiper-container">
+							<!-- меню в шапке-->
+							<ul class="menu swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item-has-children swiper-slide" itemprop="item"><a href="#" itemprop="url">Услуги</a>
+									<!-- меню  с иконками-->
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППР</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОДД</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОС</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППРк</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/><span class="menu-image-title-after menu-image-title">Проектирование дорог</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/><span class="menu-image-title-after menu-image-title">Обследование зданий</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/><span class="menu-image-title-after menu-image-title">Оформление ордера ОАТИ</span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка Транспортных Схем </span></a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">азработка Транспортных Схем </span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши услуги</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 1</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 2</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 3</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Наши работы 4</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Сертификаты и СРО</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Отзывы</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
+								<li class="menu-item swiper-slide" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
@@ -158,22 +188,15 @@
 				<div class="container">
 					<!-- меню  с иконками-->
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/></div>Разработка ППР</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/></div>Разработка ПОДД</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/></div>Разработка ПОС</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/></div>Разработка ППРк</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/></div>Проектирование дорог</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/></div>Обследование зданий</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/></div>Оформление ордера ОАТИ</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">
-								<div class="menu-icon"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/></div>Разработка Транспортных Схем </a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-1.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППР</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-2.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОДД</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-3.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ПОС</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-4.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка ППРк</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-5.svg" alt=""/><span class="menu-image-title-after menu-image-title">Проектирование дорог</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-6.svg" alt=""/><span class="menu-image-title-after menu-image-title">Обследование зданий</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-7.svg" alt=""/><span class="menu-image-title-after menu-image-title">Оформление ордера ОАТИ</span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">Разработка Транспортных Схем </span></a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url"><img class="img-svg" src="img/svg/menu-8.svg" alt=""/><span class="menu-image-title-after menu-image-title">азработка Транспортных Схем </span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -301,13 +324,28 @@
 							<p> <a href="#">Разработка ППР на подготовительный период</a><br/><a href="#">Разработка ППР на земляные работы</a><br/><a href="#">Проект организации работ (ПОР)</a><br/><a href="#">Разработка ППР на монолитные работы</a></p><br/>
 							<h3>Составление ППР на отдельные виды работ</h3>
 							<p><strong>Инженеры Проектного бюро ООО С-Проджект разработали ППР для строительных работ на объектах Государственных организаций:</strong></p>
-							<ol>
-								<li>ФГУК ГКД Управления Делами Пезидента РФ. Разработка ППР на реконструкцию кровли.</li>
-								<li>Объекты Кавалерийского почётного эскорта Президентского полка СКМК ФСО России. Разработка ППР на 	монтажные работы.</li>
-								<li>ФГУП "ТТЦ "Останкино". Разработка ППР на снос.</li>
-								<li>МИД РФ. Разработка ППР на демонтаж, демонтажные работы.</li>
-								<li>ФГУ ФИПС (РОСПАТЕНТ). Разработка ППР на капитальный ремонт конференц-зала с заменой инженерных 	коммуникаций.</li>
-								<li>ОАО РЖД. Административное здание: </li>
+							<ol> 
+								<li><span>1.</span><i>ФГУК ГКД Управления Делами Пезидента РФ </i>. Разработка ППР на реконструкцию кровли.</li>
+								<li><span>2.</span><i>Объекты Кавалерийского почётного эскорта Президентского полка СКМК ФСО России</i>. Разработка ППР на монтажные работы.</li>
+								<li><span>3.</span><i>ФГУП "ТТЦ "Останкино"</i>. Разработка ППР на снос.</li>
+								<li><span>4.</span><i>МИД РФ</i>. Разработка ППР на демонтаж, демонтажные работы.</li>
+								<li><span>5.</span><i>ФГУ ФИПС (РОСПАТЕНТ)</i>. Разработка ППР на капитальный ремонт конференц-зала с заменой инженерных коммуникаций.</li>
+								<li><span>6.</span><i>ОАО РЖД</i>. Административное здание:
+									<ul>
+										<li>проект производства работ на бетонные работы;</li>
+										<li>проект производства работ на монтаж металлоконструкций;</li>
+										<li>проект производства работ на кровлю;</li>
+										<li>проект производства работ на отделочные работы;</li>
+										<li>проект производства работ на устройство стен и перегородок.</li>
+									</ul>
+								</li>
+								<li><span>7.</span><i>Здание Госкорпорации "РОСАТОМ"</i>. Разработка ППР на бетонные работы.</li>
+								<li><span>8.</span><i>ЦОВБ МВД РОССИИ</i>. Разработка ППР на фасадные работы. Разработка ППР на установку лесов.</li>
+								<li><span>9.</span><i>УФНС РФ </i>. Разработка ППР на бетонные работы. Разработка ППР на земляные работы.</li>
+								<li><span>10.</span><i>ОАО "Мосэнерго". ТЭЦ-11 им. М.Я. Уфаева</i>. Разработка ППР на кровельные работы.</li>
+								<li><span>11.</span><i>Балаковская АЭС.</i> Разработка ППР на перепланировку помещений.</li>
+								<li><span>12.</span><i>ОАО Воронежская ТЭЦ-2.</i> Разработка ППР на монолитные работы под основание паротурбинной установки.</li>
+								<li><span>13.</span><i>Взрывотехническая лаборатория УВД по Ивановской области</i>. Разработка ППР на строительство</li>
 							</ol>
 						</div>
 						<!-- end s-content-->
@@ -608,6 +646,7 @@
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/readmore-js/readmore.min.js"></script>
 		<!-- полифил для picture-->
 		<script src="libs/picturefill/picturefill.min.js"></script>
 		<!-- полифил для object-fit-->
@@ -616,6 +655,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/slick-carousel/slick/slick.min.js"></script>
 		<!-- /slider libs-->
 		<!-- for svg libs-->

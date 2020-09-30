@@ -21,8 +21,9 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy.d-none.d-lg-block
+	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			+e.menu-wrap.swiper-container
+				+mnu()
 					
 	// end top-nav

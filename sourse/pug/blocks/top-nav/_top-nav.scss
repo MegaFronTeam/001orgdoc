@@ -7,15 +7,28 @@
 	}
 
 	z-index: 200;
-
+	.container{
+		// overflow-y: hidden;
+		// overflow-x: auto;
+		// position: static;
+	}
 	ul {
 		text-align: center;
 		list-style-type: none;
-		display: flex;
-		justify-content: space-between;
-		margin-left: rem(-10);
-		margin-right: rem(-10);
-		margin-bottom: 0;
+		// display: flex;
+		// justify-content: space-between;
+		// margin-left: rem(-10);
+		// margin-right: rem(-10);
+		// margin-bottom: 0;
+		// @include media-breakpoint-up(xl) {
+		// 	min-width: 1190px;
+		// }
+		
+		// @include media-breakpoint-up(lg) {
+		// 	min-width: 1190px;
+
+		// }
+
 	}
 
 	a {
@@ -26,6 +39,7 @@
 		font-weight: bold;
 		padding: rem(15) rem(10);
 		text-decoration: none !important;
+		white-space: nowrap;
 
 		&:hover {
 			color: $primary;
@@ -35,8 +49,67 @@
 	li {
 		// display: inline-block;
 		// list-style-type: none;
+	position: relative;
+	}
+	&__sub-menu{
+		position: relative;
+	}
+	li ul{
+		position: absolute;
+		left: 0;
+		top: 100%;
+		display: block;
+		min-width: rem(250);
+		max-width: rem(280);
+		background-color: #ffffff;
+		text-align: left;
+		transform: scaleY(0);
+		@include mt;
+		transform-origin: 0 0;
+		a{
+			font-size: 1rem;
+			
+		}
+		img,
+		svg{
+			display: none;
+		}
+	}
+	li:hover{
+		ul{
+			transform: scaleY(1);
+
+		}
+		&::after { 
+			border: 0;
+			@include triangle(1rem, $primary, up);
+		}
 	}
 
+	&__menu-wrap{
+		overflow: visible;
+		// overflow-y: auto;
+		// width: 300px;
+		height: 100%;
+		position: relative;
+		>ul {
+			// @extend .swiper-wrapper;
+			>li{
+				@extend .swiper-slide;
+				width: auto;
+
+				ul{
+
+					a{
+						padding-left: 1rem;
+					}
+				}
+				&:hover{
+
+				}
+			}
+		}
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -72,4 +145,26 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+	.menu-item-has-children{
+		padding-right: rem(10);
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			@include a-cent(y);
+			right: 0;
+			@include triangle(1rem, $primary, down);
+			@include mt;
+			cursor: pointer;
+		}
+	}
 }
+

@@ -211,7 +211,11 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		&__block{
+		}
+		display: none;
+	}
 
 	@include media-breakpoint-down(xs) {}
 }

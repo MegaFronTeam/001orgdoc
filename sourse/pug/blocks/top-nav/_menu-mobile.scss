@@ -92,7 +92,7 @@ $h: em(1.8);
 
 	&__inner {
 		background-color: #fff;
-		padding: 5% 0;
+		padding: 5% 0 rem(160);
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
@@ -158,15 +158,15 @@ $h: em(1.8);
 			align-items: center;
 		}
 
-		.menu-icon {
-			width: rem(30);
-			text-align: center;
-			margin-right: rem(10);
-
-			.img-svg {
-				max-width: 100%;
-				max-height: rem(40);
-			}
-		}
+ 
+			.img-svg,
+			.menu-image {
+				display: inline-block;
+				// width: 100%;
+				text-align: center;
+				margin-right: rem(10);
+				height: rem(48) * .8;
+				width: rem(68 * .8);
+			} 
 	}
 }
