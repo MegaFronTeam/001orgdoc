@@ -214,8 +214,16 @@
 	@include media-breakpoint-down(sm) {
 		&__block{
 		}
-		// display: none;
+
+		display: none;
 	}
 
 	@include media-breakpoint-down(xs) {}
+}
+@include media-breakpoint-down(sm) {
+.home {
+	.header-block{
+		display: block !important;	
+	}
+}
 }
