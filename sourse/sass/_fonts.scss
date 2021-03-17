@@ -4,10 +4,10 @@ $addr: '../fonts/';
 $file-format: woff2;
 
 // @include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RobotoSlab-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RobotoSlab-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RobotoSlab-Light", 300, $file-formats: $file-format);
-@include font-face (Montserrat, $addr + "Montserrat-Bold", 700, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Regular", $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Bold", bold, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Light", 300, $file-formats: $file-format);
+// @include font-face (Montserrat, $addr + "Montserrat-Bold", 700, $file-formats: $file-format);
 
 // font-weight helper:
 
