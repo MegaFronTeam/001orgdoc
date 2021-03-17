@@ -78,6 +78,16 @@ $h: em(1.8);
 }
 
 .menu-mobile {
+	ul{
+		display: block;
+		height: auto;
+	}
+	.sub-menu{
+		display: none !important;
+	}
+	li{
+		height: auto;
+	}
 	position: fixed !important;
 	z-index: 999;
 	max-width: 85%;
