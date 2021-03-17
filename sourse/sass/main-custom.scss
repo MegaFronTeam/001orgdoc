@@ -136,4 +136,6 @@ $output-bourbon-deprecation-warnings: false;
 // @import "base";
 // @import "swiper";
 // @import "../pug/blocks/**/*.scss";
+@import "../pug/blocks/s-markups/_s-markups.scss";
+@import "../pug/blocks/s-price/_s-price.scss";
 // @import "media"; // Всегда в конце

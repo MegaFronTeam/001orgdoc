@@ -17,12 +17,14 @@ include ../blocks/s-about-work/_s-about-work.pug
 include ../blocks/header-block-small/_header-block-small.pug
 include ../blocks/s-questions/_s-questions.pug
 include ../blocks/s-accordion/_s-accordion.pug
+include ../blocks/s-markups/_s-markups.pug
+include ../blocks/s-price/_s-price.pug
 
 
 block variables
 	- let  mainPage= "inner-page"
 block title
-	- let  title= 'Виды разметки'
+	- let  title= 'Виды разметки которые Вы можете заказть у нас'
 	title= title
 block pagecontent 
 	+mob-mnu()
@@ -30,32 +32,17 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+header-block-small()
-	//- +page-head(title,"Главная","Услуги",'Вопрос/Ответ')
+	+page-head2(title)
 	.section-border-bottom
 		.container
 			.row
 				.col-lg-8
-					+s-accordion2
-					+s-questions
+					+s-markups()
+					+s-price()
 				.col-lg-4
 					+s-menu-right
-	.container
-		.row
-			.col-lg-6.col-sm-12
-				+s-cases-2
-					+b.section-title.text-center(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
-						h2 Наши работы
-						a.link-more(href="#") /   Все работы
-							+icon('arrow-right') 
-			.col-lg-6.col-sm-12
-				+s-rews
-	+s-docs
+	
+	//- +s-docs
 	//- +s-form()
-	.section-wrap.container
-		.row
-			.col-lg-6
-				+s-news
-			.col-lg-6
-				+s-blog
 	//- +s-logo 
 	+footer()

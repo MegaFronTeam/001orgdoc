@@ -26,6 +26,12 @@ mixin page-head(t, ...items)
 			+breadcrumb(...items)
 			+e.title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
 				h1= t
+				
+mixin page-head2(t)
+	+b.page-head
+		.container
+			+e.title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
+				h1= t
 //- pugination
 mixin pugin()
 	//- nav(aria-label='...')
