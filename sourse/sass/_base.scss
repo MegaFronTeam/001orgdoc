@@ -792,3 +792,67 @@ figure iframe {
 		box-shadow: 0px 0px 0px rgba(#86B92D, 0), inset 0px 0px 10px rgba(255, 255, 255, 0.1);
 	}
 }
+
+.has-backplate{
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		z-index: -1;
+		top: var(--top-shift, 10px);
+		left: var(--left-shith, 10px);
+		height: 100%;
+		width: calc(100% - var(--left-shith, 10px) * 2);
+
+		background: $white;
+		filter: drop-shadow(0px 8px 15px rgba(19, 21, 26, 0.1));
+		border-radius: rem(15);
+	}
+}
+
+.inner-border{
+	background: $white;
+	filter: drop-shadow(0px 8px 15px rgba(19, 21, 26, 0.1));
+	border-radius: 15px;
+
+	position: relative;
+	z-index: 1;
+	&:after{
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		top: var(--box-padd, 10px);
+		left: var(--box-padd, 10px);
+		width: calc(100% - var(--box-padd, 10px) * 2);
+		height: calc(100% - var(--box-padd, 10px) * 2);
+
+		border-radius: rem(15);
+		border: 1px solid #DAD8E3;
+	}
+}
+
+.accept-ratio-frame {
+	display: block;
+	width: 100%;
+	height: 0;
+	position: relative;
+
+	overflow: hidden;
+	&:hover {
+		img {
+			//filter: brightness(100%);
+		}
+	}
+
+	img {
+		@include mt();
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}

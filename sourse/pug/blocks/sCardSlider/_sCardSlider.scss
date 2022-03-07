@@ -1,0 +1,115 @@
+// start .sCardSlider
+.sCardSlider {
+	&__wrap {
+		position: relative;
+		.swiper {
+			position: relative;
+			overflow: visible !important;
+		}
+		.swiper-wrapper {
+			padding-bottom: rem(60);
+		}
+		.swiper-slide {
+			transition: opacity 0.3s ease-in-out;
+			//max-width: 100%;
+			width: 100%;
+			@extend .has-backplate;
+
+			&:before {
+				top: -10px;
+				height: calc(100% + 20px);
+			}
+			@include media-breakpoint-up(md) {
+				width: calc(100% / 2 - 30px * 1 / 2);
+				opacity: 0.5;
+
+				&.swiper-slide-active,
+				&.swiper-slide-active + .swiper-slide {
+					opacity: 1;
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				width: calc(100% / 3 - 30px * 2 / 3);
+
+				&.swiper-slide-active,
+				&.swiper-slide-active + .swiper-slide,
+				&.swiper-slide-active + .swiper-slide + .swiper-slide {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__card-wrap {
+		@extend .has-backplate;
+
+		&:before {
+			top: -10px;
+			height: calc(100% + 20px);
+		}
+	}
+	&__card {
+		@extend .inner-border;
+		display: block;
+	}
+	&__img {
+		@extend .accept-ratio-frame;
+		padding-top: calc(530 / 343 * 100%);
+		@include media-breakpoint-up(sm) {
+			padding-top: calc(530 / 373 * 100%);
+		}
+		border-radius: rem(15);
+
+		img {
+		}
+	}
+	// &__item {
+	// 	@extend .inner-border;
+	// 	display: block;
+	// 	picture {
+	// 		@extend .accept-ratio-frame;
+	// 		padding-top: calc(530 / 343 * 100%);
+	// 		@include media-breakpoint-up(sm) {
+	// 			padding-top: calc(530 / 373 * 100%);
+	// 		}
+	// 		border-radius: rem(15);
+	// 	}
+	// }
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+} // end.sCardSlider
