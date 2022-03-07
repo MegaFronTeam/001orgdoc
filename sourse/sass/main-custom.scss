@@ -1,0 +1,21 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "mixin";
+@import "fonts";
+// @import "./public/img/svg/_sprite";
+// @import "bootstrap-theme/bootstrap";
+
+// Option B: Include parts of Bootstrap
+
+@import "vars";
+@import "./node_modules/bootstrap/scss/vendor/rfs";
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+ 
+@import "../pug/blocks/s-markups/_s-markups.scss";
+@import "../pug/blocks/s-price/_s-price.scss";
+// @import "media"; // Всегда в конце

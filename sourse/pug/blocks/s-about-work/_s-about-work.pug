@@ -1,0 +1,24 @@
+mixin s-about-work()
+	// start s-about-work
+	+b.SECTION.s-about-work.section#s-about-work&attributes(attributes)
+		.row
+			.titele-wrapper.text-center(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
+				h2 Наши работы
+				a.link-more(href="#") /   Все работы
+					+icon('arrow-right') 
+			mixin item(i,t)
+				+e.col.col-sm-6
+					+e.item.bg-wrap(href="#")
+						+pic(`case-` + i,'bg')(class="picture-bg")
+						+e.title= t
+				// /+e.col.col-sm-6
+			+item("1",'Разработка ППР на объекте "14-й корпус Кремля"')
+			+item("2",'Разработка ППР на объекте "Триумфальная Арка"')
+			+item("3",'План производства работ на монтаж слаботочных систем по объекту: «МАЛАЯ')
+			+item("4",'Разработка ППР для Кремлевской школы верховой езды')
+	// end s-about-work
+
+
+
+
+	// need deleted

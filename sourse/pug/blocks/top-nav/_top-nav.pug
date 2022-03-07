@@ -1,0 +1,29 @@
+
+mixin mob-mnu()
+	
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+			+e.menu-icons
+				+mnu2()
+			+b.top-line
+				.col-12.mb-2
+					addr г. Москва, Алтуфьевское&nbsp;ш.,  д.&nbsp;48, корпус&nbsp;1
+				+e.cont.col-12
+					+e.tel(href="tel:8495971-3-971") 8 495 971-3-971
+					br
+					+e.mail(href="mailto:9713971@mail.ru") 9713971@mail.ru
+					br
+				.col-12.d-none.d-lg-block.pt-1
+					+e.btn(href="#") Обратный звонок
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+e.menu-wrap.swiper-container
+				+mnu()
+					
+	// end top-nav

@@ -1,0 +1,20 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.block-with-lazy.lazy-background#s-form&attributes(attributes)
+		.container
+			+form-wrap
+				+e.inner
+					h2(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0") Узнать стоимость проекта за 5 мин
+					.row
+						.col-lg-4
+							+input(null,'text','Ф. И. О.:')
+						
+						.col-lg-4
+							+input(null,'tel','Контактный телефон:')
+						
+						.col-lg-4
+							+input(null,'email','Email адрес:')
+					+input(null,'textarea','Сообщение:')
+					+e.INPUT.btn(type="submit" value="отправить")
+					
+	// end s-form

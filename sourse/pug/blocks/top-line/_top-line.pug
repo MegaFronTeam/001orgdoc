@@ -1,0 +1,197 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				.col
+					+e.logo
+						a(href="/" style="width: 100%;")
+							img(src="img/svg/logo.svg", alt="")
+							+e.DIV.logo-title С-ПРОДЖЕКТ 
+						.top-line__logo-text
+							| Организация строительства и дорожного движения
+						.top-line__logo-text
+							addr
+								a(href='contact')
+									| Москва,
+									br
+									| пр. Хлебозаводский, 7, стр. 9
+
+				.col-auto.d-none.d-xl-block
+					#ajaxsearchlite2.wpdreams_asl_container.asl_w.asl_m.asl_m_2.hasASL
+						.probox
+							.promagnifier
+								.innericon
+									svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='22' height='22' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve')
+										path(d='M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037\
+										C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041\
+										c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056\
+										c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041\
+										z')
+							.prosettings(style='display:none;' data-opened='0')
+								.innericon
+									svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='22' height='22' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve')
+										polygon(transform='rotate(90 256 256)' points='142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 ')
+							.proinput
+								form(autocomplete='off' aria-label='Ajax search form')
+									input.orig(aria-label='Search input' type='search' name='phrase' placeholder='Поиск услуги' value='' autocomplete='off')
+									input.autocomplete(aria-label='Autocomplete input, do not use this' type='text' name='phrase' value='' autocomplete='off')
+									input(type='submit' value='Start search' style='width:0; height: 0; visibility: hidden;')
+							.proloading
+								.asl_loader
+									.asl_loader-inner.asl_simple-circle
+							.proclose
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12' height='12' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve')
+									polygon(points='438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 ')
+					#asl_init_id_2.asl_init_data.wpdreams_asl_data_ct(style='display:none !important;' data-asldata='ew0KICAgICAgICAiaG9tZXVybCI6ICJodHRwczovL29yZ2RvYy5ydS8iLA0KICAgICAgICAicmVzdWx0c3R5cGUiOiAidmVydGljYWwiLA0KICAgICJyZXN1bHRzcG9zaXRpb24iOiAiaG92ZXIiLA0KICAgICJpdGVtc2NvdW50IjogNCwNCiAgICAiaW1hZ2V3aWR0aCI6IDcwLA0KICAgICJpbWFnZWhlaWdodCI6IDcwLA0KICAgICJyZXN1bHRpdGVtaGVpZ2h0IjogIjcwcHgiLA0KICAgICJzaG93YXV0aG9yIjogMCwNCiAgICAic2hvd2RhdGUiOiAwLA0KICAgICJzaG93ZGVzY3JpcHRpb24iOiAxLA0KICAgICJjaGFyY291bnQiOiAgMCwNCiAgICAiZGVmYXVsdEltYWdlIjogImh0dHBzOi8vb3JnZG9jLnJ1L3dwLWNvbnRlbnQvcGx1Z2lucy9hamF4LXNlYXJjaC1saXRlL2ltZy9kZWZhdWx0LmpwZyIsDQogICAgImhpZ2hsaWdodCI6IDAsDQogICAgImhpZ2hsaWdodHdob2xld29yZHMiOiAxLA0KCSJzaW5nbGVIaWdobGlnaHQiOiAwLA0KICAgICJzY3JvbGxUb1Jlc3VsdHMiOiAwLA0KICAgICJyZXN1bHRhcmVhY2xpY2thYmxlIjogMSwNCiAgICAiYXV0b2NvbXBsZXRlIjogew0KICAgICAgICAiZW5hYmxlZCIgOiAxLA0KICAgICAgICAibGFuZyIgOiAicnUiDQogICAgfSwNCgkibW9iaWxlIjogew0KCQkibWVudV9zZWxlY3RvciI6ICIjbWVudS10b2dnbGUiDQoJfSwNCiAgICAidHJpZ2dlcm9udHlwZSI6IDEsDQogICAgInRyaWdnZXJfb25fY2xpY2siOiAwLA0KICAgICJ0cmlnZ2VyX29uX2ZhY2V0X2NoYW5nZSI6IDEsDQogICAgInNldHRpbmdzaW1hZ2Vwb3MiOiAicmlnaHQiLA0KICAgICJocmVzdWx0YW5pbWF0aW9uIjogImZ4LW5vbmUiLA0KICAgICJ2cmVzdWx0YW5pbWF0aW9uIjogImZ4LW5vbmUiLA0KICAgICJocmVzdWx0aGlkZWRlc2MiOiAiMSIsDQogICAgInByZXNjb250YWluZXJoZWlnaHQiOiAiNDAwcHgiLA0KICAgICJwc2hvd3N1YnRpdGxlIjogIjAiLA0KICAgICJwc2hvd2Rlc2MiOiAiMSIsDQogICAgImNsb3NlT25Eb2NDbGljayI6IDEsDQogICAgImlpZk5vSW1hZ2UiOiAiZGVzY3JpcHRpb24iLA0KICAgICJpaVJvd3MiOiAyLA0KICAgICJpaXRlbXNXaWR0aCI6IDIwMCwNCiAgICAiaWl0ZW1zSGVpZ2h0IjogMjAwLA0KICAgICJpaXNob3dPdmVybGF5IjogMSwNCiAgICAiaWlibHVyT3ZlcmxheSI6IDEsDQogICAgImlpaGlkZUNvbnRlbnQiOiAxLA0KICAgICJpaWFuaW1hdGlvbiI6ICIxIiwNCiAgICAiYW5hbHl0aWNzIjogIjAiLA0KICAgICJhbmFseXRpY3NTdHJpbmciOiAiIiwNCiAgICAicmVkaXJlY3RvbmNsaWNrIjogMSwNCiAgICAicmVkaXJlY3RDbGlja1RvIjogInJlc3VsdHNfcGFnZSIsDQogICAgInJlZGlyZWN0Q2xpY2tMb2MiOiAic2FtZSIsDQogICAgInJlZGlyZWN0X29uX2VudGVyIjogMSwNCiAgICAicmVkaXJlY3RFbnRlclRvIjogInJlc3VsdHNfcGFnZSIsDQogICAgInJlZGlyZWN0RW50ZXJMb2MiOiAic2FtZSIsDQogICAgInJlZGlyZWN0X3VybCI6ICI/cz17cGhyYXNlfSIsDQogICAgIm92ZXJyaWRld3BkZWZhdWx0IjogMCwNCiAgICAib3ZlcnJpZGVfbWV0aG9kIjogImdldCINCn0NCg==')
+				.top-line__cont.col-auto
+					a.top-line__tel(href='tel:8495971-3-971')
+						b
+							| 8 
+							span 495
+							|  971-3-971
+					.dropdown
+						button.dropbtn
+							//
+						.dropdown-content
+							li
+								| Москва, пр. Хлебозаводский, 7, с. 9
+								br
+								a(href='tel:8495971-3-971')
+									b
+										| 8 
+										span 495
+										|  971-3-971
+							li
+								| Воронеж, пр. Московский, 130
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Екатеринбург, тр. Сибирский, 12, к. 7
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Казань, ул. Островского, 98
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Краснодар, ул. Северная, 405
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Красноярск, ул. Молокова, 37А
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Нижний Новгород, пер. Мотальный, 8
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Новосибирск, ул. Каменская, 7
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Омск, ул. Карла Либкнехта, 19
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Пермь, ул. Луначарского, 73
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Ростов-на-Дону,  пер. Доломановский, 70Д
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Самара, ул. Молодогвардейская, 204
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Санкт-Петербург, ш. Пулковское, 40, к. 4
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Тюмень, ул. Республики, 143
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Уфа, ул. Менделеева, 134/7
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Хабаровск, ул. Ленина, 85
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+							li
+								| Челябинск, пр. Ленина, 26А, с. 2
+								a(href='tel:+79296084396')
+									b
+										| +7 
+										span 929
+										|  608-43-96
+					// <div class="d-none d-lg-block"><a class="top-line__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru</a>
+					.d-none.d-lg-block
+						a.top-line__mail.link-modal(href='#modal-call') mail@orgdoc.ru
+					.d-lg-none.pc
+						a.top-line__mail.link-modal(href='#modal-call') Обратный звонок
+					.d-lg-none.mob
+						a.top-line__mail(href='mailto:mail@orgdoc.ru' target='_blank') mail@orgdoc.ru
+				.col-auto.d-none.d-lg-block
+					a.top-line__btn.link-modal(href='#modal-call') Обратный звонок
+				.col-auto
+					.toggle-menu-mobile.toggle-menu-mobile--js
+						svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve')
+							path#magnifier-2-icon(d='M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037\
+							C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041\
+							c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056\
+							c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041\
+							z' fill='#9ec856')
+						span(style='display: none;')
+
+	// end .top-line
+

@@ -1,0 +1,24 @@
+mixin s-docs()
+	// start s-docs
+	+b.SECTION.s-docs.section#s-docs&attributes(attributes)
+		.container
+			+b.section-title.text-center(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
+				h2 Сертификаты, СРО, удостоверения
+				.arrow-wrap
+			+b.slider--js
+				- for (var x = 1; x < 6; x++)
+					+e.slide
+						+e.img-wrap(href=`img/@2x/doc-${x}.jpg`)
+							img.object-fit-js(src="#" data-lazy=`img/@2x/doc-${x}.jpg`, alt="")
+					
+				- for (var x = 1; x < 6; x++)
+					+e.slide
+						+e.img-wrap(href=`img/@2x/doc-${x}.jpg`)
+							img.object-fit-js(src="#" data-lazy=`img/@2x/doc-${x}.jpg`, alt="")
+					
+				//- - for (var x = 1; x < 6; x++)
+				//- 	+e.slide
+				//- 		+e.img-wrap
+				//- 			img.object-fit-js.lazy(src="#" data-src=`img/@2x/doc-${x}.jpg`, alt="")
+					
+	// end s-docs

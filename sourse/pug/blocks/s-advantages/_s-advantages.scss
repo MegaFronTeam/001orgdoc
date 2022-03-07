@@ -1,0 +1,158 @@
+// start .s-advantages
+.s-advantages {
+	padding-top: rem(65);
+	// margin-bottom: 0;
+	padding-bottom: 0;
+
+	.section-title {
+		padding-bottom: rem(60);
+	}
+
+	.row {
+		@include media-breakpoint-up(lg) {
+
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	&__col {
+		max-width: 100%;
+		margin-bottom: rem(50);
+
+		p {
+
+			font-size: rem(14);
+			line-height: 1.71;
+		}
+
+		@include media-breakpoint-up(lg) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+
+		@include media-breakpoint-up(md) {
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+
+
+		&:nth-child(3) {
+			@include media-breakpoint-up(md) {
+				max-width: 100%;
+				flex: 0 0 100%;
+			}
+
+			grid-row-start: 1;
+			grid-row-end: 3;
+			grid-column-start: 2;
+			grid-column-end: 3;
+
+			@include media-breakpoint-up(lg) {
+
+				.s-advantages__item {
+					padding-top: rem(52);
+				}
+
+				.s-advantages__icon-wrap {
+					top: auto;
+					margin-bottom: rem(60);
+				}
+			}
+
+			p {
+				@extend h5;
+				line-height: 1.56;
+			}
+		}
+
+
+	}
+
+	&__item {
+		height: 100%;
+		min-height: rem(230);
+		text-align: center;
+		background-color: rgba($color: $blue, $alpha: .1);
+		border-radius: rem(10);
+
+		@include media-breakpoint-up(xl) {
+
+			padding: 0 rem(30) rem(10);
+		}
+
+		padding: 0 rem(15) rem(10);
+	}
+
+	&__icon-wrap {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		width: rem(110);
+		height: rem(110);
+		z-index: 2;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		top: rem(-35);
+		margin-bottom: rem(-18);
+		padding: rem(25);
+
+		img {
+
+			@extend .res-i;
+		}
+
+		&::before {
+			content: '';
+			z-index: -1;
+			border-radius: $border-radius * 2;
+			width: 90%;
+			height: 90%;
+			box-shadow: 0 5px $em-base rgba(184, 255, 58, 0.3);
+			background-color: $primary;
+			@include a-cent;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-advantages

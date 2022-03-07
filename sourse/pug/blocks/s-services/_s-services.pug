@@ -1,0 +1,24 @@
+mixin s-services()
+	// start s-services
+	+b.s-services.section#s-services&attributes(attributes)
+		.container
+			.row
+				mixin item(i,  p)
+					+e.col.col-lg-4.col-sm-6
+						+e.item.bg-wrap(href="#")
+							+pic(`services-` + i,'bg')(class="picture-bg")
+							+e.title= p
+
+				+item('1','Разработка ППР')
+				+item('2','Разработка ПОДД')
+				+item('3','Разработка ПОС')
+				+item('4','Разработка ППРк')
+				+item('5','Проектирование дорог')
+				+item('6','Обследование зданий')
+				+item('7','Оформление ордера ОАТИ')
+				+item('8','Разработка Транспортных Схем')
+				+item('9','Проектирование сетей')
+				+item('10','Проектирование АСУДД')
+				+item('11','Обустройство парковок')
+				+item('12','Разработка ПОР')
+	// end s-services
