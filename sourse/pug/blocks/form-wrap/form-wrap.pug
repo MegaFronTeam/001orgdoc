@@ -26,13 +26,21 @@ mixin input(placeholder,  t='text', label, name= t)
 	// +e.input-wrap
 mixin select(label,pl,...items)
 	+e.input-wrap
-		label
-			+e.SPAN.title= label
+		if label
+			label
+				+e.SPAN.title= label
+				+e.SELECT.input
+
+						option()= pl
+						each item in items
+							option()= item
+		else
 			+e.SELECT.input
 
 					option()= pl
 					each item in items
 						option()= item
+
 
 //- wrapper for form
 mixin form-wrap()

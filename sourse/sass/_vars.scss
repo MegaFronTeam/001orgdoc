@@ -63,7 +63,7 @@ $theme-colors: map-merge(("blue": $blue,
   ),
   $theme-colors);
 
-$body-bg: $white !default;
+$body-bg: #F5F5F5 !default;
 $body-color: #010101 !default;
 
 // Typography
@@ -136,7 +136,7 @@ $line-height-base: 1.5 !default;
 
 // title 
 $h1-font-size: rem(35) !default;
-$h2-font-size: rem(35) !default;
+$h2-font-size: rem(60) !default;
 $h3-font-size: rem(22) !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: rem(18) !default;

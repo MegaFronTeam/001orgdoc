@@ -53,6 +53,9 @@
 	 &__head{
 		 position: relative;
 		 margin-bottom: 50px;
+		 @include media-breakpoint-up(lg) {
+			 padding-bottom: 0;
+		 }
 		 @include media-breakpoint-down(xl) {
 			 padding-bottom: 67px;
 		 }

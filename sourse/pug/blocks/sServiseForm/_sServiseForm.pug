@@ -1,0 +1,14 @@
+mixin sServiseForm()
+	// start sServiseForm
+	+b.sServiseForm.section#sServiseForm&attributes(attributes)
+		.container
+			+form-wrap
+				.row
+					.col
+						+e.title Для какой задачи вам нужен ПОС?
+					.col
+						+select()
+					.col
+						+e.title-price Цена
+						+e.price от 25 000 ₽ до 30 000 ₽
+	// end sServiseForm

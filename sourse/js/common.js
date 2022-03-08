@@ -324,6 +324,49 @@ function eventHandler() {
 		spaceBetween: 10
 	});
 
+	let sCardSliderRev = new Swiper('.sCardSlider--rev .sCardSlider__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		loop: true,
+
+		//-
+		navigation: {
+			nextEl: '.sCardSlider--rev .swiper-button-next',
+			prevEl: '.sCardSlider--rev .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sCardSlider--rev .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	let sCardSliderCert = new Swiper('.sCardSlider--cert .sCardSlider__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		loop: true,
+
+		//-
+		navigation: {
+			nextEl: '.sCardSlider--cert .swiper-button-next',
+			prevEl: '.sCardSlider--cert .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sCardSlider--cert .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	window.bioEp = {
 		// Private variables
 		bgEl: {},

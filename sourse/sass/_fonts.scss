@@ -1,11 +1,11 @@
-$default-font: "Roboto Slab";
+$default-font: "Gilroy";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
 
-// @include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "RobotoSlab-Regular", $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "RobotoSlab-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Gilroy-Regular", 400, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Gilroy-Semibold", 600, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Gilroy-Bold", bold, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "RobotoSlab-Light", 300, $file-formats: $file-format);
 @include font-face (Montserrat, $addr + "Montserrat-Bold", 700, $file-formats: $file-format);
 

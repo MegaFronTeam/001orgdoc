@@ -152,9 +152,10 @@
 			font-weight: 700;
 			line-height: 1.14;
 			color: #ffffff;
-			font-size: $h2-font-size;
-			@extend h2; 
-			// @include rfs(rem(40));
+			// font-size: $h2-font-size;
+			// @extend h2; 
+			@include rfs(rem(40));
+			font-weight: normal;
 			max-width: rem(470);
 	
 			@include media-breakpoint-up(sm) {

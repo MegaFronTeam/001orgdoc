@@ -1,0 +1,22 @@
+mixin sCardSlider(t, attr)
+	// start sCardSlider
+	+b.SECTION.sCardSlider.section#sCardSlider&attributes(attributes)(class=`sCardSlider--${attr}`)
+		.container
+			+b.section-title.text-center
+				h2!= t
+			+e.wrap
+				+e.slider--js.swiper
+					.swiper-wrapper
+						- for (var x = 0; x < 6; x++)
+							+e.slide.swiper-slide
+								+e.card-wrap
+									+e.card(href=`img/@2x/sCardSlider-${attr}-1.jpg` data-fancybox=`sCardSlider-${attr}`)
+										+e.img
+											img.swiper-lazy(src=`img/@2x/sCardSlider-${attr}-1.jpg` alt="")
+							//- +e.slide.swiper-slide
+							//- 	+e.item(href=`img/@2x/sCardSlider-${attr}-1.jpg` data-fancybox=`sCardSlider-${attr}`)
+							//- 		+pic(`sCardSlider-${attr}-1.jpg`)
+					.d-none.d-xl-block
+						+arrow()
+				.swiper-pagination
+	// end sCardSlider
