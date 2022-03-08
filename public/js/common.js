@@ -556,6 +556,35 @@ function eventHandler() {
 		speed: 75,
 		lessLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u0421\u043A\u0440\u044B\u0442\u044C\n\t</button> ",
 		moreLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C\n\t</button> "
+	});
+	let sCasesSlider = new Swiper('.sCases__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		loop: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 3
+			}
+		},
+		//-
+		navigation: {
+			nextEl: '.sCases .swiper-button-next',
+			prevEl: '.sCases .swiper-button-prev'
+		},
+		pagination: {
+			el: '.sCases .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	}); // let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')

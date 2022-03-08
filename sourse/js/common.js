@@ -566,6 +566,39 @@ function eventHandler() {
 
 	});
 
+
+	let sCasesSlider = new Swiper('.sCases__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		loop: true,
+		breakpoints: { 
+			576: {
+				slidesPerView:2
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 3
+			}
+		},
+
+		//-
+		navigation: {
+			nextEl: '.sCases .swiper-button-next',
+			prevEl: '.sCases .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sCases .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+
 	// let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')
@@ -577,10 +610,11 @@ function eventHandler() {
 	});
 	window.on('load', function(){
 	})
-}
 
 
-;
+
+
+};
 
 if (document.readyState !== 'loading') {
 	eventHandler();
