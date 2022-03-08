@@ -29,13 +29,13 @@ mixin select(label,pl,...items)
 		if label
 			label
 				+e.SPAN.title= label
-				+e.SELECT.input
+				+e.SELECT.input.form-control
 
 						option()= pl
 						each item in items
 							option()= item
 		else
-			+e.SELECT.input
+			+e.SELECT.input.form-control
 
 					option()= pl
 					each item in items
@@ -78,3 +78,8 @@ mixin polite()
 	+e.polite
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin policy2()
+	+e.polite--22
+		+in-c()(checked)
+			+e.SMALL.text Согласен на обработку и хранение моих персональных данных в соответствии с условиями

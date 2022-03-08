@@ -1,7 +1,20 @@
 
 	// start .sServiseForm
 	.sServiseForm {
-		 
+		
+		.container{
+			position: relative;
+			@include media-breakpoint-up(lg) {
+
+				&:before{
+					content: var(--before);
+					position: absolute;
+					right: 100%;
+					@include a-cent(y);
+					margin-top: -100px;
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

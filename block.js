@@ -27,6 +27,9 @@ const fileSources = {
 	scss: `
 	// start .{blockName}
 	.{blockName} \{
+		// --sPT: #{ rem(60px)};
+		// --sPB: #{ rem(40px)};
+		// --sTPB: #{rem(20)};
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -1,6 +1,7 @@
 // start .s-menu-right
 .s-menu-right {
 	.menu {
+		width: 100%;
 		@include media-breakpoint-down(md) {
 			display: none;
 			// Не очень правильное решение, возможно переделать
@@ -10,7 +11,7 @@
 	padding-top: 0;
 	padding-bottom: 0;
 	display: flex;
-
+	
 
 
 	li {

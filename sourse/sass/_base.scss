@@ -29,8 +29,8 @@ html {
 
 .section {
 	@include bgs;
-	padding-top: rem(60px);
-	padding-bottom: rem(40px);
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPB);
 }
 
 .section-title {
@@ -84,7 +84,7 @@ html {
 	// padding-bottom: rem(100);
 
 	.section-title {
-		padding-bottom: rem(20);
+		padding-bottom: var(--sTPB);
 	}
 
 	h2 {
@@ -762,7 +762,8 @@ figure iframe {
 	@extend .btn;
 	@extend .btn-primary;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 14px;
+	padding: rem(29) rem(20);
 
 	background: radial-gradient(100% 100% at 50.18% 0%, rgba(255, 255, 255, 0.44) 0%, rgba(255, 255, 255, 0) 100%),
 		#86b92d !important;
@@ -872,4 +873,13 @@ figure iframe {
 	// 		}
 	// 	}
 	// }
+}
+
+
+select.form-control{
+
+	background-image: $custom-select-indicator;
+	background-position: calc(100% - #{$custom-select-padding-x}) 50%;
+	background-repeat: no-repeat;
+	appearance: none;
 }
