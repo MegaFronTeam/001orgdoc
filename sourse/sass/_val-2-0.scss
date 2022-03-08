@@ -1,0 +1,12 @@
+.val-2-0{
+	@include media-breakpoint-down(xl) {
+		.breadcrumb{
+			display: none;
+		}
+		.page-head{
+			padding-top: 0;
+		}
+	}
+
+
+}

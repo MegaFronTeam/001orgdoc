@@ -147,4 +147,5 @@ $output-bourbon-deprecation-warnings: false;
 @import "base";
 @import "swiper";
 @import "../pug/blocks/**/*.scss";
+@import "val-2-0"; // Всегда в конце
 @import "media"; // Всегда в конце

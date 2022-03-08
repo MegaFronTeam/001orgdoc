@@ -50,6 +50,13 @@
 
  .page-head {
  	padding-top: rem(17);
+	 &__head{
+		 position: relative;
+		 margin-bottom: 50px;
+		 @include media-breakpoint-down(xl) {
+			 padding-bottom: 67px;
+		 }
+	 }
 
  	// padding-bottom: rem(60);
  	&__title {
@@ -86,10 +93,15 @@
  	}
 
 	 &__block{
-		 position: relative;
 		 padding-top: rem(30);
+		 @include media-breakpoint-up(lg){
+			 position: relative;
+			 //  padding-bottom: 0;
+			 margin-bottom: 55px;
+			}
+			margin-bottom: 35px;
+		//  padding-bottom: 67px;
 		 color: #fff;
-		 margin-bottom: 55px;
 		 h1{
 			 color: #fff;
 			 font-weight: normal;
@@ -99,17 +111,24 @@
 		&__sub-text{
 			color: #fff;
 			@include rfs(20px);
-			margin-bottom: 40px;
+			margin-bottom: 10px;
 	 }
 	 &__bg{
 		 position: absolute;
-		 right: 0;
 		 top: 0;
 		 height: 100%;
 		 z-index: -1;
-		 width: calc(100% + (100vw - 150%));
+		 @include media-breakpoint-up(lg) {
+			 
+			 width: calc(100% + (100vw - 150%));
+			 right: 0;
+				left: auto;
+				border-radius: 0 0 1000px 0;
+			}
+			width:  100vw;
+			left: calc(-1 * (50vw - 50%));
+
 		 overflow: hidden;
-		 border-radius: 0 0 1000px 0;
 		 img{
 			 position: absolute;
 			 right: 0;
@@ -133,19 +152,34 @@
 		}
 		.row{
 			--bs-gutter-x: 10px;
+			--bs-gutter-y: 10px;
+			@include media-breakpoint-up(lg){
+
+				// padding-top: 30px;
+				position: relative;
+				bottom: rem(-30);
+			}
 		}
 		&__item{
 			background: #FFFFFF;
 			box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
 			border-radius: 8px;
-			padding: rem(15);
-			padding-left: rem(55);
-			color: #000000;
-			position: relative;
-			&::before{
-				content: url(../img/svg/check.svg);
-				left: rem(15);
-				top: rem(15);
+			@include media-breakpoint-up(sm) {
+				padding: rem(15);
+				padding-left: rem(55);
+			}
+			padding: rem(10) rem(10); 
+				padding-left: rem(45);
+				color: #000000;
+				position: relative;
+				&::before{
+					content: url(../img/svg/check.svg);
+					@include media-breakpoint-up(sm) {
+						left: rem(15);
+						top: rem(15);
+					}
+					left: rem(5);
+					top: rem(10);
 				position: absolute;
 			}
 			&-title{
@@ -155,8 +189,11 @@
 			}
 			&-text{
 				font-weight: 600;
+				@include media-breakpoint-up(sm) {
+					font-size: 1rem;
+				}
+				font-size: 12px;
 			}
-			margin-bottom: rem(-30);
 		}
 
 
@@ -166,7 +203,7 @@
 			justify-content: center;
 			align-items: center;
 			max-width: rem(370);
-			margin-bottom: rem(40);
+			// margin-bottom: rem(40);
 			.icon{
 				font-size: 24px;
 				margin-right: rem(15);
