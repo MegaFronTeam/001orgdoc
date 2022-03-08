@@ -18,6 +18,8 @@ include ../blocks/s-about-work/_s-about-work.pug
 include ../blocks/header-block-small/_header-block-small.pug
 include ../blocks/s-accordion/_s-accordion.pug
 include ../blocks/sServiseForm/_sServiseForm.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
+
 
 
 block variables
@@ -54,6 +56,8 @@ block pagecontent
 			.col-lg-6.col-sm-12
 				+s-rews
 	+s-docs
+	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
+	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
 	//- +s-form()
 	.section-wrap.container
 		.row
