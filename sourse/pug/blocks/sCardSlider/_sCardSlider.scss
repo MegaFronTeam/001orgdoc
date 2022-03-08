@@ -1,14 +1,31 @@
 // start .sCardSlider
 .sCardSlider {
+	padding-top: rem(80);
+	padding-bottom: rem(60);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(100);
+		padding-bottom: rem(100);
+	}
+	&.blue-bg {
+		overflow: hidden;
+	}
+	.section-title {
+		padding-bottom: rem(40);
+		margin-bottom: 10px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(60);
+			margin-bottom: 10px;
+		}
+	}
 	&__wrap {
 		position: relative;
 		.swiper {
 			position: relative;
 			overflow: visible !important;
 		}
-		.swiper-wrapper {
-			padding-bottom: rem(60);
-		}
+		// .swiper-wrapper {
+		// 	padding-bottom: rem(50);
+		// }
 		.swiper-slide {
 			transition: opacity 0.3s ease-in-out;
 			//max-width: 100%;
@@ -37,6 +54,10 @@
 					opacity: 1;
 				}
 			}
+		}
+		.swiper-pagination {
+			position: static;
+			padding-top: rem(60);
 		}
 	}
 	&__card-wrap {
