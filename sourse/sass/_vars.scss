@@ -31,7 +31,8 @@ $pink: #e83e8c !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #9ec856 !default;
+$green: #86B92D !default;
+// $green: #9ec856 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
@@ -63,7 +64,7 @@ $theme-colors: map-merge(("blue": $blue,
   ),
   $theme-colors);
 
-$body-bg: #F5F5F5 !default;
+$body-bg: $white !default;
 $body-color: #010101 !default;
 
 // Typography
@@ -136,7 +137,7 @@ $line-height-base: 1.5 !default;
 
 // title 
 $h1-font-size: rem(35) !default;
-$h2-font-size: rem(60) !default;
+$h2-font-size: rem(35) !default;
 $h3-font-size: rem(22) !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: rem(18) !default;
