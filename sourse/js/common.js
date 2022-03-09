@@ -598,6 +598,40 @@ function eventHandler() {
 		},
 	});
 
+	let sPartnersSlider = new Swiper('.sPartners__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		loop: true,
+		breakpoints: { 
+			576: {
+				slidesPerView:2
+			},
+			768: {
+				slidesPerView:3
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 4
+			}
+		},
+
+		//-
+		navigation: {
+			nextEl: '.sPartners .swiper-button-next',
+			prevEl: '.sPartners .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sPartners .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 
 	// let div = document.createElement('input');
 	// div.className = "clientID";

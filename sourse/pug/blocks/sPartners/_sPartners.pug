@@ -1,0 +1,24 @@
+mixin sPartners()
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наши партнеры
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/sPartners-1.png", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/sPartners-2.png", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/sPartners-3.png", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/sPartners-4.png", alt="")
+			+b.control-wrap
+				+arrow
+				.swiper-pagination
+	// end sPartners
