@@ -1,15 +1,33 @@
-.val-2-0{
+.val-2-0 {
 	@include media-breakpoint-down(xl) {
-		.breadcrumb{
+		.breadcrumb {
 			display: none;
 		}
-		.page-head{
+		.page-head {
 			padding-top: 0;
 		}
 	}
-	.section-border-bottom{
+	.section-border-bottom {
 		border: none;
 	}
-
-
+	.section-title {
+		h2 {
+			font-weight: 600;
+			@include rfs(60px);
+			max-width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			@include media-breakpoint-down(xl) {
+				font-size: rem(60);
+			}
+			&::after, &::before {
+				content: none;
+			}
+		}
+	}
+	.btn-outline-primary {
+		&:hover {
+			color: $white;
+		}
+	}
 }

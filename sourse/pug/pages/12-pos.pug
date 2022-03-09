@@ -20,6 +20,7 @@ include ../blocks/s-accordion/_s-accordion.pug
 include ../blocks/sServiseForm/_sServiseForm.pug
 include ../blocks/sCardSlider/_sCardSlider.pug
 include ../blocks/sCases/_sCases.pug
+include ../blocks/sArticles/_sArticles.pug
 
 
 
@@ -61,11 +62,13 @@ block pagecontent
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
 	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
 	//- +s-form()
-	.section-wrap.container
+	.container
 		.row
 			.col-lg-6
-				+s-news
+				+sArticles(`Новости`, `Bсе новости`)
+					+sArticlesItem(`Новости`).--green
 			.col-lg-6
-				+s-blog
+				+sArticles(`Блог`, `все статьи`)
+					+sArticlesItem(`Блог`).--blue
 	//- +s-logo 
 	+footer()

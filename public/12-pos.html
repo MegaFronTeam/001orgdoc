@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
@@ -1488,85 +1489,93 @@
 				</div>
 			</section>
 			<!-- end sCardSlider-->
-			<div class="section-wrap container">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<!-- start s-news-->
-						<section class="s-news section" id="s-news"> 
-							<div class="section-title wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0">
-								<h2>Новости </h2><a class="link-more" href="#">/   Все новости 
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg></a>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="news-item">
-										<div class="news-item__date">12.11.2019
-										</div>
-										<div class="news-item__title"><a href="#">Выполнена разработка ППР на строительство временных дорог, прокладку коммуникаций и согласование ППР с ГУП Мосгортранс</a>
-										</div>
-										<p>Компания С-Проджект выполнила комплекс работ по разработке Проекта производства работ- ППР на строительство временных дорог и восстановление...</p>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="news-item">
-										<div class="news-item__date">01.11.2019
-										</div>
-										<div class="news-item__title"><a href="#">Вступило в силу Постановление Правительства №284-ПП и №299-ПП</a>
-										</div>
-										<p>С 01 августа 2015г. вступили в силу Постановление Правительства №284-ПП от 19.05.2015 и Постановления Правительства №299-ПП от...</p>
-									</div>
-								</div>
-							</div>
-						</section>
-						<!-- end s-news-->
-					</div>
-					<div class="col-lg-6">
-						<!-- start s-blog-->
-						<section class="s-blog section" id="s-blog">
+						<!-- start sArticles-->
+						<section class="sArticles section" id="sArticles">
 							<div class="container">
 								<div class="section-title wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0">
-									<h2>Блог </h2><a class="link-more" href="#">/   Все статьи 
-										<svg class="icon icon-arrow-right ">
-											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-										</svg></a>
+									<h2>Новости</h2><a class="link-more d-none d-sm-inline" href="#">/<span>Bсе новости</span></a>
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
-										<div class="blog-item">
-											<a class="blog-item__img-wrap bg-wrap" href="#">
-												<!-- picture-->
-												<picture class="lazy picture-bg"> 
-													<!-- /webp images  --><img class="object-fit-js" src="#" data-src="img/@2x/blog-1.jpg" alt=""/>
-												</picture>
-												<!-- /picture-->
-											</a>
-											<div class="blog-item__date">12.11.2019
+										<div class="sArticlesItem sArticlesItem--green">
+											<div class="sArticlesItem__img-wrap bg-wrap"><img class="picture-bg" src="img/sArticlesItem-1.jpg" alt=""/>
+												<div class="sArticlesItem__label">Новости
+												</div>
 											</div>
-											<div class="blog-item__title"><a href="#">ППР на монтаж оборудования. Необходимость разработки</a>
+											<div class="sArticlesItem__caption">
+												<div class="sArticlesItem__title">Ордер на&nbsp;земляные работы в&nbsp;Московской области
+												</div>
+												<p>В&nbsp;апреле специалистами компании &laquo;С-Проджект&raquo; выполнен комплекс работ...</p>
+												<a class="sArticlesItem__btn" href="#">Смотреть полностью
+												</a>
 											</div>
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<div class="blog-item">
-											<a class="blog-item__img-wrap bg-wrap" href="#">
-												<!-- picture-->
-												<picture class="lazy picture-bg"> 
-													<!-- /webp images  --><img class="object-fit-js" src="#" data-src="img/@2x/blog-2.jpg" alt=""/>
-												</picture>
-												<!-- /picture-->
-											</a>
-											<div class="blog-item__date">01.11.2019
+										<div class="sArticlesItem sArticlesItem--green">
+											<div class="sArticlesItem__img-wrap bg-wrap"><img class="picture-bg" src="img/sArticlesItem-1.jpg" alt=""/>
+												<div class="sArticlesItem__label">Новости
+												</div>
 											</div>
-											<div class="blog-item__title"><a href="#">Стоимость разработки ППР в строительстве</a>
+											<div class="sArticlesItem__caption">
+												<div class="sArticlesItem__title">Ордер на&nbsp;земляные работы в&nbsp;Московской области
+												</div>
+												<p>В&nbsp;апреле специалистами компании &laquo;С-Проджект&raquo; выполнен комплекс работ...</p>
+												<a class="sArticlesItem__btn" href="#">Смотреть полностью
+												</a>
 											</div>
 										</div>
 									</div>
-								</div>
+								</div><a class="link-more d-sm-none" href="#"><span>Bсе новости</span></a>
 							</div>
 						</section>
-						<!-- end s-blog-->
+						<!-- end sArticles-->
+					</div>
+					<div class="col-lg-6">
+						<!-- start sArticles-->
+						<section class="sArticles section" id="sArticles">
+							<div class="container">
+								<div class="section-title wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0">
+									<h2>Блог</h2><a class="link-more d-none d-sm-inline" href="#">/<span>все статьи</span></a>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="sArticlesItem sArticlesItem--blue">
+											<div class="sArticlesItem__img-wrap bg-wrap"><img class="picture-bg" src="img/sArticlesItem-1.jpg" alt=""/>
+												<div class="sArticlesItem__label">Блог
+												</div>
+											</div>
+											<div class="sArticlesItem__caption">
+												<div class="sArticlesItem__title">Ордер на&nbsp;земляные работы в&nbsp;Московской области
+												</div>
+												<p>В&nbsp;апреле специалистами компании &laquo;С-Проджект&raquo; выполнен комплекс работ...</p>
+												<a class="sArticlesItem__btn" href="#">Смотреть полностью
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="sArticlesItem sArticlesItem--blue">
+											<div class="sArticlesItem__img-wrap bg-wrap"><img class="picture-bg" src="img/sArticlesItem-1.jpg" alt=""/>
+												<div class="sArticlesItem__label">Блог
+												</div>
+											</div>
+											<div class="sArticlesItem__caption">
+												<div class="sArticlesItem__title">Ордер на&nbsp;земляные работы в&nbsp;Московской области
+												</div>
+												<p>В&nbsp;апреле специалистами компании &laquo;С-Проджект&raquo; выполнен комплекс работ...</p>
+												<a class="sArticlesItem__btn" href="#">Смотреть полностью
+												</a>
+											</div>
+										</div>
+									</div>
+								</div><a class="link-more d-sm-none" href="#"><span>все статьи</span></a>
+							</div>
+						</section>
+						<!-- end sArticles-->
 					</div>
 				</div>
 			</div>

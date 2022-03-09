@@ -56,11 +56,11 @@ $theme-colors: map-merge(("blue": $blue,
     "primary": $primary,
     "secondary": $secondary,
     "success": $success,
-    // "info":       $info,
-    // "warning":    $warning,
+    "info": $blue,
+    // "warning": $warning,
     "danger": $danger,
-    // "light":      $light,
-    // "dark":       $dark
+    // "light": $light,
+    // "dark": $dark
   ),
   $theme-colors);
 

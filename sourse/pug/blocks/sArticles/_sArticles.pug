@@ -1,0 +1,18 @@
+
+
+mixin sArticles(h, l)
+	// start sArticles
+	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+		.container
+			+b.section-title(class="wow slideInLeft" data-wow-duration="0.4s" data-wow-delay="0")
+				h2!= h
+				a.link-more.d-none.d-sm-inline(href="#") /
+					span!= l
+			.row
+				.col-sm-6
+					block
+				.col-sm-6
+					block
+			a.link-more.d-sm-none(href="#")
+				span!= l
+	// end sArticles
