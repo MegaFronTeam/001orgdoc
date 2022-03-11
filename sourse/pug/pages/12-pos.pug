@@ -22,6 +22,7 @@ include ../blocks/sCardSlider/_sCardSlider.pug
 include ../blocks/sCases/_sCases.pug
 include ../blocks/sArticles/_sArticles.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sOrderForm/_sOrderForm.pug
 
 
 
@@ -63,6 +64,7 @@ block pagecontent
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
 	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
 	//- +s-form()
+	+sOrderForm().blue-bg
 	.container
 		.row
 			.col-lg-6
