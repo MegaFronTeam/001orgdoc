@@ -1,21 +1,39 @@
 // start .sOrderForm
 .sOrderForm {
-	--sPT: #{ rem(40px)};
-	--sPB: #{ rem(65px)};
+	overflow: hidden;
+	--sPT: #{rem(40px)};
+	--sPB: #{rem(65px)};
 	--sTPB: #{rem(25)};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{ rem(100px)};
-		--sPB: #{ rem(100px)};
+		--sPT: #{rem(100px)};
+		--sPB: #{rem(100px)};
 		--sTPB: #{rem(40)};
-
 	}
-	overflow: hidden;
+	.container {
+		position: relative;
+
+		&::before {
+			@include media-breakpoint-up(lg) {
+				content: url(../img/pencil.png);
+				position: absolute;
+				right: -72%;
+				bottom: -36%;
+				z-index: 2;
+				transform: rotate(87.22deg);
+				// pointer-events: none;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -58%;
+				bottom: -36%;
+			}
+		}
+	}
 	.section-title {
 		max-width: rem(900);
 		margin-bottom: 0;
 		padding-bottom: var(--sTPB);
 		text-align: center;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			text-align: left;
 		}
 		h2 {
