@@ -20,7 +20,7 @@
 				bottom: -36%;
 				z-index: 2;
 				transform: rotate(87.22deg);
-				// pointer-events: none;
+				pointer-events: none;
 			}
 			@include media-breakpoint-up(xl) {
 				right: -58%;

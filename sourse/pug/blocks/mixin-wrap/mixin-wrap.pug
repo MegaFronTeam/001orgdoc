@@ -363,3 +363,9 @@ mixin sArticlesItem(label)
 			+e.title Ордер на&nbsp;земляные работы в&nbsp;Московской области
 			p В&nbsp;апреле специалистами компании &laquo;С-Проджект&raquo; выполнен комплекс работ...
 			+e.btn(href="#") Смотреть полностью
+
+mixin sInformationItem(c, t)
+	+b.sInformationItem&attributes(attributes)
+		+e.wrapper
+			+e.counter!= c
+			p!= t
