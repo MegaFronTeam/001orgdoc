@@ -306,10 +306,10 @@ function eventHandler() {
 	var wow = new WOW({
 		mobile: false
 	});
-	wow.init();
-	$('.header').hcSticky({
-		stickTo: 'body'
-	});
+	wow.init(); // $('.header').hcSticky({
+	// 	stickTo: 'body'
+	// });
+
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {
 			$(".menu-item-has-children").addClass("menu-item-has-children");
@@ -617,6 +617,9 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	});
+	$(".toggle-search--js").click(function () {
+		$(".search-wrap--js").slideToggle();
 	}); // let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')

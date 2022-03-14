@@ -9,7 +9,7 @@
   }
   // 
   @include media-breakpoint-up(xl) {}
-
+  
   @include media-breakpoint-up(lg) {}
 
   @include media-breakpoint-up(md) {}
@@ -40,7 +40,8 @@
   @include media-breakpoint-down(md) {}
 
   @include media-breakpoint-down(sm) {
-    box-shadow: 0 1px 5px $primary;
+    // box-shadow: 0 1px 5px $primary;
+    border-bottom: 1px solid  rgba($color: $info, $alpha: .2);
   }
 
   @include media-breakpoint-down(xs) {}

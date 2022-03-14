@@ -33,17 +33,17 @@
 
 	a {
 		display: block;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 			@include media-breakpoint-up(sm){
 
 				font-size: rem(16);
 			}
 			font-size: rem(12);
 		color: $body-color;
-		font-weight: bold;
+		// font-weight: bold;
 		padding: rem(5) rem(10);
 		text-decoration: none !important;
-		border: 1px solid $primary;
+		// border: 1px solid $primary;
 		border-radius: rem(10);
 		white-space: nowrap;
 
@@ -99,7 +99,7 @@
 		}
 		&::after { 
 			border: 0;
-			@include triangle(1rem, $primary, up);
+			@include triangle(.6rem, $primary, up);
 		}
 	}
 
@@ -193,11 +193,20 @@
 			content: '';
 			position: absolute;
 			@include a-cent(y);
-			right: rem(10);
-			@include triangle(1rem, $primary, down);
+			right: rem(12);
+			@include triangle(.6rem, $primary, down);
 			@include mt;
 			cursor: pointer;
 		}
 	}
 }
 
+
+
+.toggle-search--js {
+	svg{
+		margin-left: 10px;
+		width: 24px;
+	}
+
+}

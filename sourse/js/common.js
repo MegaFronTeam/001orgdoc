@@ -305,9 +305,9 @@ function eventHandler() {
 		mobile: false
 	});
 	wow.init();
-	$('.header').hcSticky({
-		stickTo: 'body'
-	});
+	// $('.header').hcSticky({
+	// 	stickTo: 'body'
+	// });
 
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {
@@ -632,7 +632,9 @@ function eventHandler() {
 		},
 	});
 
-
+	$(".toggle-search--js").click(function () {
+		$(".search-wrap--js").slideToggle();
+	})
 	// let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')
