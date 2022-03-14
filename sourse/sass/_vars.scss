@@ -118,8 +118,9 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
 
 
-// $link-color:                              theme-color("primary") !default;
-// $component-active-bg:         theme-color("primary") !default;
+$link-color:                              theme-color("info") ;
+$link-hover-color:                        darken($link-color, 15%) ;
+// $component-active-bg:         theme-color("info") !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`

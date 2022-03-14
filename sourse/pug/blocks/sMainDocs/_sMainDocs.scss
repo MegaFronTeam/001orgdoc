@@ -61,16 +61,16 @@
 		padding: 30px;
 		height: 100%;
 		&--border {
-			padding: 34px;
-			position: relative;
-			border: none;
-			box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
 			@include media-breakpoint-up(lg) {
 				padding: rem(60);
 				p {
 					font-size: 18px;
 				}
 			}
+			padding: 34px;
+			position: relative;
+			border: none;
+			box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
 			&::before {
 				content: "";
 				width: calc(100% - 20px);
