@@ -24,6 +24,7 @@ include ../blocks/sArticles/_sArticles.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sOrderForm/_sOrderForm.pug
 include ../blocks/sInformation/_sInformation.pug
+include ../blocks/sMainDocs/_sMainDocs.pug
 
 
 
@@ -62,6 +63,7 @@ block pagecontent
 			.col-lg-6.col-sm-12
 				+s-rews
 	//- +s-docs
+	+sMainDocs()
 	+sInformation()
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
 	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
