@@ -10,3 +10,5 @@
 1. <https://pashawol.github.io/001orgdoc/public/09-blog-article.html>
 1. <https://pashawol.github.io/001orgdoc/public/10-questions.html>
 1. <https://pashawol.github.io/001orgdoc/public/11-catalog-markups.html>
+
+1. <https://pashawol.github.io/001orgdoc/public/12-pos.html>
