@@ -370,6 +370,11 @@ mixin sInformationItem(c, t)
 			+e.counter!= c
 			p!= t
 
+mixin sInfoItem(i, t)
+	+b.sInfoItem&attributes(attributes)
+		+img(`sInfoItem-${i}.png`)
+		p!= t
+
 
 
 mixin img(url, bg)
