@@ -26,6 +26,7 @@ include ../blocks/sOrderForm/_sOrderForm.pug
 include ../blocks/sInformation/_sInformation.pug
 include ../blocks/sMainDocs/_sMainDocs.pug
 include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sHowWork/_sHowWork.pug
 
 
 
@@ -67,6 +68,7 @@ block pagecontent
 	//- +s-docs
 	+sMainDocs()
 	+sServiseForm2()
+	+sHowWork
 	+sInformationGoals()
 	+sInformation()
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
