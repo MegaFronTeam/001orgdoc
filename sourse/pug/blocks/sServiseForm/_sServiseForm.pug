@@ -28,3 +28,25 @@ mixin sServiseForm()
 							button.btn-green.w-100 Получить бесплатную консультацию
 							+policy2 
 	// end sServiseForm
+
+mixin sServiseForm2()
+	// start sServiseForm
+	+b.sServiseForm.sServiseForm--free.section#sServiseForm&attributes(attributes)
+		.container
+			//- img(src="img/form-before.png", alt="").before
+			+form-wrap.--blue
+				+e.body
+					+e.title Бесплатная консультация
+					.row 
+						.col-lg-4
+							+input("Ваше имя")
+						.col-lg-4
+							+input("Номер телефона",'tel')
+						.col-lg-4
+							+input("Электронная почта",'email')
+						.col-lg-7
+							+input("Сообщение или вопрос",'textarea')
+						.col-lg-5
+							button.btn-green.w-100 Получить бесплатную консультацию
+							+policy2 
+	// end sServiseForm
