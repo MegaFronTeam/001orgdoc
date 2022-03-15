@@ -33,7 +33,8 @@
 			color: $white;
 		}
 	}
-	.sInformation, .sMainDocs {
+	.sInformation,
+	.sMainDocs {
 		.section-title {
 			h2 {
 				font-weight: 700;
@@ -41,8 +42,10 @@
 				line-height: 115%;
 				color: rgba($color: #000000, $alpha: 0.8);
 				margin-bottom: 0;
+				@include media-breakpoint-up(xl) {
+					font-size: 48px;
+				}
 			}
 		}
 	}
-	
 }

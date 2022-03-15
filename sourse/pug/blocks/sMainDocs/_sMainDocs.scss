@@ -1,18 +1,33 @@
 // start .sMainDocs
 .sMainDocs {
-	// --sPT: #{ rem(60px)};
-	// --sPB: #{ rem(40px)};
-	// --sTPB: #{rem(20)};
+	--sPT: #{rem(67px)};
+	--sPB: #{rem(80px)};
+	--sTPB: 57px;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(100px)};
+		--sPB: #{rem(60px)};
+		--sTPB: 30px;
+	}
 	position: relative;
+
 	&__wrapper {
 		position: absolute;
 		left: -5%;
 		top: 0;
 		overflow: hidden;
 		width: 110%;
-		height: 86%;
+		height: 100%;
 		border-start-end-radius: 1000px 100px;
 		border-start-start-radius: 1000px 100px;
+		@include media-breakpoint-up(md) {
+			height: 89%;
+		}
+		@include media-breakpoint-up(lg) {
+			height: 88%;
+		}
+		@include media-breakpoint-up(xl) {
+			height: 86.5%;
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -38,12 +53,17 @@
 		}
 	}
 	.section-title {
+		margin-bottom: 0;
+		padding-bottom: var(--sTPB);
 		h2 {
 			font-weight: 700;
 			@include rfs(48px);
 			line-height: 115%;
 			color: $white !important;
 			margin-bottom: 0;
+			@include media-breakpoint-up(xl) {
+				font-size: 48px;
+			}
 		}
 	}
 	.row {
@@ -51,6 +71,11 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 		@include media-breakpoint-up(xl) {
 			--bs-gutter-x: 30px;
+		}
+	}
+	&__col {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: 50px;
 		}
 	}
 	&__item {
@@ -61,16 +86,13 @@
 		padding: 30px;
 		height: 100%;
 		&--border {
-			@include media-breakpoint-up(lg) {
-				padding: rem(60);
-				p {
-					font-size: 18px;
-				}
-			}
 			padding: 34px;
 			position: relative;
 			border: none;
 			box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
+			@include media-breakpoint-up(lg) {
+				padding: rem(60);
+			}
 			&::before {
 				content: "";
 				width: calc(100% - 20px);
@@ -101,6 +123,9 @@
 			margin-bottom: 0;
 			font-size: 16px;
 			line-height: 135%;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
 			span {
 				font-weight: 700;
 				color: $blue;
