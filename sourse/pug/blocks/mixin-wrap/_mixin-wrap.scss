@@ -1,30 +1,68 @@
 .soc {
-	margin: 0 rem(-5px) rem(25);
+	margin: 0 rem(-5px);
 	display: flex;
 
 	&__item {
+		position: relative;
 		text-decoration: none !important;
 		margin: 0 rem(5px);
-		vertical-align: middle;
-		width: rem(30px);
-		height: rem(30px);
-		border-radius: 7px;
-		background-color: #ffffff;
+		// vertical-align: middle;
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
+		background-color: $primary;
 		@include mt;
-		display: block;
-		text-align: center;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
+		// display: block;
+		// text-align: center;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		&--instagram {
+			background-image: linear-gradient(49.12deg, #ffdd55 6.62%, #ff543e 50.06%, #c837ab 93.5%);
+		}
+		&--facebook {
+			background-color: #3b5999;
+		}
+		&--youtube {
+			background-color: #eb0000;
+		}
+		&--telegram {
+			background-color: #1c8adb;
+		}
+		&--whatsapp {
+			background-color: #29a71a;
+		}
 		&:hover {
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: 0.6;
+			opacity: 0.7;
 		}
 	}
 
 	.icon {
+		@include a-cent;
 		font-size: rem(15);
+		color: $white;
+
+		&-instagram {
+			font-size: 17px;
+		}
+		&-facebook {
+			font-size: 19px;
+			right: 4px;
+			bottom: 0;
+			left: auto;
+			top: auto;
+			transform: none;
+		}
+		&-youtube {
+			font-size: 12px;
+		}
+		&-telegram {
+			font-size: 12px;
+		}
+		&-whatsapp {
+			font-size: 15px;
+		}
 	}
 }
 

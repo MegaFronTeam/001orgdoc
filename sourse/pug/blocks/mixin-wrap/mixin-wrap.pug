@@ -153,14 +153,18 @@ mixin arrow()
 mixin soc()
 	+b.soc
 		mixin item()
-			+e.A.item(href="№" target="_blank")
+			+e.A.item(href="#" target="_blank")&attributes(attributes)
 				block
-		+item()
-			+icon('fb')
-		
-		+item()
+		+item().--instagram
 			+icon('instagram')
-	 
+		+item().--facebook
+			+icon('facebook')
+		+item().--youtube
+			+icon('youtube')
+		+item().--telegram
+			+icon('telegram')
+		+item().--whatsapp
+			+icon('whatsapp')
 //- /scial buttons
 
 mixin mnu2()

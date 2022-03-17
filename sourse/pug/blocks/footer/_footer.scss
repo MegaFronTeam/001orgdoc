@@ -30,6 +30,12 @@
   .row {
     --bs-gutter-y: 24px;
   }
+  .soc {
+    margin-top: 40px;
+    @include media-breakpoint-up(sm) {
+      margin-top: 30px;
+    }
+  }
   ul {
     margin-bottom: 0;
     column-gap: rem(30);
@@ -47,13 +53,14 @@
     @include media-breakpoint-up(xl) {
       // column-gap: rem(20);
     }
-
-    a {
-      position: relative;
-      display: inline-block;
-      text-decoration: none !important;
-      font-size: 14px;
-      color: $white;
+    li {
+      & > a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+        font-size: 14px;
+        color: $white;
+      }
     }
   }
 
