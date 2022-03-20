@@ -6,6 +6,7 @@
 		margin-bottom: calc(var(--sPB)  + 80px);
 		--sTPB: #{rem(40)};
 		position: relative;
+		z-index: 4;
 		&__inner{
 			@include media-breakpoint-down(md) {
 				position: relative;
@@ -29,8 +30,7 @@
 		.section-title{
 
 			padding-bottom: var(--sTPB);
-		}
-		z-index: 2;
+		}		
 		.container{
 			position: relative;
 			@include media-breakpoint-up(lg) {

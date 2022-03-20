@@ -5,6 +5,7 @@
 		--sPB: #{ rem(80px)};
 		// --sTPB: #{rem(20)};
 		position: relative;
+		z-index: 2;
 		
 		&__item{
 			@include media-breakpoint-up(lg) {
@@ -86,10 +87,9 @@
 		}
 		.image-wrap {
 			position: absolute;
-			// top: 0;
-			bottom: 50%;
+			top: -250px;
 			right: 0;
-			z-index: 2;
+			z-index: -2;
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

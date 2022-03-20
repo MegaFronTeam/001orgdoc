@@ -24,12 +24,22 @@ const fileSources = {
 				
 			.row
 	// end {blockName}`,
-	scss: `
-	// start .{blockName}
-	.{blockName} \{
-		// --sPT: #{ rem(60px)};
-		// --sPB: #{ rem(40px)};
-		// --sTPB: #{rem(20)};
+	scss: `// start .{blockName}
+.{blockName} \{
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+	}
+	&__item{
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
