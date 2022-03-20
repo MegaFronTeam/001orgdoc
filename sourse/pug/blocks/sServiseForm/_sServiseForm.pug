@@ -27,6 +27,37 @@ mixin sServiseForm()
 						.col-lg-5
 							button.btn-green.w-100 Получить бесплатную консультацию
 							+policy2 
+		// end sServiseForm
+
+mixin sServiseForm14()
+	// start sServiseForm
+	+b.sServiseForm.section#sServiseForm&attributes(attributes)
+		.container(style="--before: url(../img/form-before.png)")
+			//- img(src="img/form-before.png", alt="").before
+			+form-wrap.--blue
+				+e.head
+					.row
+						.col-lg
+							+e.title Для какой задачи вам нужен ППР?
+						.col
+							+select('','ПОС на строительство здания','ПОС на строительство здания')
+						.col-md
+							+e.title-price Цена
+							+e.price от 25 000 ₽ до 30 000 ₽
+				+e.body
+					+e.body-title  Заявка на услугу или бесплатную консультацию
+					.row 
+						.col-lg-4
+							+input("Ваше имя")
+						.col-lg-4
+							+input("Номер телефона",'tel')
+						.col-lg-4
+							+input("Электронная почта",'email')
+						.col-lg-7
+							+input("Сообщение или вопрос",'textarea')
+						.col-lg-5
+							button.btn-green.w-100 Получить бесплатную консультацию
+							+policy2 
 	// end sServiseForm
 
 mixin sServiseForm2()

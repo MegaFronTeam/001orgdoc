@@ -4,6 +4,7 @@
 		// --sPT: #{ rem(60px)};
 		--sPB: #{ rem(80px)};
 		// --sTPB: #{rem(20)};
+		position: relative;
 		
 		&__item{
 			@include media-breakpoint-up(lg) {
@@ -82,6 +83,13 @@
 		.btn-green{
 			max-width: rem(370);
 			width: 100%;
+		}
+		.image-wrap {
+			position: absolute;
+			// top: 0;
+			bottom: 50%;
+			right: 0;
+			z-index: 2;
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
