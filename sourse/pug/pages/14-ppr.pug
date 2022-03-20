@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
+include ../blocks/sServiseForm/_sServiseForm.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-docs/_s-docs.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-cases/_s-cases.pug
+include ../blocks/header-block-small/_header-block-small.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sMainDocs/_sMainDocs.pug
+
+block variables
+	- let  mainPage= 'val-2-0'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-small()
+	.section-border-bottom
+		.container
+			.row
+				.col-lg-8
+					+page-head2('Разработка ППР', 'ППР - Проект Производства Работ', 'page-bg', "Главная", "Услуги", "Разработка ППР")
+				.col-lg-4
+					+s-menu-right
+	+sServiseForm
+	+sCases('hidden')
+	+sHowOrder14
+
+	+sMainDocs()
+	+s-about
+		+s-cases
+	+s-advantages
+	.container
+		.row
+			.col-lg-6
+				+s-content
+			.col-lg-6
+				+s-rews
+	+s-docs
+	+s-form()
+	.section-wrap.container
+		.row
+			.col-lg-6
+				+s-news
+			.col-lg-6
+				+s-blog
+	+s-logo
+	+footer()
