@@ -19,6 +19,7 @@ include ../blocks/header-block-small/_header-block-small.pug
 include ../blocks/sCases/_sCases.pug
 include ../blocks/sHowOrder/_sHowOrder.pug
 include ../blocks/sMainDocs/_sMainDocs.pug
+include ../blocks/sListOfJobs/_sListOfJobs.pug
 
 block variables
 	- let  mainPage= 'val-2-0'
@@ -35,7 +36,7 @@ block pagecontent
 		.container
 			.row
 				.col-lg-8
-					+page-head2('Разработка ППР', 'ППР - Проект Производства Работ', 'page-bg', "Главная", "Услуги", "Разработка ППР")
+					+page-head2-14('Разработка ППР', 'ППР - Проект Производства Работ', 'page-bg', "Главная", "Услуги", "Разработка ППР")
 				.col-lg-4
 					+s-menu-right
 	+sServiseForm14
@@ -43,7 +44,8 @@ block pagecontent
 	+sHowOrder14
 		.image-wrap
 			+img(src="img/sHowOrder-after.png", alt="")
-	+sMainDocs()
+	+sMainDocs14()
+	+sListOfJobs()
 	+s-about
 		+s-cases
 	+s-advantages
