@@ -65,6 +65,11 @@
 				font-size: 48px;
 			}
 		}
+		&.dark {
+			h2 {
+				color: $black !important;
+			}
+		}
 	}
 	.row {
 		--bs-gutter-x: 22px;
