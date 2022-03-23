@@ -625,12 +625,36 @@ function eventHandler() {
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')
 	// this.append(div);
 
-	ym(21984247, 'getClientID', function (clientID) {
-		$(".wpcf7 form .clientID").each(function () {
-			$(this).val(clientID);
-		});
-	});
-	window.on('load', function () {});
+	let sListOfJobsSlider = new Swiper('.slider-jobs--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		slidesPerColumn: 2,
+		// slidesPerGroup: 2,
+		// slidesPerColumnFill: 'row',
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 10,
+		// },
+		// loop: true,
+		//-
+		navigation: {
+			nextEl: '.slider-jobs-wrap .swiper-button-next',
+			prevEl: '.slider-jobs-wrap .swiper-button-prev'
+		},
+		pagination: {
+			el: '.slider-jobs-wrap .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); // ===================
+	// ym(21984247, 'getClientID', function (clientID) {
+	// 	$(".wpcf7 form .clientID" ).each(function(){ 
+	// 			$(this).val(clientID);
+	// 	})
+	// });
+	// window.on('load', function(){
+	// })
 }
 
 ;
