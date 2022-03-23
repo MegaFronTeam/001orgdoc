@@ -1,12 +1,8 @@
 extends layout/main.pug
 
-
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
 include ../blocks/s-menu/_s-menu.pug
-include ../blocks/s-menu-right/_s-menu-right.pug
-include ../blocks/s-menu-right/_s-menu-right.pug
-include ../blocks/sServiseForm/_sServiseForm.pug
 include ../blocks/s-about/_s-about.pug
 include ../blocks/s-advantages/_s-advantages.pug
 include ../blocks/s-rews/_s-rews.pug
@@ -14,17 +10,31 @@ include ../blocks/s-docs/_s-docs.pug
 include ../blocks/s-news/_s-news.pug
 include ../blocks/s-blog/_s-blog.pug
 include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-development/_s-development.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
 include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-about-work/_s-about-work.pug
 include ../blocks/header-block-small/_header-block-small.pug
+include ../blocks/s-accordion/_s-accordion.pug
+include ../blocks/sServiseForm/_sServiseForm.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
 include ../blocks/sCases/_sCases.pug
-include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sOrderForm/_sOrderForm.pug
+include ../blocks/sInformation/_sInformation.pug
 include ../blocks/sMainDocs/_sMainDocs.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sHowWork/_sHowWork.pug
 include ../blocks/sListOfJobs/_sListOfJobs.pug
+include ../blocks/sPrice/_sPrice.pug
+
 
 block variables
 	- let  mainPage= 'val-2-0'
 block title
-	- let  title= 'title'
+	- let  title= 'Разработка ППР'
+	- let  titlesub= 'ППР - Проект Производства Работ'
 	title= title
 block pagecontent 
 	+mob-mnu()
@@ -36,32 +46,34 @@ block pagecontent
 		.container
 			.row
 				.col-lg-8
-					+page-head2-14('Разработка ППР', 'ППР - Проект Производства Работ', 'page-bg', "Главная", "Услуги", "Разработка ППР")
+					+page-head2(title, titlesub, 'page-ppr-bg', 'ППР', "Главная", "Услуги", title)
+					p С&nbsp;2006 года мы&nbsp;разрабатываем и&nbsp;согласовываем Проекты производства работ (ППР) c&nbsp;ОАТИ, ГУП &laquo;Мосгортранс&raquo;, ФСО, ГИБДД, ГУП &laquo;Мосгоргеотрест&raquo;, Отдел подземных сооружений (ОПС) и&nbsp;другими заинтересованными службами уже более 13-ти лет. Также, помогаем согласовать график производства работ с&nbsp;ЦОДД Правительства Москвы для оформления ордера ОАТИ.
+					p Правомерная, грамотная разработка ППР позволяет обеспечить безопасность, рациональность демонтажных, реконструкционных или строительных работ. Компания С-Проджект качественно выполнит разработку проекта производства работ (ППР) любой сложности и&nbsp;на&nbsp;любой вид работ.
 				.col-lg-4
 					+s-menu-right
-	+sServiseForm14
+	+sServiseForm('ППР')
 	+sCases('hidden').mb-0
-	+sHowOrder14
-		.image-wrap
-			+img(src="img/sHowOrder-after.png", alt="")
+	+sHowOrder('Вам необходимо заказать ППР? <br>Заказ ППР от&nbsp;15&nbsp;минут.')
+		//- .image-wrap
+		//- 	+img(src="img/sHowOrder-after.png", alt="")
+		//- +sHowOrderItem(`1`,`Позвоните по&nbsp;телефону&nbsp;<a href="tel:+74959713971">+7 (495) 971-39-71</a><br> или напишите на&nbsp;почту <a href="mailto:mail@orgdoc.ru">mail@orgdoc.ru</a>`,``,`Специалисты компании в&nbsp;течении 15&nbsp;минут подготовят подробный расчет стоимости и&nbsp;сроков разработки ППР и&nbsp;отправят Вам на&nbsp;почту. Важно обратить внимание, что позвонив нам&nbsp;Вы будете общаться сразу с&nbsp;компетентными специалистами, которые подробно проконсультирует Вас по&nbsp;стоимости ППР, срокам разработки проектов и&nbsp;их&nbsp;составу.`,`Получить консультацию`)
+		//- +sHowOrderItem(`2`,`Сроки разработки ППР: разработка ППР от&nbsp;2-х дней `,``,`Обратившись в&nbsp;нашу компанию&nbsp;Вы получите качественно разработанный Проект производства работ (ППР) за&nbsp;разумные, адекватные деньги в&nbsp;кратчайшие сроки. Так как у&nbsp;нас работают только штатные специалисты, и&nbsp;за&nbsp;более чем 13&nbsp;лет выполнено более 1000 проектов ППР (по&nbsp;ссылке можно ознакомиться с&nbsp;примерами разработанных ППР) мы&nbsp;имеем возможность, благодаря накопленному опыту и&nbsp;огромной базе проектов, выполнять разработку ППР оперативно и&nbsp;качественно от&nbsp;2-х дней.`,'Написать на почту')
 	+sMainDocs14()
 	+sListOfJobs()
-	+s-about
-		+s-cases
-	+s-advantages
+	+sInformation14()
+	+sInformationGoals14()
+	+sPrice
+	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
+	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
+	+sOrderForm('ППР').blue-bg
 	.container
 		.row
 			.col-lg-6
-				+s-content
+				+sArticles(`Новости`, `Bсе новости`)
+					+sArticlesItem(`Новости`).--green
 			.col-lg-6
-				+s-rews
-	+s-docs
-	+s-form()
-	.section-wrap.container
-		.row
-			.col-lg-6
-				+s-news
-			.col-lg-6
-				+s-blog
-	+s-logo
+				+sArticles(`Блог`, `все статьи`)
+					+sArticlesItem(`Блог`).--blue
+	+sPartners()
+	//- +s-logo 
 	+footer()

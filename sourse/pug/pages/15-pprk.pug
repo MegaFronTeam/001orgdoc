@@ -1,0 +1,74 @@
+extends layout/main.pug
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-docs/_s-docs.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-development/_s-development.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
+include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-about-work/_s-about-work.pug
+include ../blocks/header-block-small/_header-block-small.pug
+include ../blocks/s-accordion/_s-accordion.pug
+include ../blocks/sServiseForm/_sServiseForm.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sOrderForm/_sOrderForm.pug
+include ../blocks/sInformation/_sInformation.pug
+include ../blocks/sMainDocs/_sMainDocs.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sListOfJobs/_sListOfJobs.pug
+include ../blocks/sPrice/_sPrice.pug
+
+
+block variables
+	- let  mainPage= 'val-2-0'
+block title
+	- let  title= 'Разработка ППРк'
+	- let  titlesub= 'ППРк&nbsp;&mdash; Проект Производства Работ Кранами'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-small()
+	.section-border-bottom
+		.container
+			.row
+				.col-lg-8
+					+page-head2(title, titlesub, 'page-pprk-bg', 'ППРK', "Главная", "Услуги", title)
+					p Установка грузоподъемных машин, организация и&nbsp;выполнение строительно-монтажных работ с&nbsp;их&nbsp;применением осуществляются в&nbsp;соответствии со&nbsp;специально разработанным для этих целей проектом производства работ грузоподъемными кранами (ППРк) Погрузочно-разгрузочные работы и&nbsp;складирование грузов кранами и&nbsp;кранами-манипуляторами на&nbsp;базах, складах, площадках выполняются по&nbsp;технологическим картам погрузочно-разгрузочных работ (ТК&nbsp;п/р работ)
+					p Организациям, выполняющим крановые работы, необходимо иметь разработанные проекты- ППРк. Это правило законодательно регламентируется федеральными нормами промышленной безопасности. Если ваше предприятие владеет подъемным сооружением либо грузоподъемной машиной&nbsp;&mdash; вам будет интересна наша услуга по&nbsp;разработке проекта производства работ краном (ППРк).
+				.col-lg-4
+					+s-menu-right
+	+sServiseForm('ППРк')
+	+sCases('hidden').mb-0
+	+sMainDocs14()
+	+sListOfJobs()
+	+sInformation14()
+	+sInformationGoals14()
+	+sPrice
+	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
+	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
+	+sOrderForm('ППРк').blue-bg
+	.container
+		.row
+			.col-lg-6
+				+sArticles(`Новости`, `Bсе новости`)
+					+sArticlesItem(`Новости`).--green
+			.col-lg-6
+				+sArticles(`Блог`, `все статьи`)
+					+sArticlesItem(`Блог`).--blue
+	+sPartners()
+	//- +s-logo 
+	+footer()

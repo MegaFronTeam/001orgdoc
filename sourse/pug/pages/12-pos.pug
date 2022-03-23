@@ -47,14 +47,16 @@ block pagecontent
 		.container
 			.row
 				.col-lg-8
-					+page-head2(title, titlesub, 'page-bg', "Главная","Услуги", title)
+					+page-head2(title, titlesub, 'page-pos-bg','ПОС',"Главная","Услуги", title)
+					p Проект организации строительства (ПОС)&nbsp;&mdash; это по&nbsp;сути специально подготовленный план, который позволяет оперативно и&nbsp;эффективно разрешать любые задачи, связанные с&nbsp;рациональным обустройством строительной площадки. В&nbsp;соответствии с&nbsp;Постановлением Правительства Российской Федерации &#8470;&nbsp;87&nbsp;от&nbsp;16&nbsp;февраля 2008&nbsp;года, ПОС&nbsp;&mdash; обязательный раздел в&nbsp;любом ПД. Без данного проекта невозможно получить разрешение на&nbsp;возведение объекта, его ремонт или реконструкцию.
+					p Наша компания специализируется на&nbsp;подготовке проекта организации строительства. Мы&nbsp;обеспечиваем полный пакет услуг по&nbsp;разработке и&nbsp;созданию данного проекта в&nbsp;соответствии с&nbsp;актуальными нормативами и&nbsp;требованиями.
 					//- +s-development
 					//- +s-accordion
 				.col-lg-4
 					+s-menu-right
-	+sServiseForm
+	+sServiseForm('ПОС')
 	+sCases
-	+sHowOrder
+	+sHowOrder('Как заказать проект организации строительства (ПОС)?')
 	//- .container
 	//- 	.row
 	//- 		.col-lg-6.col-sm-12
@@ -74,7 +76,7 @@ block pagecontent
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
 	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
 	//- +s-form()
-	+sOrderForm().blue-bg
+	+sOrderForm('ПОС').blue-bg
 	.container
 		.row
 			.col-lg-6
