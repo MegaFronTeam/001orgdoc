@@ -28,6 +28,8 @@ include ../blocks/sHowOrder/_sHowOrder.pug
 include ../blocks/sHowWork/_sHowWork.pug
 include ../blocks/sListOfJobs/_sListOfJobs.pug
 include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sExperts/_sExperts.pug
+include ../blocks/sStages/_sStages.pug
 
 
 block variables
@@ -53,7 +55,8 @@ block pagecontent
 					+s-menu-right
 	+sServiseForm('ППРк')
 	+sCases('hidden').mb-0
-	+sMainDocs14()
+	+sExperts
+	+sStages()
 	+sListOfJobs()
 	+sInformation14()
 	+sInformationGoals14()
