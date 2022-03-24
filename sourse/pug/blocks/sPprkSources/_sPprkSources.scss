@@ -1,24 +1,18 @@
 // start .sPprkSources
 .sPprkSources {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	.row{
+		--bs-gutter-y: var(--bs-gutter-x);		
+		margin-bottom: rem(30);
 	}
 	.section-title{
-		
+		margin-bottom: 0;
 	}
 	span {
 		display: block;
+		margin-bottom: rem(30);
 		font-size: rem(18);
 		font-weight: 700;
 		color: rgba($black, 0.8)
-	}
-	&__col{
-	}
-	  
 	}
 	.item{
 		height: 100%;
@@ -28,8 +22,18 @@
 		border-radius: 10px;
 		p {
 			margin-bottom: 0;
+			font-size: rem(16);
 			color: $white;
 		}
+	}
+
+	p {
+		font-size: rem(18);
+		a {
+			color: initial;
+			text-decoration: underline;
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

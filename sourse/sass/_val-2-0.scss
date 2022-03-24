@@ -34,8 +34,15 @@
 		}
 	}
 	.sInformation,
-	.sMainDocs {
+	.sMainDocs,
+	.sExperts,
+	.sPprkSources,
+	.sHowOrder,
+	.sExamples,
+	.sListOfJobs,
+	.sPrice {
 		.section-title {
+			padding-bottom: rem(30);
 			h2 {
 				font-weight: 700;
 				@include rfs(48px);

@@ -12,8 +12,12 @@
 	// }
 
 	.section-title {
+		max-width: 1020px;
 		margin-bottom: rem(30);
 		padding-bottom: 0;
+		h2 {
+			color: $white !important;
+		}
 	}
 
 	&__wrapper {
@@ -54,9 +58,7 @@
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	.section-title{
-		color: $white;
-	}
+	
 	&__col{
 	}
 	&__item{

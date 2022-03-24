@@ -6,6 +6,10 @@
 		// --sTPB: #{rem(20)};
 		position: relative;
 		z-index: 2;
+
+		.section-title {
+			max-width: 900px;
+		}
 		
 		&__item{
 			@include media-breakpoint-up(lg) {

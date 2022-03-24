@@ -2,26 +2,24 @@
 .sPprkList {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	--sTPB: #{rem(30)};
+	// --sTPB: #{rem(30)};
 	&.blue-bg {
 		overflow: hidden;		
 	}
+	.section-title {
+		margin-bottom: rem(30);
+		padding-bottom: 0;
+	}
+
 	p {
 		max-width: 600px;
+		font-size: rem(18);
 		color: $white;
+	}	
+	.jobs-item__title {
+		max-width: 250px;
 	}
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
-	.section-title{
-		
-	}
-	&__col{
-	}
-	&__item{
-	}
-		 
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -47,3 +45,15 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sPprkList
+
+.val-2-0 {
+	.sPprkList {
+		.section-title {
+			h2 {			
+				font-size: rem(48);
+				font-weight: 700;
+			}
+		}
+	}
+}
+
