@@ -12,3 +12,6 @@
 1. <https://pashawol.github.io/001orgdoc/public/11-catalog-markups.html>
 
 1. <https://pashawol.github.io/001orgdoc/public/12-pos.html>
+1. <https://pashawol.github.io/001orgdoc/public/13-podd.html>
+1. <https://pashawol.github.io/001orgdoc/public/14-ppr.html>
+1. <https://pashawol.github.io/001orgdoc/public/15-pprk.html>

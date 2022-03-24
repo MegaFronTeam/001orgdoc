@@ -1,0 +1,15 @@
+mixin sPprkList()
+	// start sPprkList
+	+b.SECTION.sPprkList.blue-bg.section#sPprkList&attributes(attributes)
+		+e.wrapper
+			.container
+				+b.section-title
+					h2 Какими бывают ППР на&nbsp;работу крана
+				p В&nbsp;зависимости от&nbsp;того, с&nbsp;помощью какого грузоподъемного механизма Вы&nbsp;выполняете работы, ППРк могут быть следующих видов:
+				.row
+					.col-12.col-sm-6
+						+sListOfJobsItem('31','ППР на&nbsp;<span>автомобильный кран</span>')
+					.col-12.col-sm-6
+						+sListOfJobsItem('32','ППР на&nbsp;<span>башенные краны</span>')
+
+	// end sPprkList
