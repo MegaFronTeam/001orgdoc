@@ -1,8 +1,17 @@
 mixin sListOfJobsItem(i,t)
-	+e.item
+	+b.jobs-item
 		+img(`sListOfJobs-${i}.jpg`)
 		+e.title!= t
 		a.btn.btn-outline-light.btn-animate(href='#')= 'ПОДРОБНЕЕ'
+
+mixin sListOfJobsSlider()
+	+b.slider-jobs-wrap
+		+b.slider-jobs--js.swiper
+			.swiper-wrapper
+				block
+		+b.control-wrap.d-md-none
+			+arrow
+			.swiper-pagination
 mixin sListOfJobs()
 	// start sListOfJobs
 	+b.SECTION.sListOfJobs.section#sListOfJobs&attributes(attributes)
@@ -12,42 +21,43 @@ mixin sListOfJobs()
 				+b.section-title
 					h2 Чтобы просмотреть список разрабатываемых ППР (на&nbsp;любой вид работ), нажмите на&nbsp;наименование ППР:
 				+input('Поиск услуги','text','')
-				.row
-					.col.col-3
+				
+				+sListOfJobsSlider()
+					+e.slide.swiper-slide
 						+sListOfJobsItem('1','Разработка ППР на <span>высоте</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('2','Разработка ППР на <span>благоустройство территории</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('3','Разработка ППР на <span>&nbsp;забивку свай, на&nbsp;буронабивные сваи</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('4','Разработка ППР на <span>монтаж металлоконструкций</span>')
-					.col.col-6
+					+e.slide--w50.swiper-slide
 						+sListOfJobsItem('5','Разработка ППР на&nbsp;наружные или внутренние инженерные сети (коммуникации)')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('6','Разработка ППР на <span>шпунт</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('7','Разработка ППР на <span>фундамент</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('8','Разработка ППР на <span>бетонные работы</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('9','Разработка ППР на <span>фасады, фасадные работы</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('10','Разработка ППР на <span>кровлю, ремонт кровли</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('11','Разработка ППР на <span>кранами</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('12','Разработка ППР на <span>подготовительный период</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('13','Разработка ППР на <span>строительсво</span>')
-					.col.col-6
+					+e.slide--w50.swiper-slide
 						+sListOfJobsItem('14','Разработка ППР на <span>монтажные работы</span> (любой вид строительно-монтажных работ)')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('15','Разработка ППР на <span>отделочные работы</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('16','Разработка ППР на <span>подъемник фасадный</span>')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('17','Разработка ППР на устройство бытового городка')
-					.col.col-3
+					+e.slide.swiper-slide
 						+sListOfJobsItem('16','Разработка ППР на <span>подъемник фасадный</span>')
 
 	// end sListOfJobs

@@ -1,9 +1,9 @@
-mixin sOrderForm()
+mixin sOrderForm(name)
 	// start sOrderForm
 	+b.SECTION.sOrderForm.section#sOrderForm&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Закажите разработку&nbsp;ПОС
+				h2 Закажите разработку&nbsp;#[= name]
 				p Оставьте заявку, чтобы наши специалисты рассчитали для вас цену и&nbsp;сроки разработки документов, а&nbsp;также проконсультировали по&nbsp;всем вопросам.
 			+form-wrap
 				+e.title Бесплатная консультация
@@ -17,3 +17,7 @@ mixin sOrderForm()
 						button.btn-green Получить консультацию
 				+policy2 
 	// end sOrderForm
+
+	
+
+	

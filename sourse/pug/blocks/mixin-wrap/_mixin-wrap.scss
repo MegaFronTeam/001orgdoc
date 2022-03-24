@@ -403,6 +403,13 @@
 		p {
 			color: $white;
 		}
+		ul {
+			padding: 0;
+    	margin-left: 13px;
+		}
+		li {
+			color: $white;
+		}
 		.sInformationItem__counter {
 			color: rgba($color: $white, $alpha: 0.8);
 		}
