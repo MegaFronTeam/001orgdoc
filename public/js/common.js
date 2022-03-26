@@ -647,6 +647,20 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	});
+	let sfinishedProjectSlider = new Swiper('.slider-projects--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.slider-jobs-wrap .swiper-button-next',
+			prevEl: '.slider-jobs-wrap .swiper-button-prev'
+		},
+		pagination: {
+			el: '.slider-jobs-wrap .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	}); // ===================
 	// ym(21984247, 'getClientID', function (clientID) {
 	// 	$(".wpcf7 form .clientID" ).each(function(){ 

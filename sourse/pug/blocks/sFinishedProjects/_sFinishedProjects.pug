@@ -1,0 +1,43 @@
+mixin finishedProject(i,d)
+	+b.finished-item
+		+e.img-wrap
+			+img(`sFinishedPr-${i}.jpg`)
+		+e.descr!= d
+
+mixin sfinishedProjectSlider()
+	+b.slider-projects-wrap
+		+b.slider-projects--js.swiper
+			.swiper-wrapper
+				block
+		+b.control-wrap.d-md-none
+			+arrow
+			.swiper-pagination
+
+mixin sFinishedProjects()
+	// start sFinishedProjects
+	+b.SECTION.sFinishedProjects.section#sFinishedProjects&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Согласование ПОДД с&nbsp;Департаментом транспорта города Москвы
+			+input('Поиск услуги','text','')
+			+poddSourceItem('Разработка Проекта организации дорожного движения при капитальном ремонте проезжей части, дорожные работы', 'Схема транспортного обслуживания, согласованная с&nbsp;Департаментом транспорта и&nbsp;развития дорожно-транспорнтой инфраструктуры города Москвы', 'Исходно-разрешительная документация (ИРД)', 'ГПЗУ')
+			h3.subtitle Примеры некоторых выполненных и&nbsp;согласованных Проектов ОДД, ПОДД, Схем ОДД:
+			+sfinishedProjectSlider()
+				+e.slide.swiper-slide
+					+finishedProject('1','Получено согласование ПОДД на строительство и эксплуатацию строительных лесов с Департаментом транспорта')
+				+e.slide.swiper-slide
+					+finishedProject('2','Выполнена разработка и&nbsp;согласование ПОДД с&nbsp;Мосавтодор')
+				+e.slide.swiper-slide
+					+finishedProject('3','Разработан ПОДД и&nbsp;согласован с&nbsp;ЦОДД для Мерседес-Панавто')
+				+e.slide.swiper-slide
+					+finishedProject('4','Разработан и&nbsp;согласован Проект ОДД с&nbsp;Мосавтодор')
+				+e.slide.swiper-slide
+					+finishedProject('5','Разработка и&nbsp;согласование ПОДД на&nbsp;строительство линейного объекта')
+				+e.slide.swiper-slide
+					+finishedProject('6','Согласование ПОДД и&nbsp;ПОС с&nbsp;Мосгортранс')
+				+e.slide.swiper-slide
+					+finishedProject('7','Разработка и&nbsp;согласование ПОДД в&nbsp;Москве с&nbsp;Департаментом транспорта')
+				+e.slide.swiper-slide
+					+finishedProject('8','Согласование ПОДД на установку строительных лесов с Департаментом транспорта')
+			button.top-line__btn Показать больше
+			// end sFinishedProjects

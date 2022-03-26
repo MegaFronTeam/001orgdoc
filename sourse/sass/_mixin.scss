@@ -263,3 +263,63 @@
     padding: #{$var};
   }
 }
+$variable-prefix: "bs-";
+@mixin make-row($gutter: $grid-gutter-width) {
+  --#{$variable-prefix}gutter-x: #{$gutter};
+  --#{$variable-prefix}gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  // TODO: Revisit calc order after https://github.com/react-bootstrap/react-bootstrap/issues/6039 is fixed
+  margin-top: calc(-1 * var(--#{$variable-prefix}gutter-y)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(-.5 * var(--#{$variable-prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$variable-prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
+}
+
+@mixin make-col-ready1($gutter: $grid-gutter-width) {
+  // Add box sizing if only the grid is loaded
+  box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+  // Prevent columns from becoming too narrow when at smaller grid tiers by
+  // always setting `width: 100%;`. This works because we set the width
+  // later on to override this initial width.
+  flex-shrink: 0;
+  padding-right: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+  margin-top: var(--#{$variable-prefix}gutter-y);
+}
+
+@mixin make-col1() {
+    flex: 1 1 0;
+}
+
+
+@mixin col-sw(){ 
+  @include make-col1;
+  @include make-col-ready1;
+  // padding: 0 calc(var(--bs-gutter-x)/2) !important;
+  // margin-top: var(--bs-gutter-y);
+  margin-right: 0 !important;
+}
+
+
+@mixin row-sw($x: $grid-gutter-width, $media: lg, $y:$x) {
+  @include media-breakpoint-up($media) {
+
+    @include make-row;
+    --bs-gutter-x: #{$x};
+    --bs-gutter-y: #{$y};
+    margin-top: calc(-1 * var(--bs-gutter-y)); 
+    transform: none!important;
+    width: calc(100% + var(--bs-gutter-x, 0px)) !important;
+    max-width: calc(100% + var(--bs-gutter-x, 0px)) !important;
+    height: auto;
+    & > .swiper-slide-duplicate{
+      display: none!important;
+    }
+    & > .swiper-slide{
+      @include col-sw(); 
+    }
+  }
+  & > .swiper-slide{
+    height: auto;
+  }
+}

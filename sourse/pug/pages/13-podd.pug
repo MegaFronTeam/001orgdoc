@@ -28,6 +28,10 @@ include ../blocks/sMainDocs/_sMainDocs.pug
 include ../blocks/sHowOrder/_sHowOrder.pug
 include ../blocks/sHowWork/_sHowWork.pug
 include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sAddServices/_sAddServices.pug
+include ../blocks/sAgreement/_sAgreement.pug
+include ../blocks/sPoddSources/_sPoddSources.pug
+include ../blocks/sFinishedProjects/_sFinishedProjects.pug
 
 
 
@@ -73,10 +77,11 @@ block pagecontent
 	//- 			+s-rews
 	//- +s-docs
 	//- +sMainDocs()
-	+sServiseForm2()
-	//- +sHowWork
-	//- +sInformationGoals()
-	//- +sInformation()
+	+sServiseForm2
+	+sAddServices
+	+sAgreement
+	+sPoddSources
+	+sFinishedProjects
 	+sCardSlider(`Отзывы клиентов на&nbsp;бланках`, `rev`).blue-bg
 	+sCardSlider(`Сертификаты, СРО, удостоверения`, `cert`)
 	//- +s-form()

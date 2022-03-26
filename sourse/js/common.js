@@ -665,6 +665,20 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	let sfinishedProjectSlider = new Swiper('.slider-projects--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.slider-jobs-wrap .swiper-button-next',
+			prevEl: '.slider-jobs-wrap .swiper-button-prev'
+		},
+		pagination: {
+			el: '.slider-jobs-wrap .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 
 
 

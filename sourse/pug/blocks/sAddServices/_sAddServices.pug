@@ -1,0 +1,27 @@
+mixin sAddServices()
+	// start sAddServices
+	+b.SECTION.sAddServices.section#sAddServices&attributes(attributes)
+		+e.wrapper
+		.container
+			+b.section-title
+				h2 Помимо качественного проекта организации дорожного движения (ПОДД), обратившись к&nbsp;нам&nbsp;Вы можете заказать:
+			+input('Поиск услуги','text','')
+			.row
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('1', '<span>Установка</span> дорожных знаков')
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('2', '<span>Проекты</span> ПОДД и&nbsp;Схемы ОДД')
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('3', '<span>Нанесение</span> дорожной разметки')
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('4', '<span>Выполнение</span> Топографической съемки>')
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('5', '<span>Проектирование</span> автомобильных дорог')
+					.col-12.col-sm-6.col-xl-4
+						+sExamplesItem('6', '<span>Проектирование</span> АСУДД или светофорных объектов')
+					.col-12.col-sm-6
+						+sExamplesItem('7', '<span>Обустройство</span> и&nbsp;проектирование парковок, автостоянок')
+					.col-12.col-sm-6
+						+sExamplesItem('8', '<span>Разработка</span> Схем транспортного обслуживания (СТО/ТС)')
+
+	// end sAddServices

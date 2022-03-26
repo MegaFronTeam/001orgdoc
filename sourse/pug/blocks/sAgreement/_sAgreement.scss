@@ -1,0 +1,91 @@
+// start .sAgreement
+.sAgreement {
+	&--crane {
+		.container {
+			position: relative;
+			@include media-breakpoint-up(lg) {
+				&::after {
+					content: url("../img/crane.png");
+					position: absolute;
+					top: -38%;
+					right: -28%;
+					z-index: -3;
+				}
+			}			
+		}
+	}
+	// --sPT: #{rem()};
+	--sPB: #{rem(50)};
+	// --sTPB: #{rem()};
+	.row{
+		--bs-gutter-y:  #{rem(30)};
+		margin-bottom: 43px;
+	}
+	.section-title{
+		max-width:25em;
+		margin-bottom: 0;
+	}
+
+	input {
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: rem(18);
+	}
+
+	.main {
+		font-size: rem(24);
+		font-weight: 700;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sAgreement
+
+.agreed-item {
+	height: 100%;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	border-radius: 10px;
+	overflow: hidden;
+
+	p {
+		font-size: 16px;
+		margin-bottom: 0;
+		line-height: 135%;
+	}
+
+	&__img-wrap {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		min-height: 80px;
+		margin-bottom: 7px;
+	}
+}
