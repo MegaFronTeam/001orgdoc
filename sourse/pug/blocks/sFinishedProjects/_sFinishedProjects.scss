@@ -19,15 +19,16 @@
 	}
 
 	.poss-s-item__list {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
+		// display: flex;
+		// flex-direction: column;
+		// flex-wrap: wrap;
+		columns: 2;
 		@include media-breakpoint-only(xl) {
-			max-height: 70px;
+			// max-height: 70px;
 		}	
 		li {
 			@include media-breakpoint-only(xl) {
-				width: 47%;
+				// width: 47%;
 				margin-right: 50px;
 	
 			}
@@ -67,7 +68,7 @@
 
 	.finished-item {
 		&__img-wrap {
-			@include block(380, 268);
+			@include block(268, 380);
 			margin-bottom: 9px;
 			overflow: hidden;
 			border: 1px solid #E0E0E0;

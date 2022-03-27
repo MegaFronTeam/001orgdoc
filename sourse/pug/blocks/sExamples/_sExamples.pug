@@ -1,7 +1,8 @@
 mixin sExamplesItem(i,t,link)
 	+b.example-item
 		//- +e.img-wrap
-		+img(`sExamples-${i}.png`)
+		//- +img(`sExamples-${i}.png`)
+		img(src=`img/sExamples-${i}.png`, alt="")
 		+e.text
 			+e.title!= t
 			if link

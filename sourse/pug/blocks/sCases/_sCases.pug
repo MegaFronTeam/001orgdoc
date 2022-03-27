@@ -1,8 +1,8 @@
-mixin sCases(hidden)
+mixin sCases(hidden, img='pencil.png')
 	// start sCases
-	+b.SECTION.sCases.section#sCases&attributes(attributes)
+	+b.SECTION.sCases(class="section")#sCases&attributes(attributes)
 		+e.inner
-			.container(style="--before: url(../img/pencil.png); --after: url(../img/paper.png)")
+			.container(style=`--before: url(../img/${img}); --after: url(../img/paper.png)`)
 				+b.section-title.text-center
 					h2 Примеры работ
 					

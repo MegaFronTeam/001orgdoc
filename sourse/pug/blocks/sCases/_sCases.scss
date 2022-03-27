@@ -54,6 +54,14 @@
 			}
 
 		}
+		&--trafic{
+			.container{
+				&::before{
+					right: calc(100% - 300px) !important;
+					// left: 0;
+				}
+			}
+		}
 		h2{
 			color: #fff;
 		}

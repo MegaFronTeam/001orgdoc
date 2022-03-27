@@ -281,14 +281,15 @@ $variable-prefix: "bs-";
   // Prevent columns from becoming too narrow when at smaller grid tiers by
   // always setting `width: 100%;`. This works because we set the width
   // later on to override this initial width.
-  flex-shrink: 0;
+  // flex-shrink: 0;
   padding-right: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
   padding-left: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
   margin-top: var(--#{$variable-prefix}gutter-y);
 }
 
 @mixin make-col1() {
-    flex: 1 1 0;
+    // flex: 1 1 0;
+    // flex: 0 0 1;
 }
 
 
