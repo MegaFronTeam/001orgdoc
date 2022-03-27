@@ -1,5 +1,18 @@
 // start .sPprkSources
 .sPprkSources {
+	.container {
+		position: relative;
+		z-index: 1;
+		&::before {
+			@include media-breakpoint-up(lg) {
+				content: url(../img/sPrice.png);
+				position: absolute;
+				left: -57%;
+				top: -55%;
+				z-index: -1;
+			}
+		}
+	}
 	.row{
 		--bs-gutter-y: var(--bs-gutter-x);		
 		margin-bottom: rem(30);

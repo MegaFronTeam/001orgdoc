@@ -119,4 +119,21 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	
+
 } // end.sHowOrder
+.sHowOrder--crane {
+	.container {
+		position: relative;
+		&::before {
+			@include media-breakpoint-up(md) {
+				content: url('../img/crane.png');
+				position: absolute;
+				right: -27%;
+				top: -34%;
+				display: block;
+			}
+			display: none;
+		}
+	}
+}

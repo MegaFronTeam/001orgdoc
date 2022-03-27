@@ -17,6 +17,6 @@ block pagecontent
 			mixin btn(id, name)
 				.col-auto.mb-2
 					a.link-modal.btn.btn-primary(href= id)= name
-			+btn("modal-call", "modal-call")
+			//- +btn("modal-call", "modal-call")
 			+btn("#modal-podd", "Модальное окно с изображением")
-			+btn("modal-ppr", "Модальное окно с полем ввода")
+			+btn("#modal-ppr", "Модальное окно с полем ввода")

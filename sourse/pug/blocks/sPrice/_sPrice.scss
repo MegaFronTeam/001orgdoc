@@ -15,6 +15,13 @@
 			z-index: -1;
 		}
 	}
+	&--nobg {
+		.container {
+			&::before {
+				display: none;
+			}
+		}
+	}
 
 	.section-title {
 		max-width: 630px;

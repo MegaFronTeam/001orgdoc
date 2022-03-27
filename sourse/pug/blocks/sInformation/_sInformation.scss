@@ -199,6 +199,14 @@
 		}	
 	}
 
+	&--nobg {
+		.container {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
 	
 
 
