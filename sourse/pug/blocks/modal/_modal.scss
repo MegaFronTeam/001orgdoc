@@ -32,8 +32,11 @@
 	}
 }
 
-.form-wrap {	
-	padding: rem(80) rem(80);
+
+.form-wrap {
+	@include media-breakpoint-up(sm) {
+		padding: rem(80) rem(60);
+	}	
 	&__title {
 		margin-bottom: 30px;
 		font-size: rem(48);
