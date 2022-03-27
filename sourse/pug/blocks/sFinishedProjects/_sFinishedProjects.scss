@@ -59,7 +59,14 @@
 	}
 
 	.swiper-slide {
+		@include media-breakpoint-up(sm) {
+		max-width: 50% !important;
+		}
+
+		@include media-breakpoint-up(md) {
 		max-width: 33% !important;
+		}
+		
 		@include col-sw;
 		@include media-breakpoint-up(lg) {
 			max-width: 25% !important;

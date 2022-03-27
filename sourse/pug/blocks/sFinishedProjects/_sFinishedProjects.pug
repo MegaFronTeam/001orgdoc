@@ -1,6 +1,6 @@
 mixin finishedProject(i,d)
 	+b.finished-item
-		+e.img-wrap
+		+e.img-wrap(href= `img/sFinishedPr-${i}.jpg` data-fancybox="finish")
 			+img(`sFinishedPr-${i}.jpg`)
 		+e.descr!= d
 
@@ -9,7 +9,7 @@ mixin sfinishedProjectSlider()
 		+b.slider-projects--js.swiper-container
 			.swiper-wrapper
 				block
-		+b.control-wrap.d-md-none
+		+b.control-wrap.d-sm-none
 			+arrow
 			.swiper-pagination
 

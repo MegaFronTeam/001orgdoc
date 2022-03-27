@@ -302,7 +302,7 @@ $variable-prefix: "bs-";
 }
 
 
-@mixin row-sw($x: $grid-gutter-width, $media: lg, $y:$x) {
+@mixin row-sw($x: $grid-gutter-width, $media: sm, $y:$x) {
   @include media-breakpoint-up($media) {
 
     @include make-row;
