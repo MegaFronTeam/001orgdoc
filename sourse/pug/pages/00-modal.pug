@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+
+block variables
+	- let  mainPage= "inner-page val-2-0"
+block title
+	- let  title= 'Модальные окна'
+	- let  titlesub= ''
+	title= title
+block pagecontent 
+	.section.container
+		h1 Страница для  демонстрации модальных окон
+		.row
+			mixin btn(id, name)
+				.col-auto.mb-2
+					a.link-modal.btn.btn-primary(href= id)= name
+			+btn("modal-call", "modal-call")
+			+btn("#modal-podd", "Модальное окно с изображением")
+			+btn("modal-ppr", "Модальное окно с полем ввода")

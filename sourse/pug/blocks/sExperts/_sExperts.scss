@@ -9,6 +9,19 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
 
+	.container {
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			&::after {
+			content: url(../img/crane.png);
+			position: absolute;
+			top: -20%;
+			right: -28%;
+			z-index: -3;
+			}
+		}
+	}
+
 	p {
 		margin-bottom: rem(30);
 	}

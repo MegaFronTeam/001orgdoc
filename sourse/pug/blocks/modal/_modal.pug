@@ -14,3 +14,69 @@ mixin modal()
 			+polite()
 		// #modal-call
 	// modal
+
+	.d-none
+		+form-wrap()(id="modal-podd" class="  modal-win modal-form" )
+			+e.title.h3 Проект организации дорожного движения (ПОДД) на&nbsp;<span>снос или демонтаж</span>
+			.row
+				.col.col-md-4
+					.item
+						p Изучение и&nbsp;анализ исходной информации и&nbsp;документации.
+				.col.col-md-4
+					.item
+						p Проведение натурных дорожно-транспортных обследований
+				.col.col-md-4
+					.item
+						p Выполнение Топографической съемки (при необходимости)
+				.col.col-md-4
+					.item
+						p Существующая cхема организации дорожного движения
+				.col.col-md-4
+					.item
+						p Схема организации дорожного движения на&nbsp;период производства работ
+				.col.col-md-4
+					.item
+						p 
+							ul Пояснительная записка:
+								li Организация движения автотранспорта и&nbsp;пешеходов
+								li Описание средств дорожного движения
+								li Ведомости ТСОДД
+				.row
+					.col.col-6.modal-left
+						+img(src=`../img/modal-podd.png`, alt="")
+					+b.modal-right.col.col-6.
+						+e.title Пример проекта организации дорожного движения (ПОДД)
+						+e.descr На&nbsp;период прокладки инженерных сетей в&nbsp;г. Москва, 3-й Автозаводский&nbsp;пр., вл.&nbsp;13
+						button Получить бесплатную консультацию
+		// #modal-call
+	// modal
+
+	.d-none
+		+form-wrap()(id="modal-call-ppr" class="  modal-win modal-form" )
+			+e.title.h3 Разработка ППР на&nbsp;<span>земляные работы</span>
+			+input('Поиск услуги','text','')
+			.row
+				.col.col-md-4
+					.item
+						p Календарный план на&nbsp;период производства работ
+				.col.col-md-4
+					.item
+						p Стройгенплан на период производства работ
+				.col.col-md-4
+					.item
+						p Схемы производства земляных работ
+				.col.col-md-4
+					.item
+						p Указания к&nbsp;производству земляных работ
+				.col.col-md-4
+					.item
+						p Техника безопасности и&nbsp;охрана труда
+				.col.col-md-4
+					.item
+						p Пожарная безопасность
+				.col.col-md-4
+					.item
+						p Мероприятия по охране окружающей среды
+			button Получить бесплатную консультацию
+		// #modal-call
+	// modal
