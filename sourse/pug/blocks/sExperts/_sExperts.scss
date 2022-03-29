@@ -37,6 +37,10 @@
 	.control-wrap {
 		margin-bottom: rem(30);
 	}
+
+	.jobs-item::after {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

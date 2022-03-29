@@ -1,0 +1,23 @@
+mixin sGetPrice()
+	// start sGetPrice
+	+b.SECTION.sGetPrice.section#sGetPrice&attributes(attributes)
+		.container
+			+form-wrap.white-panel
+				+e.title Узнать цену ППР на&nbsp;<span>монолитные работы</span>
+				.row
+					.col-md
+						.search-form
+							+icon('search')
+							+input("Введите свой ППР в поиск")
+					.col-lg.col-xl-auto
+						button.btn-green Найти ППР
+				small Найдено результатов:
+				+b.mobile-result
+					+e.title ППР для...
+					+e.name электромонтажных работ
+					+e.price от 15 000 &#8381;
+					+e.btn.btn.btn-outline-blue.BUTTON Заказать ППР
+					+e.show-more
+						+icon('load')
+						a(href='#') Показать больше
+	// end sGetPrice

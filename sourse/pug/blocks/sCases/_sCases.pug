@@ -1,22 +1,24 @@
-mixin sCases(hidden, img='pencil.png')
+mixin sCases(hidden, img='pencil.png', common, title)
 	// start sCases
 	+b.SECTION.sCases(class="section")#sCases&attributes(attributes)
 		+e.inner
 			.container(style=`--before: url(../img/${img}); --after: url(../img/paper.png)`)
 				+b.section-title.text-center
-					h2 Примеры работ
-					
-				+e.slider--js.swiper
-					.swiper-wrapper
-						- for (var x = 0; x < 4; x++)
-							+e.slide.swiper-slide
-								+e.item
-									+e.img-wrap.bg-wrap
-										img(src="img/@2x/case-1.jpg", alt="").picture-bg
-										+e.label 230 страниц, PDF
-									+e.caption
-										+e.title Разработка ПОС для «ПромТоргСтрой»
-										+e.btn(href="#") Смотреть проект
+					h2!= title
+				if common	
+					+e.slider--js.swiper
+						.swiper-wrapper
+							- for (var x = 0; x < 4; x++)
+								+e.slide.swiper-slide
+									+e.item
+										+e.img-wrap.bg-wrap
+											img(src="img/@2x/case-1.jpg", alt="").picture-bg
+											+e.label 230 страниц, PDF
+										+e.caption
+											+e.title Разработка ПОС для «ПромТоргСтрой»
+											+e.btn(href="#") Смотреть проект
+				else
+					block
 				+b.control-wrap
 					+arrow
 					.swiper-pagination

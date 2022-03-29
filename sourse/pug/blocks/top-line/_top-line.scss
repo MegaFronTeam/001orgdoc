@@ -87,6 +87,13 @@
     }
   }
 
+  
+  .row .search-wrap .probox .proinput input::placeholder {
+      color: #545359 !important;
+      font-family: $default-font !important;  
+      opacity: 1 !important; 
+  }
+
   addr {
     @include media-breakpoint-up(xl) {
 

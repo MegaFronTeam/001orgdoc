@@ -7,12 +7,14 @@
 	.container {
 		position: relative;
 		z-index: 1;
-		&::before {
-			content: url(../img/sPrice.png);
-			position: absolute;
-			left: -57%;
-			bottom: calc((-1 * var(--sPB)) - 230px);
-			z-index: -1;
+		@include media-breakpoint-up(md) {
+			&::before {
+				content: url(../img/sPrice.png);
+				position: absolute;
+				left: -57%;
+				bottom: calc((-1 * var(--sPB)) - 230px);
+				z-index: -1;
+			}
 		}
 	}
 	&--nobg {

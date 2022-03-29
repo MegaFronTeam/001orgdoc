@@ -60,9 +60,16 @@
 		@include media-breakpoint-up(sm) {
 			padding-top: rem(15px);
 			padding-bottom: rem(15);
-
 		}
-	position: relative;
+		position: relative;
+		a {
+			border: 1px solid $green;
+			border-radius: 5px;	
+			@include media-breakpoint-up(md) {
+				border: none;
+				padding-left: 0;
+			}			
+		}
 	}
 	&__sub-menu{
 		position: relative;

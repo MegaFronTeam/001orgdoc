@@ -61,8 +61,17 @@
 	
 	&__col{
 	}
-	&__item{
-	
+	.jobs-item::before {
+		content: "от 15 000 ₽";
+		position: absolute;
+		padding: rem(8) rem(20) rem(8);
+		left: 0;
+		top: 50%;
+		color: $white;
+		background-color: $green;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 
 
@@ -124,7 +133,7 @@
 		position: absolute;
 		top: 0;      
 		left: 0;   
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.2);
 		z-index: -1;		
 		border-radius: 8px;	
 	}
