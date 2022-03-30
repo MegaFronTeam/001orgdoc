@@ -44,6 +44,8 @@ mixin top-line()
 						+e.text: span Москва, Алтуфьевское шоссе, дом 48, корпус 1
 
 				.col-auto
+					a.top-line__wa(href='https://wa.me/74957971737971')
+						+icon('whatsapp')
 					a.top-line__tel(href='tel:8495971-3-971')
 						+icon('tel')
 						|  8   495  971-3-971
@@ -52,7 +54,7 @@ mixin top-line()
 					.d-lg-none.pc
 						a.top-line__mail.link-modal(href='#modal-call') Обратный звонок
 					.d-lg-none.mob
-						a.top-line__mail(href='mailto:mail@orgdoc.ru' target='_blank') mail@orgdoc.ru
+						a.top-line__mail(href='mailto:mail@orgdoc.ru' target='_blank') mail@orgdoc.ru					
 				.col-auto.d-none.d-lg-block
 					a.top-line__btn.link-modal(href='#modal-call') Обратный звонок
 				.col-auto.d-xl-none

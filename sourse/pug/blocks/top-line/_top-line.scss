@@ -86,13 +86,23 @@
       background-color: #e2e2e2;
     }
   }
-
+  .row .search-wrap .probox {
+    margin: 0;
+  }
   
   .row .search-wrap .probox .proinput input::placeholder {
       color: #545359 !important;
       font-family: $default-font !important;  
       opacity: 1 !important; 
   }
+
+  div.asl_w .probox .promagnifier{
+    margin-left: 20px;
+    order: -1;
+    .innericon svg {
+      fill: $blue;
+    }
+  } 
 
   addr {
     @include media-breakpoint-up(xl) {
@@ -107,12 +117,33 @@
     display: block;
   }
 
+  &__wa {
+    margin-left: -22px;    
+    display: inline-block;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    .icon{
+      padding: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: $green;
+      border-radius: 50%;
+      color: $white;
+      font-size: 10px;
+    }
+  }
+
   &__tel {
     // @extend .h5;
     font-weight: bold;
     .icon{
+      display: none;
       color: $info;
       font-size: 18px;
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
     }
     @extend .text-body;
     text-decoration: none !important;
