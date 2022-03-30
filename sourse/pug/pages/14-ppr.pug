@@ -54,8 +54,8 @@ block pagecontent
 					+s-menu-right
 	//- +sServiseForm('ППР')
 	+sGetPrice
-	+sCases('hidden', 'pencil.png', '', 'Примеры разработанных нами 2197 ППР и ППРк с 2006 года')
-		+b.ppr.ppr__slider--js.swiper
+	+sCases('hidden', 'pencil.png', '', 'Примеры разработанных нами 2197 ППР и ППРк с 2006 года').mb-0
+		+b.ppr-slider.ppr__slider--js.swiper
 			.swiper-wrapper
 				.swiper-slide
 					+e.item-wrap
@@ -63,17 +63,23 @@ block pagecontent
 							+e.i-row.row.justify-content-center
 								+e.col--img.col-md-9.col-lg-6.col-xl-auto
 									img(src="/img/ppr-slider-1.jpg")
-								+e.col--content.col-lg-6.col-xl.text-center.text-lg-start
+									+e.btn-pl
+										+icon('zoom-pl')
+								+e.col--content.col-lg-6.col-xl.text-lg-start
 									+e.title Проект производства работ  для электромонтажа
 									+e.client Клиент: ООО «ПромТоргСтрой»
-									+e.b-row.row.justify-content-lg-start.justify-content-center
-										.col-12
-											+e.difficulty
-												+e.d-txt Сложность
-												+e.d-stars
-													-for(var i = 0; i < 2; i++)
-														+icon('star')
+									+e.difficulty
+										+e.d-txt Сложность
+										+e.d-stars
+											-for(var i = 0; i < 2; i++)
+												+icon('star')
+									//- +e.descr
+									+e.blue 7 листов графической части
+									+e.blue 30 страниц
 									+e.btn(href="#") Узнать стоимость такого ппр
+		+b.control-wrap
+						+arrow
+						.swiper-pagination
 	+sHowOrder('Вам необходимо заказать ППР? <br>Заказ ППР от&nbsp;15&nbsp;минут.').sHowOrder--crane
 		+sHowOrderItem(`1`,`Позвоните по&nbsp;телефону&nbsp;<a href="tel:+74959713971">+7 (495) 971-39-71</a><br> или напишите на&nbsp;почту <a href="mailto:mail@orgdoc.ru">mail@orgdoc.ru</a>`,``,`Специалисты компании в&nbsp;течении 15&nbsp;минут подготовят подробный расчет стоимости и&nbsp;сроков разработки ППР и&nbsp;отправят Вам на&nbsp;почту. Важно обратить внимание, что позвонив нам&nbsp;Вы будете общаться сразу с&nbsp;компетентными специалистами, которые подробно проконсультирует Вас по&nbsp;стоимости ППР, срокам разработки проектов и&nbsp;их&nbsp;составу.`,`Получить консультацию`)
 		+sHowOrderItem(`2`,`Сроки разработки ППР: разработка ППР от&nbsp;2-х дней `,``,`Обратившись в&nbsp;нашу компанию&nbsp;Вы получите качественно разработанный Проект производства работ (ППР) за&nbsp;разумные, адекватные деньги в&nbsp;кратчайшие сроки. Так как у&nbsp;нас работают только штатные специалисты, и&nbsp;за&nbsp;более чем 13&nbsp;лет выполнено более 1000 проектов ППР (по&nbsp;ссылке можно ознакомиться с&nbsp;примерами разработанных ППР) мы&nbsp;имеем возможность, благодаря накопленному опыту и&nbsp;огромной базе проектов, выполнять разработку ППР оперативно и&nbsp;качественно от&nbsp;2-х дней.`,'Написать на почту')

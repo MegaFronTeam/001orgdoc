@@ -17,11 +17,11 @@ mixin sCases(hidden, img='pencil.png', common, title)
 										+e.caption
 											+e.title Разработка ПОС для «ПромТоргСтрой»
 											+e.btn(href="#") Смотреть проект
+					+b.control-wrap
+						+arrow
+						.swiper-pagination
 				else
 					block
-				+b.control-wrap
-					+arrow
-					.swiper-pagination
 		if !hidden
 			.container
 				+e.content
