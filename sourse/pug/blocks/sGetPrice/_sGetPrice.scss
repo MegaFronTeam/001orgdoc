@@ -193,6 +193,11 @@
 		small {
 			color: $white;
 		}
+		.mobile-result {
+			padding: 10px;
+			background-color: #fff;
+			border-radius: 10px;
+		}
 	}
 		 
 	@include media-breakpoint-up(xl) {}
