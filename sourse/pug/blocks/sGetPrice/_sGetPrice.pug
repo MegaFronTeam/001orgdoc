@@ -1,16 +1,16 @@
-mixin sGetPrice()
+mixin sGetPrice(title, input, btn)
 	// start sGetPrice
 	+b.SECTION.sGetPrice.section#sGetPrice&attributes(attributes)
 		.container
 			+form-wrap.white-panel
-				+e.title Узнать цену ППР на&nbsp;<span>монолитные работы</span>
+				+e.title!= title
 				.row
 					.col-md
 						.search-form
-							+icon('search')
-							+input("Введите свой ППР в поиск")
+							+input(`${input}`)
+								+icon('search')
 					.col-lg.col-xl-auto
-						button.btn-green Найти ППР
+						button.btn-green!= btn
 				small Найдено результатов:
 				+b.mobile-result
 					+e.title ППР для...

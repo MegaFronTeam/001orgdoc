@@ -1021,10 +1021,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- start sServiseForm-->
-			<div class="sServiseForm section" id="sServiseForm">
-				<div class="container" style="--before: url(../img/form-before.png)">
-					<div class="form-wrap form-wrap--blue">
+			<!-- start sGetPrice-->
+			<section class="sGetPrice section sGetPrice sGetPrice--blue" id="sGetPrice">
+				<div class="container">
+					<div class="form-wrap white-panel">
 						<form>
 							<input type="hidden" name="example-input-field"/>
 							<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
@@ -1032,145 +1032,189 @@
 							<input class="utm_term" type="hidden" name="utm_term"/>
 							<input class="utm_medium" type="hidden" name="utm_medium"/>
 							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-							<div class="form-wrap__head">
-								<div class="row">
-									<div class="col-lg">
-										<div class="form-wrap__title">Для какой задачи вам нужен ПОДД?
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-wrap__input-wrap">
-											<select class="form-wrap__input form-control">
-												<option>ПОДД на строительство здания</option>
-												<option>ПОДД на строительство здания</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md">
-										<div class="form-wrap__title-price">Цена
-										</div>
-										<div class="form-wrap__price">от 25 000 ₽ до 30 000 ₽
-										</div>
-									</div>
-								</div>
+							<div class="form-wrap__title">Узнать цену Проекта и согласования ОДД на | 
 							</div>
-							<div class="form-wrap__body">
-								<div class="form-wrap__body-title"> Заявка на услугу или бесплатную консультацию
+							<div class="row">
+								<div class="col-md">
+									<div class="search-form">
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название в поиск..." name="text"/>
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
 								</div>
-								<div class="row"> 
-									<div class="col-lg-4">
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-lg-4">
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Номер телефона" name="tel"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-lg-4">
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта" name="email"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-lg-7">
-										<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Сообщение или вопрос" name="textarea"></textarea>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-lg-5">
-										<button class="btn-green w-100">Получить бесплатную консультацию</button>
-										<div class="form-wrap__polite form-wrap__polite--22">
-											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-											</label>
-										</div>
-									</div>
+								<div class="col-lg col-xl-auto">
+									<button class="btn-green">Получить бесплатную консультацию</button>
+								</div>
+							</div><small>Найдено результатов:</small>
+							<div class="mobile-result">
+								<div class="mobile-result__title">ППР для...
+								</div>
+								<div class="mobile-result__name">электромонтажных работ
+								</div>
+								<div class="mobile-result__price">от 15 000 &#8381;
+								</div>
+								<button class="mobile-result__btn btn btn-outline-blue">Заказать ППР
+								</button>
+								<div class="mobile-result__show-more">
+									<svg class="icon icon-load ">
+										<use xlink:href="img/svg/sprite.svg#load"></use>
+									</svg><a href="#">Показать больше</a>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
-			</div>
-			<!-- end sServiseForm-->
+			</section>
+			<!-- end sGetPrice-->
 			<!-- start sCases-->
-			<section class="sCases section sCases sCases--trafic mb-0" id="sCases">
+			<section class="sCases section mb-0" id="sCases">
 				<div class="sCases__inner">
-					<div class="container" style="--before: url(../img/traffic-lights.png); --after: url(../img/paper.png)">
+					<div class="container" style="--before: url(../img/pencil.png); --after: url(../img/paper.png)">
 						<div class="section-title text-center">
-							<h2>Примеры работ</h2>
+							<h2>Примеры разработанных нами 2197 ППР и ППРк с 2006 года</h2>
 						</div>
-						<div class="sCases__slider sCases__slider--js swiper">
+						<div class="ppr-slider ppr__slider ppr__slider--js swiper">
 							<div class="swiper-wrapper">
-								<div class="sCases__slide swiper-slide">
-									<div class="sCases__item">
-										<div class="sCases__img-wrap bg-wrap"><img class="picture-bg" src="img/@2x/case-1.jpg" alt=""/>
-											<div class="sCases__label">230 страниц, PDF
+									<div class="swiper-slide">
+										<div class="ppr-slider__item-wrap">
+											<div class="ppr-slider__item">
+												<div class="ppr-slider__i-row row justify-content-center">
+													<div class="ppr-slider__col ppr-slider__col--img col-lg-6"><img src="/img/ppr-slider-1.jpg">
+														<div class="ppr-slider__btn-pl">
+															<svg class="icon icon-zoom-pl ">
+																<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="ppr-slider__col ppr-slider__col--content col-lg-6 col-xl text-lg-start">
+														<div class="ppr-slider__title">Проект производства работ  для электромонтажа
+														</div>
+														<div class="ppr-slider__client">Клиент: ООО «ПромТоргСтрой»
+														</div>
+														<div class="ppr-slider__difficulty">
+															<div class="ppr-slider__d-txt">Сложность
+															</div>
+															<div class="ppr-slider__d-stars">
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="ppr-slider__descr">
+															<div class="ppr-slider__blue">7 листов графической части
+															</div>
+															<div class="ppr-slider__blue">30 страниц
+															</div>
+														</div>
+														<a class="ppr-slider__btn" href="#">Узнать стоимость такого ппр
+														</a>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="sCases__caption">
-											<div class="sCases__title">Разработка ПОС для «ПромТоргСтрой»
-											</div>
-											<a class="sCases__btn" href="#">Смотреть проект
-											</a>
 										</div>
 									</div>
-								</div>
-								<div class="sCases__slide swiper-slide">
-									<div class="sCases__item">
-										<div class="sCases__img-wrap bg-wrap"><img class="picture-bg" src="img/@2x/case-1.jpg" alt=""/>
-											<div class="sCases__label">230 страниц, PDF
+									<div class="swiper-slide">
+										<div class="ppr-slider__item-wrap">
+											<div class="ppr-slider__item">
+												<div class="ppr-slider__i-row row justify-content-center">
+													<div class="ppr-slider__col ppr-slider__col--img col-lg-6"><img src="/img/ppr-slider-1.jpg">
+														<div class="ppr-slider__btn-pl">
+															<svg class="icon icon-zoom-pl ">
+																<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="ppr-slider__col ppr-slider__col--content col-lg-6 col-xl text-lg-start">
+														<div class="ppr-slider__title">Проект производства работ  для электромонтажа
+														</div>
+														<div class="ppr-slider__client">Клиент: ООО «ПромТоргСтрой»
+														</div>
+														<div class="ppr-slider__difficulty">
+															<div class="ppr-slider__d-txt">Сложность
+															</div>
+															<div class="ppr-slider__d-stars">
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="ppr-slider__descr">
+															<div class="ppr-slider__blue">7 листов графической части
+															</div>
+															<div class="ppr-slider__blue">30 страниц
+															</div>
+														</div>
+														<a class="ppr-slider__btn" href="#">Узнать стоимость такого ппр
+														</a>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="sCases__caption">
-											<div class="sCases__title">Разработка ПОС для «ПромТоргСтрой»
-											</div>
-											<a class="sCases__btn" href="#">Смотреть проект
-											</a>
 										</div>
 									</div>
-								</div>
-								<div class="sCases__slide swiper-slide">
-									<div class="sCases__item">
-										<div class="sCases__img-wrap bg-wrap"><img class="picture-bg" src="img/@2x/case-1.jpg" alt=""/>
-											<div class="sCases__label">230 страниц, PDF
+									<div class="swiper-slide">
+										<div class="ppr-slider__item-wrap">
+											<div class="ppr-slider__item">
+												<div class="ppr-slider__i-row row justify-content-center">
+													<div class="ppr-slider__col ppr-slider__col--img col-lg-6"><img src="/img/ppr-slider-1.jpg">
+														<div class="ppr-slider__btn-pl">
+															<svg class="icon icon-zoom-pl ">
+																<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="ppr-slider__col ppr-slider__col--content col-lg-6 col-xl text-lg-start">
+														<div class="ppr-slider__title">Проект производства работ  для электромонтажа
+														</div>
+														<div class="ppr-slider__client">Клиент: ООО «ПромТоргСтрой»
+														</div>
+														<div class="ppr-slider__difficulty">
+															<div class="ppr-slider__d-txt">Сложность
+															</div>
+															<div class="ppr-slider__d-stars">
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="ppr-slider__descr">
+															<div class="ppr-slider__blue">7 листов графической части
+															</div>
+															<div class="ppr-slider__blue">30 страниц
+															</div>
+														</div>
+														<a class="ppr-slider__btn" href="#">Узнать стоимость такого ппр
+														</a>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="sCases__caption">
-											<div class="sCases__title">Разработка ПОС для «ПромТоргСтрой»
-											</div>
-											<a class="sCases__btn" href="#">Смотреть проект
-											</a>
 										</div>
 									</div>
-								</div>
-								<div class="sCases__slide swiper-slide">
-									<div class="sCases__item">
-										<div class="sCases__img-wrap bg-wrap"><img class="picture-bg" src="img/@2x/case-1.jpg" alt=""/>
-											<div class="sCases__label">230 страниц, PDF
-											</div>
-										</div>
-										<div class="sCases__caption">
-											<div class="sCases__title">Разработка ПОС для «ПромТоргСтрой»
-											</div>
-											<a class="sCases__btn" href="#">Смотреть проект
-											</a>
-										</div>
-									</div>
-								</div>
 							</div>
-						</div>
-						<div class="control-wrap">
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-slider-arrow-left ">
-									<use xlink:href="img/svg/sprite.svg#slider-arrow-left"></use>
-								</svg>
+							<div class="control-wrap">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-slider-arrow-left ">
+										<use xlink:href="img/svg/sprite.svg#slider-arrow-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-slider-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#slider-arrow-right"></use>
+									</svg>
+								</div>
+								<div class="swiper-pagination"></div>
 							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-slider-arrow-right ">
-									<use xlink:href="img/svg/sprite.svg#slider-arrow-right"></use>
-								</svg>
-							</div>
-							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
