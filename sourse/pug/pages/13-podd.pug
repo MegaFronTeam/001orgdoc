@@ -32,6 +32,7 @@ include ../blocks/sAddServices/_sAddServices.pug
 include ../blocks/sAgreement/_sAgreement.pug
 include ../blocks/sPoddSources/_sPoddSources.pug
 include ../blocks/sFinishedProjects/_sFinishedProjects.pug
+include ../blocks/sGetPrice/_sGetPrice.pug
 
 
 
@@ -59,8 +60,37 @@ block pagecontent
 					//- +s-accordion
 				.col-lg-4
 					+s-menu-right
-	+sServiseForm('ПОДД')
-	+sCases('hidden','traffic-lights.png','common','Примеры работ').sCases--trafic.mb-0
+	+sGetPrice('Узнать цену Проекта и согласования ОДД на | ', 'Введите название в поиск...','Получить бесплатную консультацию').sGetPrice--blue
+	+sCases('hidden', 'traffic-lights.png', '', 'Примеры разработанных нами 2197 ППР и ППРк с 2006 года').sCases--trafic.mb-0
+		+b.ppr-slider.ppr__slider--js.swiper
+			.swiper-wrapper
+				mixin pprSlide()
+					.swiper-slide
+						+e.item-wrap
+							+e.item
+								+e.i-row.row.justify-content-center
+									+e.col--img.col-lg-6
+										img(src="img/ppr-slider-1.jpg")
+										+e.btn-pl
+											+icon('zoom-pl')
+									+e.col--content.col-lg-6.col-xl.text-lg-start
+										+e.title Проект производства работ  для электромонтажа
+										+e.client Клиент: ООО «ПромТоргСтрой»
+										+e.difficulty
+											+e.d-txt Сложность
+											+e.d-stars
+												-for(var i = 0; i < 2; i++)
+													+icon('star')
+										+e.descr
+											+e.blue 7 листов графической части
+											+e.blue 30 страниц
+										+e.btn(href="#") Узнать стоимость такого ппр
+				+pprSlide()
+				+pprSlide()
+				+pprSlide()
+			+b.control-wrap
+				+arrow
+				.swiper-pagination
 	+sHowOrder('Как заказать проект организации дорожного движения, схему ОДД?')
 		+sHowOrderItem(`1`,`Позвоните по&nbsp;телефону&nbsp;`,`+7 (495) 971-39-71`,`Наши специалисты (не&nbsp;менеджеры, а&nbsp;именно инженеры- проектировщики) с&nbsp;высшим строительным образованием и&nbsp;опытом работы, подробно консультируют Вас по&nbsp;всем интересующим вопросам, касающимся разработки и&nbsp;согласования проектов организации дорожного движения (ПОДД), дадут необходимые консультации, помогут быстро и&nbsp;удобно заказать ПОДД на&nbsp;любой вид работ.`,`Получить консультацию`)
 		+sHowOrderItem(`2`,`При наличии исходных данных в&nbsp;электронном виде&nbsp;&mdash; присылайте их&nbsp;нам по&nbsp;электронной почте`,`mail@orgdoc.ru`,`Если исходных данных нет, мы&nbsp;помогаем их&nbsp;собирать самостоятельно за&nbsp;Вас. Мы&nbsp;в&nbsp;течении 15&nbsp;минут рассматриваем их&nbsp;и&nbsp;делаем Вам подробное предложение с&nbsp;ценами и&nbsp;сроками на&nbsp;разработку Проекта ОДД.`,'Написать на почту')

@@ -679,6 +679,20 @@ function eventHandler() {
 			clickable: true
 		}
 	});
+	let sPprSlider = new Swiper('.ppr__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.ppr__slider .swiper-button-next',
+			prevEl: '.ppr__slider .swiper-button-prev'
+		},
+		pagination: {
+			el: '.ppr__slider .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 
 
 

@@ -661,6 +661,20 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	});
+	let sPprSlider = new Swiper('.ppr__slider--js', {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.ppr__slider .swiper-button-next',
+			prevEl: '.ppr__slider .swiper-button-prev'
+		},
+		pagination: {
+			el: '.ppr__slider .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	}); // ===================
 	// ym(21984247, 'getClientID', function (clientID) {
 	// 	$(".wpcf7 form .clientID" ).each(function(){ 
