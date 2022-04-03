@@ -80,6 +80,13 @@
 		}
 	}
 
+	.sExamples-item__title {
+		span {
+			display: block;
+			text-decoration: none;
+		}
+	}
+
 	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

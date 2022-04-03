@@ -12,6 +12,27 @@ mixin sExamplesItem(i,t,link)
 			if link
 				+e.A.link.link-success(href='#')= 'ПОДРОБНЕЕ'
 
+mixin sExamples-item(title, img)
+	+b.sExamples-item
+		+e.title!= title 
+		p Что вы получите:
+		ul
+			li Наши специалисты бесплатно посетят Ваш объект
+			li Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД
+			li Скидка&nbsp;10% при заказе в&nbsp;день обращения
+			li Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации
+			li Проектируем ОДД на&nbsp;любой вид строительных работ
+		+e.images-block
+			img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
+			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${img}`)
+				img(src=`img/sExamples-fr-${img}.png`, alt="")
+				+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
+					img(src=`img/sExamples-bk-${img}.png`, alt="")
+				a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
+			+e.result <span>Результат</span> нашей работы:
+				+icon('result-arrow')
+		button.btn-green Узнать стоимость
+
 mixin sExamples()
 	// start sExamples
 	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
@@ -27,24 +48,22 @@ mixin sExamples()
 				+e.subtitle Далее, нажав на&nbsp;кнопку&nbsp;Вы можете посмотреть пример нужного Вам Проекта и&nbsp;его состав (все проекты согласованы):
 				+input('Поиск услуги','text','')
 				.row
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('1', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>период эксплуатации</span>','link')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>период эксплуатации</span>`,'1')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>период строительства</span>`,'2')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>снос/демонтаж</span>`,'3')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>прокладку сетей, коммуникации</span>`,'4')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>установку лесов или пешеходной галереи</span>`,'5')
+					.col.col-lg-6
+						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>подъем оборудования</span>`,'6')
+					.col.col-lg-6
+						+sExamples-item(`Проект съезда к&nbsp;земельному участку с&nbsp;автодороги регионального значения в&nbsp;Московской области с&nbsp;согласованием Мосавтодор`,'7')
+					.col.col-lg-6
+						+sExamples-item(`Проект реконструкции светофорного объекта (АСУДД), с&nbsp;получением&nbsp;ТУ, согласованиями ЦОДД, Департамента транспорта`,'8')
 
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('2', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>период строительства</span>','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('3', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>на снос или демонтаж</span>','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('4', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>прокладку сетей, коммуникации</span>')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('5', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>установку лесов или пешеходной галереи</span>','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('6', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>подъем оборудования</span>','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('7', 'Проект съезда к&nbsp;земельному участку с&nbsp;автодороги регионального значения в&nbsp;Московской области с&nbsp;согласованием Мосавтодор','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('8', 'Проект реконструкции светофорного объекта (АСУДД), с&nbsp;получением ТУ, согласованиями ЦОДД, Департамента транспорта','link')
-					.col-12.col-sm-6.col-lg-4
-						+sExamplesItem('9', 'Проект переустройства контактной сети троллейбуса с&nbsp;согласованием ГУП Мосгортранс, Деп-та транспорта Москвы','link')
 
 	// end sExamples
