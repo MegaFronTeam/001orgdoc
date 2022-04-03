@@ -1,8 +1,12 @@
 mixin sExamplesItem(i,t,link)
 	+b.example-item
+		+e.img--front(href=`img/sExamples-${i}-1.png` data-fancybox=`sert-${i}`)
+			img(src=`img/sExamples-${i}-1.png`, alt="")
+			+e.img--back(href=`img/sExamples-${i+1}-1.png` data-fancybox=`sert-${i}`)
+				img(src=`img/sExamples-${i}-1.png`, alt="")
+			a(href=`img/sExamples-${i+1}-1.png` data-fancybox=`sert-${i}`).d-none
 		//- +e.img-wrap
 		//- +img(`sExamples-${i}.png`)
-		img(src=`img/sExamples-${i}.png`, alt="")
 		+e.text
 			+e.title!= t
 			if link
@@ -12,7 +16,7 @@ mixin sExamples()
 	// start sExamples
 	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
 		+e.wrapper
-			
+
 			img(src="img/sMainDocs-bg.jpg" alt="").picture-bg
 			.container
 				+b.section-title
@@ -25,6 +29,7 @@ mixin sExamples()
 				.row
 					.col-12.col-sm-6.col-lg-4
 						+sExamplesItem('1', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>период эксплуатации</span>','link')
+
 					.col-12.col-sm-6.col-lg-4
 						+sExamplesItem('2', 'Проект организации дорожного движения (ПОДД) на&nbsp;<span>период строительства</span>','link')
 					.col-12.col-sm-6.col-lg-4
