@@ -55,12 +55,12 @@ block pagecontent
 	//- +sServiseForm('ППР')
 	+sGetPrice
 	+sCases('hidden', 'pencil.png', '', 'Примеры разработанных нами 2197 ППР и ППРк с 2006 года').mb-0
-		+b.ppr-slider.ppr__slider--js.swiper
+		+b.ppr-slider.ppr__slider--js.swiper-container
 			.swiper-wrapper
 				.swiper-slide
 					+e.item-wrap
 						+e.item
-							+e.i-row.row.justify-content-center
+							+e.i-row.row
 								+e.col--img.col-md-9.col-lg-6.col-xl-auto
 									img(src="/img/ppr-slider-1.jpg")
 									+e.btn-pl
@@ -73,9 +73,9 @@ block pagecontent
 										+e.d-stars
 											-for(var i = 0; i < 2; i++)
 												+icon('star')
-									//- +e.descr
-									+e.blue 7 листов графической части
-									+e.blue 30 страниц
+									+e.descr
+										+e.blue 7 листов графической части
+										+e.blue 30 страниц
 									+e.btn(href="#") Узнать стоимость такого ппр
 		+b.control-wrap
 						+arrow

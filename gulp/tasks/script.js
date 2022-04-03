@@ -16,7 +16,7 @@ module.exports = function (){
 		'node_modules/babel-polyfill/dist/polyfill.js',
 		$.sourse + '/js/lazy.js'
 		])
-	.pipe($.babel())
+	// .pipe($.babel())
 	.pipe($.tabify(2, true))
 	.pipe($.gulp.dest($.public + '/js'))
 	.pipe($.browserSync.stream());

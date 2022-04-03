@@ -6,7 +6,7 @@ mixin sCases(hidden, img='pencil.png', common, title)
 				+b.section-title.text-center
 					h2!= title
 				if common	
-					+e.slider--js.swiper
+					+e.slider--js.swiper-container
 						.swiper-wrapper
 							- for (var x = 0; x < 4; x++)
 								+e.slide.swiper-slide
