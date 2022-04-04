@@ -147,21 +147,24 @@
 		}
 	}
 	&__img--back {
-		position: relative;
+		position: absolute;
 		overflow: hidden;
 		display: inline-block;
-		transform: translateX(-90%) scaleY(.8);
+		top: 80px;
+		left: 45px;
+		// transform: translateX(-90%);
 		z-index: 1;
 	}
 	.bg-img {
 		position: absolute;
+		width: 70%;
 		top: 0;
 		right: rem(-20);
 	}
 	&__result {
 		position: relative;
 		margin-bottom: rem(40);
-		max-width: 180px;
+		max-width: rem(180);
 		font-weight: 700;
 		font-size: rem(16);
 		span {
