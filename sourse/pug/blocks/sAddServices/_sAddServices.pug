@@ -1,3 +1,12 @@
+mixin sServiceSlider()
+	+b.slider-service-wrap
+		+b.slider-service--js.swiper
+			.swiper-wrapper
+				block
+		+b.control-wrap.d-md-none
+			+arrow
+			.swiper-pagination
+
 mixin sAddServices()
 	// start sAddServices
 	+b.SECTION.sAddServices.section#sAddServices&attributes(attributes)
@@ -6,22 +15,22 @@ mixin sAddServices()
 			+b.section-title
 				h2 Помимо качественного проекта организации дорожного движения (ПОДД), обратившись к&nbsp;нам&nbsp;Вы можете заказать:
 			+input('Поиск услуги','text','')
-			.row
-					.col.col-lg-6
+				+sServiceSlider()
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Установка</span> дорожных знаков`,'9')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Проекты</span> ПОДД и&nbsp;Схемы ОДД`,'10')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Нанесение</span> дорожной разметки`,'11')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Выполнение</span> Топографической съемки`,'12')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Проектирование</span> автомобильных дорог`,'13')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Проектирование</span> АСУДД или светофорных объектов`,'14')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Обустройство</span> и&nbsp;проектирование парковок, автостоянок`,'15')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`<span>Разработка</span> Схем транспортного обслуживания (СТО/ТС)`,'16')
 
 	// end sAddServices

@@ -1,16 +1,11 @@
-mixin sExamplesItem(i,t,link)
-	+b.example-item
-		+e.img--front(href=`img/sExamples-${i}-1.png` data-fancybox=`sert-${i}`)
-			img(src=`img/sExamples-${i}-1.png`, alt="")
-			+e.img--back(href=`img/sExamples-${i+1}-1.png` data-fancybox=`sert-${i}`)
-				img(src=`img/sExamples-${i}-1.png`, alt="")
-			a(href=`img/sExamples-${i+1}-1.png` data-fancybox=`sert-${i}`).d-none
-		//- +e.img-wrap
-		//- +img(`sExamples-${i}.png`)
-		+e.text
-			+e.title!= t
-			if link
-				+e.A.link.link-success(href='#')= 'ПОДРОБНЕЕ'
+mixin sExamplesSlider()
+	+b.slider-examples-wrap
+		+b.slider-examples--js.swiper
+			.swiper-wrapper
+				block
+		+b.control-wrap.d-md-none
+			+arrow
+			.swiper-pagination
 
 mixin sExamples-item(title, img)
 	+b.sExamples-item
@@ -47,22 +42,22 @@ mixin sExamples()
 				p Компания &laquo;С-Проджект&raquo; помогает обеспечить безопасность, удобство движения пешеходов, транспорта посредством профессиональной разработки Проекта ОДД (проект организации дорожного движения) на&nbsp;время строительства или эксплуатации. Также, Проект организации дорожного движения актуален и&nbsp;при устройстве инженерных коммуникаций, АЗС, автостоянок, прочих объектов.
 				+e.subtitle Далее, нажав на&nbsp;кнопку&nbsp;Вы можете посмотреть пример нужного Вам Проекта и&nbsp;его состав (все проекты согласованы):
 				+input('Поиск услуги','text','')
-				.row
-					.col.col-lg-6
+				+sExamplesSlider()
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>период эксплуатации</span>`,'1')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>период строительства</span>`,'2')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>снос/демонтаж</span>`,'3')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>прокладку сетей, коммуникации</span>`,'4')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>установку лесов или пешеходной галереи</span>`,'5')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект организации дорожного движения (ПОДД) на&nbsp;<span>подъем оборудования</span>`,'6')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект съезда к&nbsp;земельному участку с&nbsp;автодороги регионального значения в&nbsp;Московской области с&nbsp;согласованием Мосавтодор`,'7')
-					.col.col-lg-6
+					+e.slide.swiper-slide
 						+sExamples-item(`Проект реконструкции светофорного объекта (АСУДД), с&nbsp;получением&nbsp;ТУ, согласованиями ЦОДД, Департамента транспорта`,'8')
 
 
