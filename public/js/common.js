@@ -678,7 +678,7 @@ function eventHandler() {
 	});
 	let sExampleSlider = new Swiper('.slider-examples--js', {
 		watchOverflow: true,
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 30,
 		navigation: {
 			nextEl: '.slider-examples-wrap .swiper-button-next',
@@ -692,7 +692,7 @@ function eventHandler() {
 	});
 	let sServiceSlider = new Swiper('.slider-service--js', {
 		watchOverflow: true,
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 30,
 		navigation: {
 			nextEl: '.slider-service-wrap .swiper-button-next',

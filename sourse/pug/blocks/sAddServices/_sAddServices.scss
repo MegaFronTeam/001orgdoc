@@ -99,7 +99,7 @@
 				margin: 0;
 			}
 			&__slide{
-				// width: auto;
+				width: calc(100% - 40px);
 				height: auto;
 			}
 			.swiper-wrapper{
