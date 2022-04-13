@@ -21,9 +21,9 @@ mixin sExamples-item(title, img)
 			img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
 			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${img}`)
 				img(src=`img/sExamples-fr-${img}.png`, alt="")
-				+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
-					img(src=`img/sExamples-bk-${img}.png`, alt="")
-				a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
+			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
+				img(src=`img/sExamples-bk-${img}.png`, alt="")
+			a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
 			+e.result <span>Результат</span> нашей работы:
 				+icon('result-arrow')
 		button.btn-green Узнать стоимость
