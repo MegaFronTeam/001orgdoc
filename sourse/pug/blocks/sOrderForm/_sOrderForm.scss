@@ -76,6 +76,9 @@
 			opacity: 0.8;
 			margin-bottom: rem(26);
 		}
+		.form-wrap__input.form-control {
+			margin-top: 0 !important;
+		}
 	}
 	button.btn-green {
 		display: flex;

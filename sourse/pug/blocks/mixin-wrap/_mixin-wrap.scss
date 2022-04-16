@@ -1,6 +1,7 @@
 .soc {
 	margin: 0 rem(-5px);
 	display: flex;
+	justify-content: end;
 
 	&__item {
 		position: relative;
@@ -316,6 +317,7 @@
 	}
 	&__btn {
 		@extend .btn;
+		margin-top: auto;
 		width: 100%;
 		letter-spacing: 0.05em;
 		font-size: 14px;

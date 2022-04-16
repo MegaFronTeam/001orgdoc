@@ -246,6 +246,9 @@
 		.row {
 			--bs-gutter-x: 0;
 		}
+		&__col--img {
+			@include block(592, 507)
+		}
 
 		&__item-wrap{
 			min-height: 100%;
@@ -469,6 +472,10 @@
 		}
 	}
 
+	}
+
+	.ppr-slider__col--img::before {
+		display: none;
 	}
 
 	@include media-breakpoint-up(xl) {}

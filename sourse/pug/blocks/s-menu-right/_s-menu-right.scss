@@ -69,6 +69,8 @@
 		overflow: hidden;
 
 		a {
+			position: relative;
+			z-index: 1;
 			@include mt;
 
 			&:before {

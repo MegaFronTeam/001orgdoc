@@ -203,6 +203,10 @@
 			border-radius: 10px;
 		}
 	}
+
+	.probox {
+		padding:15px 0;
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
