@@ -305,9 +305,9 @@ function eventHandler() {
 		mobile: false
 	});
 	wow.init();
-	// $('.header').hcSticky({
-	// 	stickTo: 'body'
-	// });
+	$('.header').hcSticky({
+		stickTo: 'body'
+	});
 
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {

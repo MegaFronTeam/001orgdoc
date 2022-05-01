@@ -61,8 +61,7 @@
 	
 	&__col{
 	}
-	.jobs-item::before {
-		content: "от 15 000 ₽";
+	.jobs-item__price {
 		position: absolute;
 		padding: rem(8) rem(20) rem(8);
 		left: 0;

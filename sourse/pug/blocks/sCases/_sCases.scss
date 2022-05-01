@@ -298,9 +298,9 @@
 			}
 		}
 		
-		&__col{			
+		&__col{
 			&--img{
-				max-height: 120px;
+				max-height:200px;
 				@include media-breakpoint-up(sm){
 					max-height: 300px;
 				}
@@ -320,8 +320,12 @@
 				width: 55.6%!important;
 			}
 			img {
+				position: absolute;
 				width: 100%;
 				object-fit: cover;
+				height: 100%;
+				left: 0;
+				top: 0;
 			}
 		}
 		&--content{

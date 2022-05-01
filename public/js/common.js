@@ -306,10 +306,10 @@ function eventHandler() {
 	var wow = new WOW({
 		mobile: false
 	});
-	wow.init(); // $('.header').hcSticky({
-	// 	stickTo: 'body'
-	// });
-
+	wow.init();
+	$('.header').hcSticky({
+		stickTo: 'body'
+	});
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {
 			$(".menu-item-has-children").addClass("menu-item-has-children");
