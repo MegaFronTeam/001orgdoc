@@ -27,6 +27,8 @@ include ../blocks/sInformation/_sInformation.pug
 include ../blocks/sMainDocs/_sMainDocs.pug
 include ../blocks/sHowOrder/_sHowOrder.pug
 include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sGetPrice/_sGetPrice.pug
 
 
 
@@ -42,7 +44,7 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+header-block-small().d-none.d-lg-block
-
+	
 	.section-border-bottom
 		.container
 			.row
@@ -54,6 +56,8 @@ block pagecontent
 					//- +s-accordion
 				.col-lg-4
 					+s-menu-right
+	+sGetPrice
+	+sForm
 	+sServiseForm('ПОС')
 	+sCases('', 'pencil.png', 'common', 'Примеры работ')
 	+sHowOrder('Как заказать проект организации строительства (ПОС)?')

@@ -62,7 +62,7 @@ var JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	body: document.querySelector("body"),
 	modalCall: function modalCall() {
-		$(".link-modal").fancybox({
+		$(".link-modal, .link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
 			touch: false,
@@ -705,12 +705,67 @@ function eventHandler() {
 		}
 	}); // ===================
 	// ym(21984247, 'getClientID', function (clientID) {
-	// 	$(".wpcf7 form .clientID" ).each(function(){ 
+	// 	$(".wpcf7 form .clientID" ).each(function(){
 	// 			$(this).val(clientID);
 	// 	})
 	// });
 	// window.on('load', function(){
 	// })
+
+	$('.sForm--js').each(function () {
+		let parent = this;
+		let input = parent.querySelector('.sForm-search-js');
+		let btn = parent.querySelector('.sForm-btn-js');
+		let resultItemsCont = parent.querySelector('.ppr-items-js');
+		let itemsFound = parent.querySelector('.sForm-items-found');
+		let priceFrom = resultItemsCont.getAttribute('data-price-from');
+		let btnMute = false;
+		$(btn).click(function () {
+			console.log(this);
+
+			if (btnMute) {
+				return;
+			}
+
+			let val = input.value;
+
+			if (val.length > 2) {
+				btnMute = true;
+				itemsFound.innerHTML = '1';
+				$(resultItemsCont).slideUp(function () {
+					$(this).toggleClass('active');
+					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none');
+					let foundItem = "\n\t\t\t\t\t<div class=\"sForm__item\">\n\t\t\t\t\t\t<div class=\"sForm__i-row row align-items-center\">\n\t\t\t\t\t\t\t<div class=\"sForm__i-title col-md\">\n\t\t\t\t\t\t\t\t".concat(val, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"sForm__i-price col-md-auto\">\n\t\t\t\t\t\t\t\t").concat(priceFrom, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-auto\">\n\t\t\t\t\t\t\t\t<a class=\"sForm__i-btn link-modal--js\" href=\"#modal-price\" data-title=\"").concat(val, "\" data-price=\"").concat(priceFrom, "\">\n\t\t\t\t\t\t\t\t\t\u0417\u0430\u043A\u0430\u0437\u0430\u0442\u044C \u041F\u041F\u0440\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t");
+					this.innerHTML = foundItem;
+					$(this).slideDown(function () {
+						$(this).addClass('active');
+						btnMute = false;
+					});
+				});
+				$(".link-modal--js").fancybox({
+					arrows: false,
+					infobar: false,
+					touch: false,
+					type: 'inline',
+					i18n: {
+						en: {
+							CLOSE: "Закрыть",
+							NEXT: "Вперед",
+							PREV: "Назад" // PLAY_START: "Start slideshow",
+							// PLAY_STOP: "Pause slideshow",
+							// FULL_SCREEN: "Full screen",
+							// THUMBS: "Thumbnails",
+							// DOWNLOAD: "Download",
+							// SHARE: "Share",
+							// ZOOM: "Zoom"
+
+						}
+					}
+				});
+			} //-
+
+		}); //let resultItems = document.querySelectorAll('.result-item-js');
+	});
 }
 
 ;
@@ -722,6 +777,36 @@ if (document.readyState !== 'loading') {
 }
 
 document.addEventListener('wpcf7mailsent', function (event) {
-	ym(21984247, 'reachGoal', 'zakaz'); // yaCounter21984247.reachGoal('zakaz')
-	// console.log(1000);
+	ym(21984247, 'reachGoal', 'zakaz');
 }, false);
+jQuery(document).ready(function ($) {
+	$('#more_items').click(function (e) {
+		e.preventDefault();
+		$('.slide_more').removeClass('d-none');
+		$(this).remove();
+	});
+
+	if (typeof OptionPos !== 'undefined') {
+		$('#title_form').text(TitleForm);
+
+		for (let index = 0; index < OptionPos.length; index++) {
+			const element = OptionPos[index];
+			$('#pos_select').append('<option data-price="' + element['price'] + '" value="' + element['title'] + '">' + element['title'] + '</option>');
+
+			if (index == 0) {
+				$('#price_pos').text(element['price']);
+			}
+		}
+
+		$('#pos_select').change(function (e) {
+			let price = $('option:selected', $('#pos_select')).data('price');
+			$('#price_pos').text(price);
+		});
+	} //zaraz_form_title
+
+
+	if (typeof zaraz_form_title !== 'undefined') {
+		console.log(zaraz_form_title);
+		$('#zaraz_form_title_el ').text(zaraz_form_title);
+	}
+});

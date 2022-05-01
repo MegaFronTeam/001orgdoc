@@ -182,7 +182,7 @@ body {
 }
 
 .row--small {
-	@include roww(10);
+	@include roww(10px);
 }
 
 .main-wrapper {
@@ -975,3 +975,42 @@ select.form-control{
 				// z-index: 0;
 			}
 }
+
+.custom-marker{
+	padding-left: rem(20);
+	margin-left: 0;
+    li {
+      list-style: none;
+      position: relative;
+      padding-bottom: rem(10);
+      line-height: 1.67;
+
+      &::after {
+        content: "";
+        width: $em-base;
+        background-color: #90c336;
+        height: rem(2);
+        right: 101%;
+        top: rem(12);
+        position: absolute;
+      }
+    }
+} 
+.page-list,
+.section-border-bottom ul:not(.breadcrumb, .menu){
+		
+	@extend .custom-marker;
+
+	} 
+
+	.s-accordion .accordion-item .icon{
+		display: none !important;
+	}
+
+ 
+.form-wrap{
+
+	input.wpcf7-form-control.wpcf7-text.form-wrap__input.form-control{
+		margin-top: 0 !important;
+	}
+} 

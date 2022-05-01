@@ -40,7 +40,12 @@
 		display: block;
 		margin-bottom: rem(5);
 	}
-
+	
+	&__input-wrap &__title{
+		display: block;
+		font-size: 1rem;
+		margin-bottom: rem(5);
+	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;

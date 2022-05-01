@@ -50,9 +50,11 @@ function _defineProperty(obj, key, value) {
 }
 
 var $ = jQuery;
+
 if ($('#unWrapWidget').length) {
-	$('#unWrapWidget').unwrap()
+	$('#unWrapWidget').unwrap();
 }
+
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -60,7 +62,7 @@ var JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	body: document.querySelector("body"),
 	modalCall: function modalCall() {
-		$(".link-modal").fancybox({
+		$(".link-modal, .link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
 			touch: false,
@@ -207,7 +209,7 @@ function eventHandler() {
 	});
 	var icon = '<svg width = "18" height = "13" xmlns = "http://www.w3.org/2000/svg" version = "1.1" xmlns: xlink = "http://www.w3.org/1999/xlink" xmlns: avocode = "https://avocode.com/" viewBox = "0 0 18 13" > <defs></defs> <g><g><path d="M-0.00018,6.99896v-1.00096l16.20587,0l-5.19071,-5.19059l0.79388,-0.79371l6.1758,6.17591l-0.30905,0.3088l0.30905,0.30894l-6.1758,6.17591l-0.79388,-0.79371l5.1904,-5.19059z" fill="#90c336" fill-opacity="1"></path></g></g></svg> ';
 	var arrl2 = ' <div class="r">' + icon,
-		arrr2 = ' <div class="l">' + icon; // // карусель
+			arrr2 = ' <div class="l">' + icon; // // карусель
 
 	var defaultSlide = {
 		speed: 600,
@@ -308,12 +310,11 @@ function eventHandler() {
 	$('.header').hcSticky({
 		stickTo: 'body'
 	});
-
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {
 			$(".menu-item-has-children").addClass("menu-item-has-children");
 		}
-	})
+	});
 	var tabsSl = new Swiper('.top-nav__menu-wrap', {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
@@ -323,7 +324,6 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 10
 	});
-
 	let sCardSliderRev = new Swiper('.sCardSlider--rev .sCardSlider__slider--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -333,17 +333,16 @@ function eventHandler() {
 		// 	loadPrevNextAmount: 10,
 		// },
 		loop: true,
-
 		//-
 		navigation: {
 			nextEl: '.sCardSlider--rev .swiper-button-next',
-			prevEl: '.sCardSlider--rev .swiper-button-prev',
+			prevEl: '.sCardSlider--rev .swiper-button-prev'
 		},
 		pagination: {
 			el: '.sCardSlider--rev .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
+			clickable: true
+		}
 	});
 	let sCardSliderCert = new Swiper('.sCardSlider--cert .sCardSlider__slider--js', {
 		watchOverflow: true,
@@ -354,19 +353,17 @@ function eventHandler() {
 		// 	loadPrevNextAmount: 10,
 		// },
 		loop: true,
-
 		//-
 		navigation: {
 			nextEl: '.sCardSlider--cert .swiper-button-next',
-			prevEl: '.sCardSlider--cert .swiper-button-prev',
+			prevEl: '.sCardSlider--cert .swiper-button-prev'
 		},
 		pagination: {
 			el: '.sCardSlider--cert .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
+			clickable: true
+		}
 	});
-
 	window.bioEp = {
 		// Private variables
 		bgEl: {},
@@ -392,7 +389,7 @@ function eventHandler() {
 			// Create a cookie
 			create: function create(name, value, days, sessionOnly) {
 				var expires = "";
-				if (sessionOnly) expires = "; expires=0"; else if (days) {
+				if (sessionOnly) expires = "; expires=0";else if (days) {
 					var date = new Date();
 					date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
 					expires = "; expires=" + date.toGMTString();
@@ -438,7 +435,7 @@ function eventHandler() {
 			return false;
 		},
 		// Add font stylesheets and CSS for the popup
-		addCSS: function addCSS() { },
+		addCSS: function addCSS() {},
 		// Add the popup to the page
 		addPopup: function addPopup() {
 			// Add the background div
@@ -446,14 +443,14 @@ function eventHandler() {
 			this.bgEl.id = "bio_ep_bg";
 			document.body.appendChild(this.bgEl); // Add the popup
 
-			if (document.getElementById("bio_ep")) this.popupEl = document.getElementById("bio_ep"); else {
+			if (document.getElementById("bio_ep")) this.popupEl = document.getElementById("bio_ep");else {
 				this.popupEl = document.createElement("div");
 				this.popupEl.id = "bio_ep";
 				this.popupEl.innerHTML = this.html;
 				document.body.appendChild(this.popupEl);
 			} // Add the close button
 
-			if (document.getElementById("bio_ep_close")) this.closeBtnEl = document.getElementById("bio_ep_close"); else {
+			if (document.getElementById("bio_ep_close")) this.closeBtnEl = document.getElementById("bio_ep_close");else {
 				this.closeBtnEl = document.createElement("div");
 				this.closeBtnEl.id = "bio_ep_close";
 				this.closeBtnEl.appendChild(document.createTextNode("X"));
@@ -484,12 +481,12 @@ function eventHandler() {
 			}
 		},
 		// Hide the popup
-		hidePopup: function hidePopup() { },
+		hidePopup: function hidePopup() {},
 		// Handle scaling the popup
-		scalePopup: function scalePopup() { },
+		scalePopup: function scalePopup() {},
 		// Event listener initialisation for all browsers
 		addEvent: function addEvent(obj, event, callback) {
-			if (obj.addEventListener) obj.addEventListener(event, callback, false); else if (obj.attachEvent) obj.attachEvent("on" + event, callback);
+			if (obj.addEventListener) obj.addEventListener(event, callback, false);else if (obj.attachEvent) obj.attachEvent("on" + event, callback);
 		},
 		// Load event listeners for the popup
 		loadEvents: function loadEvents() {
@@ -553,20 +550,13 @@ function eventHandler() {
 				}, bioEp.delay * 1000);
 			});
 		}
-	};
-	// bioEp.init({});
+	}; // bioEp.init({});
 
 	$('.s-content--main').readmore({
 		speed: 75,
-		lessLink: `<button class="btn btn-toggle-js" type="button">Скрыть
-	</button> `,
-
-		moreLink: `<button class="btn btn-toggle-js" type="button">Показать
-	</button> `,
-
+		lessLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u0421\u043A\u0440\u044B\u0442\u044C\n\t</button> ",
+		moreLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C\n\t</button> "
 	});
-
-
 	let sCasesSlider = new Swiper('.sCases__slider--js', {
 		watchOverflow: true,
 		slidesPerView: 1,
@@ -576,28 +566,26 @@ function eventHandler() {
 		// 	loadPrevNextAmount: 10,
 		// },
 		loop: true,
-		breakpoints: { 
+		breakpoints: {
 			576: {
-				slidesPerView:2
+				slidesPerView: 2
 			},
 			// when window width is >= 640px
 			992: {
 				slidesPerView: 3
 			}
 		},
-
 		//-
 		navigation: {
 			nextEl: '.sCases .swiper-button-next',
-			prevEl: '.sCases .swiper-button-prev',
+			prevEl: '.sCases .swiper-button-prev'
 		},
 		pagination: {
 			el: '.sCases .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
+			clickable: true
+		}
 	});
-
 	let sPartnersSlider = new Swiper('.sPartners__slider--js', {
 		watchOverflow: true,
 		slidesPerView: 1,
@@ -607,39 +595,35 @@ function eventHandler() {
 		// 	loadPrevNextAmount: 10,
 		// },
 		loop: true,
-		breakpoints: { 
+		breakpoints: {
 			576: {
-				slidesPerView:2
+				slidesPerView: 2
 			},
 			768: {
-				slidesPerView:3
+				slidesPerView: 3
 			},
 			// when window width is >= 640px
 			992: {
 				slidesPerView: 4
 			}
 		},
-
 		//-
 		navigation: {
 			nextEl: '.sPartners .swiper-button-next',
-			prevEl: '.sPartners .swiper-button-prev',
+			prevEl: '.sPartners .swiper-button-prev'
 		},
 		pagination: {
 			el: '.sPartners .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
+			clickable: true
+		}
 	});
-
 	$(".toggle-search--js").click(function () {
 		$(".search-wrap--js").slideToggle();
-	})
-	// let div = document.createElement('input');
+	}); // let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')
 	// this.append(div);
-
 
 	let sListOfJobsSlider = new Swiper('.slider-jobs--js', {
 		watchOverflow: true,
@@ -653,17 +637,16 @@ function eventHandler() {
 		// 	loadPrevNextAmount: 10,
 		// },
 		// loop: true,
-
 		//-
 		navigation: {
 			nextEl: '.slider-jobs-wrap .swiper-button-next',
-			prevEl: '.slider-jobs-wrap .swiper-button-prev',
+			prevEl: '.slider-jobs-wrap .swiper-button-prev'
 		},
 		pagination: {
 			el: '.slider-jobs-wrap .swiper-pagination',
 			type: 'bullets',
-			clickable: true,
-		},
+			clickable: true
+		}
 	});
 	let sfinishedProjectSlider = new Swiper('.slider-projects--js', {
 		watchOverflow: true,
@@ -693,7 +676,6 @@ function eventHandler() {
 			clickable: true
 		}
 	});
-
 	let sExampleSlider = new Swiper('.slider-examples--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -708,7 +690,6 @@ function eventHandler() {
 			clickable: true
 		}
 	});
-
 	let sServiceSlider = new Swiper('.slider-service--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -722,13 +703,13 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
-	});
+	}); // ===================
 
 
 
-	// ===================
+
 	// ym(21984247, 'getClientID', function (clientID) {
-	// 	$(".wpcf7 form .clientID" ).each(function(){ 
+	// 	$(".wpcf7 form .clientID" ).each(function(){
 	// 			$(this).val(clientID);
 	// 	})
 	// });
@@ -737,8 +718,84 @@ function eventHandler() {
 
 
 
+	$('.sForm--js').each(function (){
+		let parent = this;
+		let input = parent.querySelector('.sForm-search-js');
+		let btn = parent.querySelector('.sForm-btn-js');
+		let resultItemsCont = parent.querySelector('.ppr-items-js');
+		let itemsFound = parent.querySelector('.sForm-items-found');
 
-};
+		let priceFrom = resultItemsCont.getAttribute('data-price-from');
+		let btnMute = false;
+
+		$(btn).click(function () {
+			console.log(this);
+			if(btnMute){
+				return
+			}
+			let val = input.value;
+
+			if (val.length > 2){
+				btnMute = true;
+				itemsFound.innerHTML = '1';
+
+				$(resultItemsCont).slideUp(function (){
+					$(this).toggleClass('active');
+					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none')
+					let foundItem = `
+					<div class="sForm__item">
+						<div class="sForm__i-row row align-items-center">
+							<div class="sForm__i-title col-md">
+								${val}
+							</div>
+							<div class="sForm__i-price col-md-auto">
+								${priceFrom}
+							</div>
+							<div class="col-md-auto">
+								<a class="sForm__i-btn link-modal--js" href="#modal-price" data-title="${val}" data-price="${priceFrom}">
+									Заказать ППр
+								</a>
+							</div>
+						</div>
+					</div>
+					`;
+					this.innerHTML = foundItem;
+					$(this).slideDown(function (){
+						$(this).addClass('active');
+						btnMute = false;
+					})
+				})
+
+				$(".link-modal--js").fancybox({
+					arrows: false,
+					infobar: false,
+					touch: false,
+					type: 'inline',
+					i18n: {
+						en: {
+							CLOSE: "Закрыть",
+							NEXT: "Вперед",
+							PREV: "Назад" // PLAY_START: "Start slideshow",
+							// PLAY_STOP: "Pause slideshow",
+							// FULL_SCREEN: "Full screen",
+							// THUMBS: "Thumbnails",
+							// DOWNLOAD: "Download",
+							// SHARE: "Share",
+							// ZOOM: "Zoom"
+		
+						}
+					}
+				});
+			}
+			//-
+		});
+
+		//let resultItems = document.querySelectorAll('.result-item-js');
+	});
+	
+}
+
+;
 
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -747,7 +804,33 @@ if (document.readyState !== 'loading') {
 }
 
 document.addEventListener('wpcf7mailsent', function (event) {
-	ym(21984247, 'reachGoal', 'zakaz')
-	// yaCounter21984247.reachGoal('zakaz')
-	// console.log(1000);
-}, false );
+	ym(21984247, 'reachGoal', 'zakaz');
+}, false);
+
+
+jQuery(document).ready(function ($) {
+	$('#more_items').click(function (e) {
+		e.preventDefault();
+		$('.slide_more').removeClass('d-none');
+		$(this).remove();
+	});
+	if(typeof OptionPos !=='undefined'){
+		$('#title_form').text(TitleForm)
+		for (let index = 0; index < OptionPos.length; index++) {
+			const element = OptionPos[index];
+			$('#pos_select').append('<option data-price="'+element['price']+'" value="'+element['title']+'">'+element['title']+'</option>');
+			if(index==0){
+				$('#price_pos').text(element['price'])
+			}
+		}
+		$('#pos_select').change(function (e) {
+			let price=$('option:selected',$('#pos_select')).data('price')
+			$('#price_pos').text(price)
+		});
+	}
+	//zaraz_form_title
+	if(typeof zaraz_form_title !=='undefined'){
+		console.log(zaraz_form_title)
+		$('#zaraz_form_title_el ').text(zaraz_form_title)
+	}
+});

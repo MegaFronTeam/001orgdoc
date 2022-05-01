@@ -1,0 +1,41 @@
+mixin sForm()
+	// start sForm
+	+b.SECTION.sForm--js.section&attributes(attributes)
+		.container
+			+e.box-wrap
+				+e.box
+					+e.search-box
+						+e.input-wrap
+							+e.INPUT.input.form-control.sForm-search-js(type="text" name="search" placeholder="Найти")
+							+e.btn.sForm-btn-js(type="button") Найти ППР
+						+e.result-row.row.d-none.d-md-flex
+							+sFormResultItem('Найдено результатов:', '2', 'sForm-items-found')
+							//-+sFormResultItem('Категорий ППР:', '23')
+							//-+sFormResultItem('Видов ППР:', '12 834')
+						+e.head-row.row.align-items-center
+							+e.for-col.col-md.text-center.text-md-left ППР для…
+							.col-md-auto.d-none.d-md-block
+								+e.show-more(href="#")
+									+icon('reload')
+									+e.SPAN.sm-txt Показать больше
+						+e.items.ppr-items-js.text-center.text-md-left(data-price-from='от 15 000 ₽')
+							+sFormItem('электромонтажных работ')
+							+sFormItem('кровельных работ')
+						//- .text-center.d-md-none
+						//- 	+e.show-more(href="#")
+						//- 		+icon('reload')
+						//- 		+e.SPAN.sm-txt Показать больше
+	// end sForm
+
+mixin sFormItem(title, addClasses='')
+	+e.item(class=addClasses)
+		+e.i-row.row.align-items-center
+			+e.i-title.col-md=title
+			+e.i-price.col-md-auto от 15 000 ₽
+			.col-md-auto
+				+e.i-btn.link-modal-js(href="#modal-price" data-title=title) Заказать ППр
+
+mixin sFormResultItem(key, val, valClass='')
+	.col-auto
+		+e.key=key
+		+e.val(class=valClass)=val

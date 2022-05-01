@@ -10,7 +10,7 @@
 			padding: rem(34) rem(30) rem(23);
 			box-shadow: 0 5px 20px rgba(93, 145, 0, 0.15);
 			.row{
-				@include roww(5);
+				@include roww(5px);
 			}
 			&__input-wrap {
 				margin-bottom: rem(10);

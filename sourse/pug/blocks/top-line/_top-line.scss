@@ -224,7 +224,7 @@
   
   @include media-breakpoint-down(xs) {
     .row {
-      @include roww(5);
+      @include roww(5px);
     }
   }
   

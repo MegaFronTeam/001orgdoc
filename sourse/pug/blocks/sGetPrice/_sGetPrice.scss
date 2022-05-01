@@ -78,12 +78,12 @@
 	}
 
 	input {
-		background: #F8F8F8;
+		background-color: #F8F8F8;
 		// padding-left: $input-padding-x;
 		border-radius: 5px;
 		border: none;	
 		@include media-breakpoint-up(sm) {			
-			padding-left: 50px;
+			padding-left: 70px;
 		}	
 		&::placeholder {
 			padding-left: 0;

@@ -12,7 +12,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 0;
-		@include roww(15);
+		@include roww(15px);
 	}
 
 	li {
