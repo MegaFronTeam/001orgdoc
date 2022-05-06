@@ -997,11 +997,16 @@ select.form-control{
     }
 } 
 .page-list,
-.section-border-bottom ul:not(.breadcrumb, .menu){
-		
+.section-border-bottom ul:not(.breadcrumb, .menu, .page-numbers){
+	
 	@extend .custom-marker;
-
-	} 
+	
+} 
+.sExamples-item ul li{
+	&::after{
+		display: none;
+	}
+}
 
 	.s-accordion .accordion-item .icon{
 		display: none !important;
