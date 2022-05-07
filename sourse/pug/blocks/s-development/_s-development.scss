@@ -28,6 +28,8 @@
   p {
     line-height: 1.67;
     padding-bottom: rem(10);
+    position: relative;
+    z-index: 3;
 
     &:nth-last-of-type(1) {
       margin-bottom: rem(0);

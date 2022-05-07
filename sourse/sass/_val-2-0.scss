@@ -22,6 +22,12 @@
 			@include media-breakpoint-down(lg) {
 				font-size: rem(60);
 			}
+			
+			@include media-breakpoint-down(sm) {
+				font-size: rem(30);
+				// font-size: rem(40);
+			}
+
 			&::after,
 			&::before {
 				content: none;

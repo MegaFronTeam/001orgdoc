@@ -737,34 +737,43 @@ function eventHandler() {
 					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none');
 					let foundItem = "\n\t\t\t\t\t<div class=\"sForm__item\">\n\t\t\t\t\t\t<div class=\"sForm__i-row row align-items-center\">\n\t\t\t\t\t\t\t<div class=\"sForm__i-title col-md\">\n\t\t\t\t\t\t\t\t".concat(val, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"sForm__i-price col-md-auto\">\n\t\t\t\t\t\t\t\t").concat(priceFrom, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-auto\">\n\t\t\t\t\t\t\t\t<a class=\"sForm__i-btn link-modal--js\" href=\"#modal-price\" data-title=\"").concat(val, "\" data-price=\"").concat(priceFrom, "\">\n\t\t\t\t\t\t\t\t\t\u0417\u0430\u043A\u0430\u0437\u0430\u0442\u044C \u041F\u041F\u0440\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t");
 					this.innerHTML = foundItem;
+					$(".link-modal--js").fancybox({
+						arrows: false,
+						infobar: false,
+						touch: false,
+						type: 'inline',
+						i18n: {
+							en: {
+								CLOSE: "Закрыть",
+								NEXT: "Вперед",
+								PREV: "Назад" // PLAY_START: "Start slideshow",
+								// PLAY_STOP: "Pause slideshow",
+								// FULL_SCREEN: "Full screen",
+								// THUMBS: "Thumbnails",
+								// DOWNLOAD: "Download",
+								// SHARE: "Share",
+								// ZOOM: "Zoom"
+
+							}
+						}
+					});
 					$(this).slideDown(function () {
 						$(this).addClass('active');
 						btnMute = false;
 					});
 				});
-				$(".link-modal--js").fancybox({
-					arrows: false,
-					infobar: false,
-					touch: false,
-					type: 'inline',
-					i18n: {
-						en: {
-							CLOSE: "Закрыть",
-							NEXT: "Вперед",
-							PREV: "Назад" // PLAY_START: "Start slideshow",
-							// PLAY_STOP: "Pause slideshow",
-							// FULL_SCREEN: "Full screen",
-							// THUMBS: "Thumbnails",
-							// DOWNLOAD: "Download",
-							// SHARE: "Share",
-							// ZOOM: "Zoom"
-
-						}
-					}
-				});
 			} //-
 
 		}); //let resultItems = document.querySelectorAll('.result-item-js');
+	});
+	$('.typed-js').each(function () {
+		let thisStings = $(this).data("text");
+		var arrayOfStrings = thisStings.split(', ');
+		let typed = new Typed(this, {
+			strings: arrayOfStrings,
+			typeSpeed: 50,
+			loop: true
+		});
 	});
 }
 

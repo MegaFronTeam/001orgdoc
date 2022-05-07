@@ -80,7 +80,7 @@
 	input {
 		background-color: #F8F8F8;
 		// padding-left: $input-padding-x;
-		border-radius: 5px;
+		border-radius: 8px;
 		border: none;	
 		@include media-breakpoint-up(sm) {			
 			padding-left: 70px;
@@ -167,6 +167,14 @@
 		}
 	}
 	&--blue {
+		.sForm__i-btn{
+			background-image: radial-gradient(100% 100% at 50.18% 0,rgba(255,255,255,.44) 0,rgba(255,255,255,0) 100%),#86b92d;
+			color: #fff;
+		}
+		.sForm__result-row,
+		.sForm__i-row{
+			color: #fff;
+		}
 		.white-panel::before {
 			background-color: #4C9ECE;
 		}

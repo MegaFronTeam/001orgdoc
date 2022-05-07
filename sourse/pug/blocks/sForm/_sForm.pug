@@ -5,6 +5,9 @@ mixin sForm()
 			+e.box-wrap
 				+e.box
 					+e.search-box
+						.section-title 
+							h2  Узнать цену ППР на  
+								span.typed-js(data-text="любой вид работ, любой объект, инженерные сети, земляные работы, монолитные работы, строительство, реконструкцию, капитальный ремонт, кровельные работы, строительные леса")
 						+e.input-wrap
 							+e.INPUT.input.form-control.sForm-search-js(type="text" name="search" placeholder="Найти")
 							+e.btn.sForm-btn-js(type="button") Найти ППР
@@ -13,7 +16,7 @@ mixin sForm()
 							//-+sFormResultItem('Категорий ППР:', '23')
 							//-+sFormResultItem('Видов ППР:', '12 834')
 						+e.head-row.row.align-items-center
-							+e.for-col.col-md.text-center.text-md-left ППР для…
+							//- +e.for-col.col-md.text-center.text-md-left ППР для…
 							.col-md-auto.d-none.d-md-block
 								+e.show-more(href="#")
 									+icon('reload')
