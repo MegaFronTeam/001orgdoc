@@ -300,14 +300,20 @@
 		
 		&__col{
 			&--img{
-				max-height:200px;
+				a{
+				// max-height:200px;
+				@include media-breakpoint-down(lg){
+					display: block;
+					@include block(465, 380);
+				}
 				@include media-breakpoint-up(sm){
 					max-height: 300px;
 				}
+			}
 				@include media-breakpoint-up(lg){
 					max-height: none;
+					width: 75%;
 				}
-				width: 75%;
 				overflow: hidden;
 				@include media-breakpoint-up(lg){
 					//-margin: calc(var(--item-padd)*-1) 0 calc(var(--item-padd)*-1) calc(var(--item-padd)*-1);
