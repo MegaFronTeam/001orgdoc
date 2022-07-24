@@ -145,13 +145,13 @@ var JSCCommon = {
 		});
 	},
 	// /mobileMenu
-	// табы  . 
+	// табы  .
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).show().addClass('active');
 		});
 	},
-	// /табы  
+	// /табы
 	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
@@ -178,7 +178,7 @@ function eventHandler() {
 	function heightses() {
 		var w = $(window).width(); // $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
+		//
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
@@ -320,9 +320,9 @@ function eventHandler() {
 		spaceBetween: 10,
 		freeMode: true,
 		freeModeMomentum: true,
-		// spaceBetween: 30, 
+		// spaceBetween: 30,
 		watchOverflow: true,
-		spaceBetween: 10
+		// spaceBetween: 10
 	});
 	let sCardSliderRev = new Swiper('.sCardSlider--rev .sCardSlider__slider--js', {
 		watchOverflow: true,
@@ -550,8 +550,11 @@ function eventHandler() {
 				}, bioEp.delay * 1000);
 			});
 		}
-	}; // bioEp.init({});
-
+	};
+	setTimeout(function (){
+		bioEp.init({});
+	}, 20000);
+	console.log(1)
 	$('.s-content--main').readmore({
 		speed: 75,
 		lessLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u0421\u043A\u0440\u044B\u0442\u044C\n\t</button> ",
@@ -704,16 +707,17 @@ function eventHandler() {
 			clickable: true
 		}
 	}); // ===================
-	// ym(21984247, 'getClientID', function (clientID) {
-	// 	$(".wpcf7 form .clientID" ).each(function(){
-	// 			$(this).val(clientID);
-	// 	})
-	// });
+	ym(21984247, 'getClientID', function (clientID) {
+		$(".wpcf7 form .clientID" ).each(function(){
+				$(this).val(clientID);
+		})
+	});
 	// window.on('load', function(){
 	// })
 
 	$('.sForm--js').each(function () {
 		let parent = this;
+		let ty = this.dataset.typeServ;
 		let input = parent.querySelector('.sForm-search-js');
 		let btn = parent.querySelector('.sForm-btn-js');
 		let resultItemsCont = parent.querySelector('.ppr-items-js');
@@ -735,28 +739,44 @@ function eventHandler() {
 				$(resultItemsCont).slideUp(function () {
 					$(this).toggleClass('active');
 					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none');
-					let foundItem = "\n\t\t\t\t\t<div class=\"sForm__item\">\n\t\t\t\t\t\t<div class=\"sForm__i-row row align-items-center\">\n\t\t\t\t\t\t\t<div class=\"sForm__i-title col-md\">\n\t\t\t\t\t\t\t\t".concat(val, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"sForm__i-price col-md-auto\">\n\t\t\t\t\t\t\t\t").concat(priceFrom, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-auto\">\n\t\t\t\t\t\t\t\t<a class=\"sForm__i-btn link-modal--js\" href=\"#modal-price\" data-title=\"").concat(val, "\" data-price=\"").concat(priceFrom, "\">\n\t\t\t\t\t\t\t\t\t\u0417\u0430\u043A\u0430\u0437\u0430\u0442\u044C \u041F\u041F\u0440\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t");
+					let foundItem = `
+					<div class="sForm__item">
+						<div class="sForm__i-row row align-items-center">
+							<div class="sForm__i-title col-md">
+								${val}
+							</div>
+							<div class="sForm__i-price col-md-auto">
+								${priceFrom}
+							</div>
+							<div class="col-md-auto">
+								<a class="sForm__i-btn link-modal" href="#modal-price" data-title="${val}" data-price="${priceFrom}">
+									${ty || "Заказать ППр"}
+								</a>
+							</div>
+						</div>
+					</div>
+					`;
 					this.innerHTML = foundItem;
-				$(".link-modal--js").fancybox({
-					arrows: false,
-					infobar: false,
-					touch: false,
-					type: 'inline',
-					i18n: {
-						en: {
-							CLOSE: "Закрыть",
-							NEXT: "Вперед",
-							PREV: "Назад" // PLAY_START: "Start slideshow",
-							// PLAY_STOP: "Pause slideshow",
-							// FULL_SCREEN: "Full screen",
-							// THUMBS: "Thumbnails",
-							// DOWNLOAD: "Download",
-							// SHARE: "Share",
-							// ZOOM: "Zoom"
+					$(".link-modal").fancybox({
+						arrows: false,
+						infobar: false,
+						touch: false,
+						type: 'inline',
+						i18n: {
+							en: {
+								CLOSE: "Закрыть",
+								NEXT: "Вперед",
+								PREV: "Назад" // PLAY_START: "Start slideshow",
+								// PLAY_STOP: "Pause slideshow",
+								// FULL_SCREEN: "Full screen",
+								// THUMBS: "Thumbnails",
+								// DOWNLOAD: "Download",
+								// SHARE: "Share",
+								// ZOOM: "Zoom"
 
+							}
 						}
-					}
-				});
+					});
 					$(this).slideDown(function () {
 						$(this).addClass('active');
 						btnMute = false;
@@ -766,27 +786,21 @@ function eventHandler() {
 
 		}); //let resultItems = document.querySelectorAll('.result-item-js');
 	});
-
-	$('.typed-js').each(function (){
-
+	$('.typed-js').each(function () {
 		let thisStings = $(this).data("text");
 		var arrayOfStrings = thisStings.split(', ');
 		let typed = new Typed(this, {
 			strings: arrayOfStrings,
 			typeSpeed: 50,
-			loop: true,
+			loop: true
 		});
 	});
-}
-
-;
-
+};
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
 document.addEventListener('wpcf7mailsent', function (event) {
 	ym(21984247, 'reachGoal', 'zakaz');
 }, false);
@@ -796,28 +810,44 @@ jQuery(document).ready(function ($) {
 		$('.slide_more').removeClass('d-none');
 		$(this).remove();
 	});
-
 	if (typeof OptionPos !== 'undefined') {
 		$('#title_form').text(TitleForm);
-
 		for (let index = 0; index < OptionPos.length; index++) {
 			const element = OptionPos[index];
 			$('#pos_select').append('<option data-price="' + element['price'] + '" value="' + element['title'] + '">' + element['title'] + '</option>');
-
 			if (index == 0) {
 				$('#price_pos').text(element['price']);
 			}
 		}
-
 		$('#pos_select').change(function (e) {
 			let price = $('option:selected', $('#pos_select')).data('price');
 			$('#price_pos').text(price);
 		});
-	} //zaraz_form_title
-
-
-	if (typeof zaraz_form_title !== 'undefined') {
-		console.log(zaraz_form_title);
-		$('#zaraz_form_title_el ').text(zaraz_form_title);
 	}
+
+	// console.log(zaraz_form_title)
+	// console.log(typeof zaraz_form_title !== 'undefined')
+	// console.log(typeof zaraz_form_title )
+	// console.log(zaraz_form_title)
+	if (typeof zaraz_form_title !== 'undefined') {
+		$('#zaraz_form_title_el').text(zaraz_form_title);
+	}
+	if (typeof form_text_home !== 'undefined') {
+		$('#zaraz_form_text_el' ).text(form_text_home);
+	}
+
 });
+
+$("#modal-call-2 [name=\"form-id\"]").val("Не нашли, что искали?(форма, при выходе с сайте)")
+
+	$(".toggle-list").click(function(){
+		$(this).toggleClass("active").next().find("ul").slideToggle();
+	})
+
+// window.onload = function () {
+// 	document.body.classList.add('loaded_hiding');
+// 	window.setTimeout(function () {
+// 		document.body.classList.add('loaded');
+// 		document.body.classList.remove('loaded_hiding');
+// 	}, 500);
+// }

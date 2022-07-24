@@ -10,13 +10,16 @@ mixin sExamplesSlider()
 mixin sExamples-item(title, img)
 	+b.sExamples-item
 		+e.title!= title 
-		p Что вы получите:
-		ul
-			li Наши специалисты бесплатно посетят Ваш объект
-			li Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД
-			li Скидка&nbsp;10% при заказе в&nbsp;день обращения
-			li Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации
-			li Проектируем ОДД на&nbsp;любой вид строительных работ
+		p.toggle-list Преимущества
+			span.toggle-list-el
+		.toggle-block
+			ul
+				li Наши специалисты бесплатно посетят Ваш объект
+				li Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД
+				li Скидка&nbsp;10% при заказе в&nbsp;день обращения
+				li Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации
+				li Проектируем ОДД на&nbsp;любой вид строительных работ
+		p Пример проекта
 		+e.images-block
 			img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
 			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${img}`)
@@ -24,9 +27,12 @@ mixin sExamples-item(title, img)
 			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
 				img(src=`img/sExamples-bk-${img}.png`, alt="")
 			a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
-			+e.result <span>Результат</span> нашей работы:
-				+icon('result-arrow')
-		a(href="#").btn-green Узнать стоимость
+			//- +e.result <span>Результат</span> нашей работы:
+			//- 	+icon('result-arrow')
+		+e.footer
+			+e.price 	Цена 
+				strong от 10 000 руб.
+			a(href="#").btn-green Узнать стоимость
 
 mixin sExamples()
 	// start sExamples
