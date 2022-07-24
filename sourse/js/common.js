@@ -682,7 +682,7 @@ function eventHandler() {
 	let sExampleSlider = new Swiper('.slider-examples--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
-		spaceBetween: 30,
+		spaceBetween: 20,
 		navigation: {
 			nextEl: '.slider-examples-wrap .swiper-button-next',
 			prevEl: '.slider-examples-wrap .swiper-button-prev'

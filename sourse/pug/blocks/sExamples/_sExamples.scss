@@ -77,9 +77,11 @@
 .sExamples-item {
 	display: flex;
 	flex-direction: column;
-	padding: rem(40) rem(20) rem(45);
-	margin-bottom: 30px;
-	height: calc(100% - 30px);
+	padding: rem(20) rem(15) rem(17);
+	 
+	height: calc(100%  );
+	
+	
 	background: $white;
 	color: $black;
 	border: 1px solid #E0E0E0;
@@ -89,11 +91,15 @@
 	&__title {
 		margin-bottom: 20px;
 		max-width: 350px;
-		font-size: rem(24px);
+		@include media-breakpoint-up(sm) {
+
+			font-size: rem(24px);
+		}
+		font-size: rem(20px);
 		font-weight: 400;
 		line-height: calc(29 / 24);
 		span {
-			font-size: 24px;
+			// font-size: 24px;
 			font-weight: 700;
 			color: $blue;
 			text-decoration: underline;
@@ -101,7 +107,7 @@
 	}
 	p {
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 125%;
 	}
 	.toggle-list{
@@ -254,7 +260,7 @@
 
 	.btn-green {
 		display: block;
-		padding: rem(27) rem(50);
+		padding: rem(20) rem(50);
 		margin: 0 auto;
 		width: 100%;
 		max-width: 321px;
@@ -280,14 +286,17 @@
 	}
 }
 
+
 .slider-examples{
+	&__slide{
+
+	}
 	@include media-breakpoint-down(md) { 
 		.sExamples-item{
 			margin: 0;
 		}
 		&__slide{
-			width: calc(100% - 40px);
-			height: auto;
+			width: calc(100% - 40px); 
 		}
 		.swiper-wrapper{
 			// flex-wrap: wrap;
@@ -302,7 +311,7 @@
 			--cols: 12;
 			--col: 6;
 		.swiper-wrapper{
-			flex-direction: row !important;
+			// flex-direction: row !important;
 			flex-wrap: wrap;
 			@include roww(20px);
 			transform: none !important;
@@ -311,10 +320,18 @@
 		}
 		&__slide{			
 			height: auto;
-			margin: 0 !important;
+			margin-right: 0 !important;
 			width: 100% !important; 
+			
 			max-width: calc(100% * var(--col) / var(--cols));
 		}
 	}
 }
 
+
+
+.slider-examples__slide{
+
+	height: auto;
+	margin-bottom: 20px;
+}
