@@ -841,7 +841,7 @@ jQuery(document).ready(function ($) {
 $("#modal-call-2 [name=\"form-id\"]").val("Не нашли, что искали?(форма, при выходе с сайте)")
 
 	$(".toggle-list").click(function(){
-		$(this).toggleClass("active").next().find("ul").slideToggle();
+		$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();
 	})
 
 // window.onload = function () {

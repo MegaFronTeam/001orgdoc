@@ -10,15 +10,18 @@ mixin sExamplesSlider()
 mixin sExamples-item(title, img)
 	+b.sExamples-item
 		+e.title!= title 
-		p.toggle-list Преимущества
-			span.toggle-list-el
-		.toggle-block
-			ul
-				li Наши специалисты бесплатно посетят Ваш объект
-				li Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД
-				li Скидка&nbsp;10% при заказе в&nbsp;день обращения
-				li Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации
-				li Проектируем ОДД на&nbsp;любой вид строительных работ
+		.toggle-wrap
+			p.toggle-list Преимущества
+				span.toggle-list-el
+			.toggle-block
+				p.toggle-list Преимущества
+					span.toggle-list-el.active
+				ul
+					li Наши специалисты бесплатно посетят Ваш объект
+					li Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД
+					li Скидка&nbsp;10% при заказе в&nbsp;день обращения
+					li Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации
+					li Проектируем ОДД на&nbsp;любой вид строительных работ
 		p Пример проекта
 		+e.images-block
 			img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
