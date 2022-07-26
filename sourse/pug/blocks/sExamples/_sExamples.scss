@@ -185,22 +185,22 @@
 		margin-left: 10px;
 		// display: none;
 		//  margin-bottom: 55px;
+		li {
+			padding-left: 20px;
+			padding-bottom: 10px;
+			list-style: none;
+			position: relative;
+			font-size: 13px;
+			&::before{
+				content: var(--check-success);
+				position: absolute;
+				left: 0;
+
+			} 
+		}
 		@include media-breakpoint-up(md) {
 			// display: block;
 			// column-count: 2;
-			li {
-				padding-left: 20px;
-				padding-bottom: 10px;
-				list-style: none;
-				position: relative;
-				font-size: 13px;
-				&::before{
-					content: var(--check-success);
-					position: absolute;
-					left: 0;
-
-				} 
-			}
 		}
 	}
 	&__images-block {

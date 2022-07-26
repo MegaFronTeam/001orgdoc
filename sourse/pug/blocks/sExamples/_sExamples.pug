@@ -24,7 +24,8 @@ mixin sExamples-item(title, img)
 					li Проектируем ОДД на&nbsp;любой вид строительных работ
 		p Пример проекта
 		+e.images-block
-			img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
+			a(href=`img/sExamples-bg-${img}.png` data-fancybox=`example-${img}`)
+				img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
 			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${img}`)
 				img(src=`img/sExamples-fr-${img}.png`, alt="")
 			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
