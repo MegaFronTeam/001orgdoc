@@ -93,39 +93,39 @@
 		
 	}
 
-	.slider-service{
-		@include media-breakpoint-down(md) { 
-			.sExamples-item{
-				margin: 0;
-			}
-			&__slide{
-				width: calc(100% - 40px);
-				height: auto;
-			}
-			.swiper-wrapper{
-				// flex-wrap: wrap;
-			}
-		} 
+	// .slider-service{
+	// 	@include media-breakpoint-down(md) { 
+	// 		.sExamples-item{
+	// 			margin: 0;
+	// 		}
+	// 		&__slide{
+	// 			width: calc(100% - 40px);
+	// 			height: auto;
+	// 		}
+	// 		.swiper-wrapper{
+	// 			// flex-wrap: wrap;
+	// 		}
+	// 	} 
 	
-			@include media-breakpoint-up(md) {
-				--cols: 12;
-				--col: 6;
-			.swiper-wrapper{
-				flex-direction: row !important;
-				flex-wrap: wrap;
-				@include roww(30px);
-				transform: none !important;
-				width: calc(100% + 30px) !important;
+	// 		@include media-breakpoint-up(md) {
+	// 			--cols: 12;
+	// 			--col: 6;
+	// 		.swiper-wrapper{
+	// 			flex-direction: row !important;
+	// 			flex-wrap: wrap;
+	// 			@include roww(30px);
+	// 			transform: none !important;
+	// 			width: calc(100% + 30px) !important;
 				
-			}
-			&__slide{			
-				height: auto;
-				margin: 0 !important;
-				width: 100% !important; 
-				max-width: calc(100% * var(--col) / var(--cols));
-			}
-		}
-	}
+	// 		}
+	// 		&__slide{			
+	// 			height: auto;
+	// 			margin: 0 !important;
+	// 			width: 100% !important; 
+	// 			max-width: calc(100% * var(--col) / var(--cols));
+	// 		}
+	// 	}
+	// }
 	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

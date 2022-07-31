@@ -314,7 +314,7 @@
 	}
 }
 
-
+.slider-service,
 .slider-examples{
 	&__slide{
 
@@ -354,12 +354,11 @@
 			max-width: calc(100% * var(--col) / var(--cols));
 		}
 	}
+	&__slide{
+	
+		height: auto;
+		margin-bottom: 20px;
+	}
 }
 
 
-
-.slider-examples__slide{
-
-	height: auto;
-	margin-bottom: 20px;
-}
