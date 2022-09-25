@@ -791,14 +791,14 @@ figure iframe {
 		width: calc(100% - var(--left-shith, 10px) * 2);
 
 		background: $white;
-		filter: drop-shadow(0px 8px 15px rgba(19, 21, 26, 0.1));
+		box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
 		border-radius: rem(15);
 	}
 }
 
 .inner-border {
 	background-color: $white;
-	filter: drop-shadow(0px 8px 15px rgba(19, 21, 26, 0.1));
+	box-shadow: 0px 8px 15px rgba(19, 21, 26, 0.1);
 	border-radius: 15px;
 
 	position: relative;
