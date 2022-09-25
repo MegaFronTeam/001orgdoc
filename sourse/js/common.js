@@ -851,3 +851,9 @@ $("#modal-call-2 [name=\"form-id\"]").val("Не нашли, что искали?
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+
+fancybox.defaults.backFocus = false;
+
+Fancybox.defaults.backdrop = false;
+Fancybox.defaults.placeFocusBack = false;
