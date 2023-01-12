@@ -2,7 +2,6 @@
 
 function ownKeys(object, enumerableOnly) {
 	var keys = Object.keys(object);
-
 	if (Object.getOwnPropertySymbols) {
 		var symbols = Object.getOwnPropertySymbols(object);
 		if (enumerableOnly) symbols = symbols.filter(function (sym) {
@@ -10,14 +9,11 @@ function ownKeys(object, enumerableOnly) {
 		});
 		keys.push.apply(keys, symbols);
 	}
-
 	return keys;
 }
-
 function _objectSpread(target) {
 	for (var i = 1; i < arguments.length; i++) {
 		var source = arguments[i] != null ? arguments[i] : {};
-
 		if (i % 2) {
 			ownKeys(Object(source), true).forEach(function (key) {
 				_defineProperty(target, key, source[key]);
@@ -30,10 +26,8 @@ function _objectSpread(target) {
 			});
 		}
 	}
-
 	return target;
 }
-
 function _defineProperty(obj, key, value) {
 	if (key in obj) {
 		Object.defineProperty(obj, key, {
@@ -45,16 +39,12 @@ function _defineProperty(obj, key, value) {
 	} else {
 		obj[key] = value;
 	}
-
 	return obj;
 }
-
 var $ = jQuery;
-
 if ($('#unWrapWidget').length) {
 	$('#unWrapWidget').unwrap();
 }
-
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -78,10 +68,10 @@ var JSCCommon = {
 					// DOWNLOAD: "Download",
 					// SHARE: "Share",
 					// ZOOM: "Zoom"
-
 				}
 			}
 		});
+
 		$(".fancy, .wp-block-image a").fancybox({
 			protect: true
 		});
@@ -96,46 +86,35 @@ var JSCCommon = {
 	// /magnificPopupCall
 	toggleMenu: function toggleMenu() {
 		var _this = this;
-
 		_this.btnToggleMenuMobile.forEach(function (element) {
 			element.addEventListener('click', function () {
 				_this.btnToggleMenuMobile.forEach(function (element) {
 					element.classList.toggle("on");
 				});
-
 				_this.menuMobile.classList.toggle("active");
-
 				_this.body.classList.toggle("fixed");
-
 				return false;
 			});
 		});
 	},
 	closeMenu: function closeMenu() {
 		var _this = this;
-
 		_this.btnToggleMenuMobile.forEach(function (element) {
 			element.classList.remove("on");
 		});
-
 		_this.menuMobile.classList.remove("active");
-
 		_this.body.classList.remove("fixed");
 	},
 	mobileMenu: function mobileMenu() {
 		// закрыть/открыть мобильное меню
 		var _this = this;
-
 		_this.toggleMenu();
-
 		_this.menuMobileLink.forEach(function (element) {
 			element.addEventListener('click', function (e) {
 				console.log(element);
-
 				_this.closeMenu();
 			});
 		});
-
 		document.addEventListener('mouseup', function (event) {
 			var container = event.target.closest(".menu-mobile--js.active"); // (1)
 
@@ -156,7 +135,6 @@ var JSCCommon = {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	} // /inputMask
-
 };
 
 function eventHandler() {
@@ -209,7 +187,7 @@ function eventHandler() {
 	});
 	var icon = '<svg width = "18" height = "13" xmlns = "http://www.w3.org/2000/svg" version = "1.1" xmlns: xlink = "http://www.w3.org/1999/xlink" xmlns: avocode = "https://avocode.com/" viewBox = "0 0 18 13" > <defs></defs> <g><g><path d="M-0.00018,6.99896v-1.00096l16.20587,0l-5.19071,-5.19059l0.79388,-0.79371l6.1758,6.17591l-0.30905,0.3088l0.30905,0.30894l-6.1758,6.17591l-0.79388,-0.79371l5.1904,-5.19059z" fill="#90c336" fill-opacity="1"></path></g></g></svg> ';
 	var arrl2 = ' <div class="r">' + icon,
-			arrr2 = ' <div class="l">' + icon; // // карусель
+		arrr2 = ' <div class="l">' + icon; // // карусель
 
 	var defaultSlide = {
 		speed: 600,
@@ -286,13 +264,11 @@ function eventHandler() {
 				$svg = $svg.attr('class', imgClass + ' replaced-svg');
 			} // Remove any invalid XML tags as per http://validator.w3.org
 
-
 			$svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
 
 			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
 				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
 			} // Replace image with new SVG
-
 
 			$img.replaceWith($svg);
 		}, 'xml');
@@ -321,9 +297,10 @@ function eventHandler() {
 		freeMode: true,
 		freeModeMomentum: true,
 		// spaceBetween: 30,
-		watchOverflow: true // spaceBetween: 10
-
+		watchOverflow: true
+		// spaceBetween: 10
 	});
+
 	let sCardSliderRev = new Swiper('.sCardSlider--rev .sCardSlider__slider--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -400,17 +377,13 @@ function eventHandler() {
 			get: function get(name) {
 				var nameEQ = name + "=";
 				var ca = document.cookie.split(";");
-
 				for (var i = 0; i < ca.length; i++) {
 					var c = ca[i];
-
 					while (c.charAt(0) == " ") {
 						c = c.substring(1, c.length);
 					}
-
 					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
 				}
-
 				return null;
 			},
 			// Delete a cookie
@@ -429,7 +402,6 @@ function eventHandler() {
 				this.cookieManager.erase("bioep_shown");
 				return false;
 			} // If cookie is set to true
-
 
 			if (this.cookieManager.get("bioep_shown") == "true") return true;
 			return false;
@@ -475,7 +447,6 @@ function eventHandler() {
 			this.shown = true;
 			this.cookieManager.create("bioep_shown", "true", this.cookieExp, false);
 			this.cookieManager.create("bioep_shown_session", "true", 0, true);
-
 			if (typeof this.onPopup === "function") {
 				this.onPopup();
 			}
@@ -707,12 +678,12 @@ function eventHandler() {
 			clickable: true
 		}
 	}); // ===================
-
 	ym(21984247, 'getClientID', function (clientID) {
 		$(".wpcf7 form .clientID").each(function () {
 			$(this).val(clientID);
 		});
-	}); // window.on('load', function(){
+	});
+	// window.on('load', function(){
 	// })
 
 	$('.sForm--js').each(function () {
@@ -726,20 +697,33 @@ function eventHandler() {
 		let btnMute = false;
 		$(btn).click(function () {
 			console.log(this);
-
 			if (btnMute) {
 				return;
 			}
-
 			let val = input.value;
-
 			if (val.length > 2) {
 				btnMute = true;
 				itemsFound.innerHTML = '1';
 				$(resultItemsCont).slideUp(function () {
 					$(this).toggleClass('active');
 					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none');
-					let foundItem = "\n\t\t\t\t\t<div class=\"sForm__item\">\n\t\t\t\t\t\t<div class=\"sForm__i-row row align-items-center\">\n\t\t\t\t\t\t\t<div class=\"sForm__i-title col-md\">\n\t\t\t\t\t\t\t\t".concat(val, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"sForm__i-price col-md-auto\">\n\t\t\t\t\t\t\t\t").concat(priceFrom, "\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-auto\">\n\t\t\t\t\t\t\t\t<a class=\"sForm__i-btn link-modal\" href=\"#modal-price\" data-title=\"").concat(val, "\" data-price=\"").concat(priceFrom, "\">\n\t\t\t\t\t\t\t\t\t").concat(ty || "Заказать ППр", "\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t");
+					let foundItem = `
+					<div class="sForm__item">
+						<div class="sForm__i-row row align-items-center">
+							<div class="sForm__i-title col-md">
+								${val}
+							</div>
+							<div class="sForm__i-price col-md-auto">
+								${priceFrom}
+							</div>
+							<div class="col-md-auto">
+								<a class="sForm__i-btn link-modal" href="#modal-price" data-title="${val}" data-price="${priceFrom}">
+									${ty || "Заказать ППр"}
+								</a>
+							</div>
+						</div>
+					</div>
+					`;
 					this.innerHTML = foundItem;
 					$(".link-modal").fancybox({
 						arrows: false,
@@ -757,19 +741,19 @@ function eventHandler() {
 								// DOWNLOAD: "Download",
 								// SHARE: "Share",
 								// ZOOM: "Zoom"
-
 							}
 						}
 					});
+
 					$(this).slideDown(function () {
 						$(this).addClass('active');
 						btnMute = false;
 					});
 				});
 			} //-
-
 		}); //let resultItems = document.querySelectorAll('.result-item-js');
 	});
+
 	$('.typed-js').each(function () {
 		let thisStings = $(this).data("text");
 		var arrayOfStrings = thisStings.split(', ');
@@ -780,15 +764,12 @@ function eventHandler() {
 		});
 	});
 }
-
 ;
-
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
 document.addEventListener('wpcf7mailsent', function (event) {
 	ym(21984247, 'reachGoal', 'zakaz');
 }, false);
@@ -798,33 +779,28 @@ jQuery(document).ready(function ($) {
 		$('.slide_more').removeClass('d-none');
 		$(this).remove();
 	});
-
 	if (typeof OptionPos !== 'undefined') {
 		$('#title_form').text(TitleForm);
-
 		for (let index = 0; index < OptionPos.length; index++) {
 			const element = OptionPos[index];
 			$('#pos_select').append('<option data-price="' + element['price'] + '" value="' + element['title'] + '">' + element['title'] + '</option>');
-
 			if (index == 0) {
 				$('#price_pos').text(element['price']);
 			}
 		}
-
 		$('#pos_select').change(function (e) {
 			let price = $('option:selected', $('#pos_select')).data('price');
 			$('#price_pos').text(price);
 		});
-	} // console.log(zaraz_form_title)
+	}
+
+	// console.log(zaraz_form_title)
 	// console.log(typeof zaraz_form_title !== 'undefined')
 	// console.log(typeof zaraz_form_title )
 	// console.log(zaraz_form_title)
-
-
 	if (typeof zaraz_form_title !== 'undefined') {
 		$('#zaraz_form_title_el').text(zaraz_form_title);
 	}
-
 	if (typeof form_text_home !== 'undefined') {
 		$('#zaraz_form_text_el').text(form_text_home);
 	}
@@ -832,10 +808,16 @@ jQuery(document).ready(function ($) {
 $("#modal-call-2 [name=\"form-id\"]").val("Не нашли, что искали?(форма, при выходе с сайте)");
 $(".toggle-list").click(function () {
 	$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();
-}); // window.onload = function () {
+});
+
+// window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
 // 	window.setTimeout(function () {
 // 		document.body.classList.add('loaded');
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+fancybox.defaults.backFocus = false;
+Fancybox.defaults.backdrop = false;
+Fancybox.defaults.placeFocusBack = false;

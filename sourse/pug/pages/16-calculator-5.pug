@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-docs/_s-docs.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-development/_s-development.pug
+include ../blocks/s-menu-right/_s-menu-right.pug
+include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-about-work/_s-about-work.pug
+include ../blocks/header-block-small/_header-block-small.pug
+include ../blocks/s-accordion/_s-accordion.pug
+include ../blocks/sServiseForm/_sServiseForm.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sOrderForm/_sOrderForm.pug
+include ../blocks/sInformation/_sInformation.pug
+include ../blocks/sMainDocs/_sMainDocs.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sListOfJobs/_sListOfJobs.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sExperts/_sExperts.pug
+include ../blocks/sStages/_sStages.pug
+include ../blocks/sPprkList/_sPprkList.pug
+include ../blocks/sPprkSources/_sPprkSources.pug
+
+include ../blocks/sCalculator/_sCalculator.pug
+
+
+block variables
+	- let  mainPage= 'val-2-0'
+block title
+	- let  title= 'Калькулятор'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-small()
+	+page-head(title,"Главная",'Калькулятор')
+	+sCalculator()
+		+head('На что Вам нужен ПОС?', 'true')
+		+e.body
+			+e.inputs-wrap
+				+in-c('radio', 'ПОДД на строительство здания', 'forWhat', false)
+				+in-c('radio', 'ПОДД на прокладку инженерных сетей', 'forWhat', false)
+			+e.btn.btn(href='#')
+				| узнать цену
+				+icon('arrow-right')
+	//- +s-logo 
+	+footer()
