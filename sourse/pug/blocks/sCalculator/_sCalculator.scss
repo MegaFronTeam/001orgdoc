@@ -90,15 +90,15 @@
 		}
 	}
 	&__row {
-		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: #{rem(17)};
 		margin-bottom: rem(22);
 		@include media-breakpoint-up(xl) {
 
-			--bs-gutter-x: 50px;
+			// --bs-gutter-x: 50px;
 		}
 		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(44)};
+			// --bs-gutter-x: #{rem(34)};
 			--bs-gutter-y: #{rem(32)};
 
 			margin-bottom: rem(40);
@@ -153,9 +153,9 @@
 						height: auto;
 					}
 					img.object-fit-js {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
+						// width: 100%;
+						// height: 100%;
+						// object-fit: cover;
 					}
 				}
 			}
