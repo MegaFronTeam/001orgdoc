@@ -2,10 +2,26 @@
 	// background-color: #f5f5f5;
 	@include media-breakpoint-down(lg) {
 		.breadcrumb {
-			display: none;
+			// display: none;
+			padding-top: 20px; 
+			margin-left: 0 ;
+			color: #fff;
+			a{
+				text-decoration: none !important;
+				color: #fff;
+			}
+			ul{
+			}
+		}
+		.breadcrumb-item+.breadcrumb-item::before{
+			color: #fff;
+
 		}
 		.page-head {
-			padding-top: 0;
+			// padding-top: 0;
+		}
+		.breadcrumb-item.active a{
+			opacity: 0.8;
 		}
 	}
 
