@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function ownKeys(object, enumerableOnly) {
 	var keys = Object.keys(object);
@@ -47,21 +47,21 @@ if ($('#unWrapWidget').length) {
 }
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-	body: document.querySelector("body"),
+	btnToggleMenuMobile: [].slice.call(document.querySelectorAll('.toggle-menu-mobile--js')),
+	menuMobile: document.querySelector('.menu-mobile--js'),
+	menuMobileLink: [].slice.call(document.querySelectorAll('.menu-mobile--js ul li a')),
+	body: document.querySelector('body'),
 	modalCall: function modalCall() {
-		$(".link-modal, .link-modal-js").fancybox({
+		$('.link-modal, .link-modal-js').fancybox({
 			arrows: false,
 			infobar: false,
 			touch: false,
 			type: 'inline',
 			i18n: {
 				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад" // PLAY_START: "Start slideshow",
+					CLOSE: 'Закрыть',
+					NEXT: 'Вперед',
+					PREV: 'Назад' // PLAY_START: "Start slideshow",
 					// PLAY_STOP: "Pause slideshow",
 					// FULL_SCREEN: "Full screen",
 					// THUMBS: "Thumbnails",
@@ -71,15 +71,14 @@ var JSCCommon = {
 				}
 			}
 		});
-
-		$(".fancy, .wp-block-image a").fancybox({
+		$('.fancy, .wp-block-image a').fancybox({
 			protect: true
 		});
 		$().fancybox({
 			selector: '.slick-slide:not(.slick-cloned) a',
 			hash: false
 		});
-		$(".modal-close-js").click(function () {
+		$('.modal-close-js').click(function () {
 			$.fancybox.close();
 		});
 	},
@@ -89,10 +88,10 @@ var JSCCommon = {
 		_this.btnToggleMenuMobile.forEach(function (element) {
 			element.addEventListener('click', function () {
 				_this.btnToggleMenuMobile.forEach(function (element) {
-					element.classList.toggle("on");
+					element.classList.toggle('on');
 				});
-				_this.menuMobile.classList.toggle("active");
-				_this.body.classList.toggle("fixed");
+				_this.menuMobile.classList.toggle('active');
+				_this.body.classList.toggle('fixed');
 				return false;
 			});
 		});
@@ -100,10 +99,10 @@ var JSCCommon = {
 	closeMenu: function closeMenu() {
 		var _this = this;
 		_this.btnToggleMenuMobile.forEach(function (element) {
-			element.classList.remove("on");
+			element.classList.remove('on');
 		});
-		_this.menuMobile.classList.remove("active");
-		_this.body.classList.remove("fixed");
+		_this.menuMobile.classList.remove('active');
+		_this.body.classList.remove('fixed');
 	},
 	mobileMenu: function mobileMenu() {
 		// закрыть/открыть мобильное меню
@@ -116,7 +115,7 @@ var JSCCommon = {
 			});
 		});
 		document.addEventListener('mouseup', function (event) {
-			var container = event.target.closest(".menu-mobile--js.active"); // (1)
+			var container = event.target.closest('.menu-mobile--js.active'); // (1)
 
 			if (!container) {
 				_this.closeMenu();
@@ -133,15 +132,14 @@ var JSCCommon = {
 	// /табы
 	inputMask: function inputMask() {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
+		$('input[type="tel"]').attr('pattern', '[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}').inputmask('+9(999)999-99-99');
 	} // /inputMask
 };
-
 function eventHandler() {
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
 
-	document.createElement("picture"); // для свг
+	document.createElement('picture'); // для свг
 
 	svg4everybody({});
 	JSCCommon.modalCall();
@@ -159,7 +157,7 @@ function eventHandler() {
 		//
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
+		var topH = $('header ').innerHeight();
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');
@@ -171,14 +169,13 @@ function eventHandler() {
 		// 	JSCCommon.closeMenu();
 		// }
 	}
-
 	$(window).resize(function () {
 		heightses();
 	});
 	heightses(); // листалка по стр
 
-	$(" .top-nav li a, .scroll-link").click(function () {
-		var elementClick = $(this).attr("href");
+	$(' .top-nav li a, .scroll-link').click(function () {
+		var elementClick = $(this).attr('href');
 		var destination = $(elementClick).offset().top;
 		$('html, body').animate({
 			scrollTop: destination
@@ -277,7 +274,7 @@ function eventHandler() {
 	$('.accordion-item__title').click(function () {
 		var $this = $(this);
 		$this.next().slideToggle();
-		$this.toggleClass("active");
+		$this.toggleClass('active');
 	});
 	var wow = new WOW({
 		mobile: false
@@ -288,7 +285,7 @@ function eventHandler() {
 	});
 	$('.top-nav__menu-wrap li').each(function () {
 		if ($(this).children().length > 1) {
-			$(".menu-item-has-children").addClass("menu-item-has-children");
+			$('.menu-item-has-children').addClass('menu-item-has-children');
 		}
 	});
 	var tabsSl = new Swiper('.top-nav__menu-wrap', {
@@ -300,7 +297,6 @@ function eventHandler() {
 		watchOverflow: true
 		// spaceBetween: 10
 	});
-
 	let sCardSliderRev = new Swiper('.sCardSlider--rev .sCardSlider__slider--js', {
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -347,13 +343,13 @@ function eventHandler() {
 		popupEl: {},
 		closeBtnEl: {},
 		shown: false,
-		overflowDefault: "visible",
-		transformDefault: "",
+		overflowDefault: 'visible',
+		transformDefault: '',
 		// Popup options
 		width: 400,
 		height: 220,
-		html: "",
-		css: "",
+		html: '',
+		css: '',
 		fonts: [],
 		delay: 0,
 		showOnDelay: false,
@@ -365,21 +361,21 @@ function eventHandler() {
 		cookieManager: {
 			// Create a cookie
 			create: function create(name, value, days, sessionOnly) {
-				var expires = "";
-				if (sessionOnly) expires = "; expires=0";else if (days) {
+				var expires = '';
+				if (sessionOnly) expires = '; expires=0';else if (days) {
 					var date = new Date();
 					date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-					expires = "; expires=" + date.toGMTString();
+					expires = '; expires=' + date.toGMTString();
 				}
-				document.cookie = name + "=" + value + expires + "; path=/";
+				document.cookie = name + '=' + value + expires + '; path=/';
 			},
 			// Get the value of a cookie
 			get: function get(name) {
-				var nameEQ = name + "=";
-				var ca = document.cookie.split(";");
+				var nameEQ = name + '=';
+				var ca = document.cookie.split(';');
 				for (var i = 0; i < ca.length; i++) {
 					var c = ca[i];
-					while (c.charAt(0) == " ") {
+					while (c.charAt(0) == ' ') {
 						c = c.substring(1, c.length);
 					}
 					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
@@ -388,7 +384,7 @@ function eventHandler() {
 			},
 			// Delete a cookie
 			erase: function erase(name) {
-				this.create(name, "", -1);
+				this.create(name, '', -1);
 			}
 		},
 		// Handle the bioep_shown cookie
@@ -398,12 +394,12 @@ function eventHandler() {
 			// Handle cookie reset
 			if (this.cookieExp <= 0) {
 				// Handle showing pop up once per browser session.
-				if (this.showOncePerSession && this.cookieManager.get("bioep_shown_session") == "true") return true;
-				this.cookieManager.erase("bioep_shown");
+				if (this.showOncePerSession && this.cookieManager.get('bioep_shown_session') == 'true') return true;
+				this.cookieManager.erase('bioep_shown');
 				return false;
 			} // If cookie is set to true
 
-			if (this.cookieManager.get("bioep_shown") == "true") return true;
+			if (this.cookieManager.get('bioep_shown') == 'true') return true;
 			return false;
 		},
 		// Add font stylesheets and CSS for the popup
@@ -411,21 +407,21 @@ function eventHandler() {
 		// Add the popup to the page
 		addPopup: function addPopup() {
 			// Add the background div
-			this.bgEl = document.createElement("div");
-			this.bgEl.id = "bio_ep_bg";
+			this.bgEl = document.createElement('div');
+			this.bgEl.id = 'bio_ep_bg';
 			document.body.appendChild(this.bgEl); // Add the popup
 
-			if (document.getElementById("bio_ep")) this.popupEl = document.getElementById("bio_ep");else {
-				this.popupEl = document.createElement("div");
-				this.popupEl.id = "bio_ep";
+			if (document.getElementById('bio_ep')) this.popupEl = document.getElementById('bio_ep');else {
+				this.popupEl = document.createElement('div');
+				this.popupEl.id = 'bio_ep';
 				this.popupEl.innerHTML = this.html;
 				document.body.appendChild(this.popupEl);
 			} // Add the close button
 
-			if (document.getElementById("bio_ep_close")) this.closeBtnEl = document.getElementById("bio_ep_close");else {
-				this.closeBtnEl = document.createElement("div");
-				this.closeBtnEl.id = "bio_ep_close";
-				this.closeBtnEl.appendChild(document.createTextNode("X"));
+			if (document.getElementById('bio_ep_close')) this.closeBtnEl = document.getElementById('bio_ep_close');else {
+				this.closeBtnEl = document.createElement('div');
+				this.closeBtnEl.id = 'bio_ep_close';
+				this.closeBtnEl.appendChild(document.createTextNode('X'));
 				this.popupEl.insertBefore(this.closeBtnEl, this.popupEl.firstChild);
 			}
 		},
@@ -445,9 +441,9 @@ function eventHandler() {
 			// document.body.style.overflow = "hidden";
 
 			this.shown = true;
-			this.cookieManager.create("bioep_shown", "true", this.cookieExp, false);
-			this.cookieManager.create("bioep_shown_session", "true", 0, true);
-			if (typeof this.onPopup === "function") {
+			this.cookieManager.create('bioep_shown', 'true', this.cookieExp, false);
+			this.cookieManager.create('bioep_shown_session', 'true', 0, true);
+			if (typeof this.onPopup === 'function') {
 				this.onPopup();
 			}
 		},
@@ -457,14 +453,14 @@ function eventHandler() {
 		scalePopup: function scalePopup() {},
 		// Event listener initialisation for all browsers
 		addEvent: function addEvent(obj, event, callback) {
-			if (obj.addEventListener) obj.addEventListener(event, callback, false);else if (obj.attachEvent) obj.attachEvent("on" + event, callback);
+			if (obj.addEventListener) obj.addEventListener(event, callback, false);else if (obj.attachEvent) obj.attachEvent('on' + event, callback);
 		},
 		// Load event listeners for the popup
 		loadEvents: function loadEvents() {
-			this.addEvent(document, "mouseout", function (e) {
+			this.addEvent(document, 'mouseout', function (e) {
 				e = e ? e : window.event; // If this is an autocomplete element.
 
-				if (e.target.tagName.toLowerCase() == "input") return; // Get the current viewport width.
+				if (e.target.tagName.toLowerCase() == 'input') return; // Get the current viewport width.
 
 				var vpWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // If the current mouse X position is within 50px of the right edge
 				// of the viewport, return.
@@ -479,11 +475,11 @@ function eventHandler() {
 				if (!from) bioEp.showPopup();
 			}.bind(this)); // Handle the popup close button
 
-			this.addEvent(this.closeBtnEl, "click", function () {
+			this.addEvent(this.closeBtnEl, 'click', function () {
 				bioEp.hidePopup();
 			}); // Handle window resizing
 
-			this.addEvent(window, "resize", function () {
+			this.addEvent(window, 'resize', function () {
 				bioEp.scalePopup();
 			});
 		},
@@ -502,7 +498,7 @@ function eventHandler() {
 		},
 		// Ensure the DOM has loaded
 		domReady: function domReady(callback) {
-			document.readyState === "interactive" || document.readyState === "complete" ? callback() : this.addEvent(document, "DOMContentLoaded", callback);
+			document.readyState === 'interactive' || document.readyState === 'complete' ? callback() : this.addEvent(document, 'DOMContentLoaded', callback);
 		},
 		// Initialize
 		init: function init(opts) {
@@ -528,8 +524,8 @@ function eventHandler() {
 	console.log(1);
 	$('.s-content--main').readmore({
 		speed: 75,
-		lessLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u0421\u043A\u0440\u044B\u0442\u044C\n\t</button> ",
-		moreLink: "<button class=\"btn btn-toggle-js\" type=\"button\">\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C\n\t</button> "
+		lessLink: '<button class="btn btn-toggle-js" type="button">\u0421\u043A\u0440\u044B\u0442\u044C\n\t</button> ',
+		moreLink: '<button class="btn btn-toggle-js" type="button">\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C\n\t</button> '
 	});
 	let sCasesSlider = new Swiper('.sCases__slider--js', {
 		watchOverflow: true,
@@ -592,8 +588,8 @@ function eventHandler() {
 			clickable: true
 		}
 	});
-	$(".toggle-search--js").click(function () {
-		$(".search-wrap--js").slideToggle();
+	$('.toggle-search--js').click(function () {
+		$('.search-wrap--js').slideToggle();
 	}); // let div = document.createElement('input');
 	// div.className = "clientID";
 	// $(this).append('<input type="hidden" name="clientID" class="clientID"/>')
@@ -679,7 +675,7 @@ function eventHandler() {
 		}
 	}); // ===================
 	ym(21984247, 'getClientID', function (clientID) {
-		$(".wpcf7 form .clientID").each(function () {
+		$('.wpcf7 form .clientID').each(function () {
 			$(this).val(clientID);
 		});
 	});
@@ -706,7 +702,7 @@ function eventHandler() {
 				itemsFound.innerHTML = '1';
 				$(resultItemsCont).slideUp(function () {
 					$(this).toggleClass('active');
-					$(".btn-wrap-more, .sForm-items-found").removeClass('d-none');
+					$('.btn-wrap-more, .sForm-items-found').removeClass('d-none');
 					let foundItem = `
 					<div class="sForm__item">
 						<div class="sForm__i-row row align-items-center">
@@ -718,23 +714,23 @@ function eventHandler() {
 							</div>
 							<div class="col-md-auto">
 								<a class="sForm__i-btn link-modal" href="#modal-price" data-title="${val}" data-price="${priceFrom}">
-									${ty || "Заказать ППр"}
+									${ty || 'Заказать ППр'}
 								</a>
 							</div>
 						</div>
 					</div>
 					`;
 					this.innerHTML = foundItem;
-					$(".link-modal").fancybox({
+					$('.link-modal').fancybox({
 						arrows: false,
 						infobar: false,
 						touch: false,
 						type: 'inline',
 						i18n: {
 							en: {
-								CLOSE: "Закрыть",
-								NEXT: "Вперед",
-								PREV: "Назад" // PLAY_START: "Start slideshow",
+								CLOSE: 'Закрыть',
+								NEXT: 'Вперед',
+								PREV: 'Назад' // PLAY_START: "Start slideshow",
 								// PLAY_STOP: "Pause slideshow",
 								// FULL_SCREEN: "Full screen",
 								// THUMBS: "Thumbnails",
@@ -744,7 +740,6 @@ function eventHandler() {
 							}
 						}
 					});
-
 					$(this).slideDown(function () {
 						$(this).addClass('active');
 						btnMute = false;
@@ -753,9 +748,8 @@ function eventHandler() {
 			} //-
 		}); //let resultItems = document.querySelectorAll('.result-item-js');
 	});
-
 	$('.typed-js').each(function () {
-		let thisStings = $(this).data("text");
+		let thisStings = $(this).data('text');
 		var arrayOfStrings = thisStings.split(', ');
 		let typed = new Typed(this, {
 			strings: arrayOfStrings,
@@ -764,7 +758,6 @@ function eventHandler() {
 		});
 	});
 }
-;
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
@@ -804,10 +797,80 @@ jQuery(document).ready(function ($) {
 	if (typeof form_text_home !== 'undefined') {
 		$('#zaraz_form_text_el').text(form_text_home);
 	}
+	let tables = document.querySelectorAll('.top-nav .swiper-wrapper>.menu-item-has-children.swiper-slide>ul>li>ul'),
+		length = tables.length,
+		i,
+		wrapper;
+	for (i = 0; i < length; i++) {
+		wrapper = document.createElement('div');
+		wrapper.setAttribute('class', 'menu-dropdown');
+		tables[i].parentNode.insertBefore(wrapper, tables[i]);
+		wrapper.appendChild(tables[i]);
+	}
+	$('.top-nav .swiper-wrapper>.menu-item-has-children.swiper-slide>ul>li.menu-item-has-children').hover(function () {
+		let self = $(this);
+		let child = self.children('.menu-dropdown');
+		let PositionY = self[0].offsetTop;
+		let childHeight = child.innerHeight();
+		let selfHeight = self.innerHeight();
+		let mainH = $('.top-nav .swiper-wrapper>.menu-item-has-children.swiper-slide>ul').innerHeight();
+		if (childHeight < PositionY + selfHeight / 2) {
+			let positionChild = PositionY - selfHeight / 2;
+			if (positionChild + childHeight > mainH) {
+				child.css({
+					top: 'auto',
+					bottom: 0
+				});
+			} else {
+				child.css('transform', 'translateY(' + positionChild + 'px)');
+			}
+		}
+	});
+	$(document).on('copy', '[href^="mailto:"]', function () {
+		yaCounter21984247.reachGoal('EMAILCOPY');
+	});
+	let tablePrice = document.querySelectorAll('.page-id-13132 table');
+	if (tablePrice) {
+		for (const tableElement of tablePrice) {
+			let th = document.createElement('th');
+			tableElement.querySelector('thead tr').appendChild(th);
+			let tr = tableElement.querySelectorAll('tbody tr');
+			for (const trElement of tr) {
+				let trTitle = trElement.querySelector('td:nth-child(2)').textContent;
+				let trPrice = trElement.querySelector('td:nth-child(3)').textContent;
+				let td = document.createElement('td');
+				td.style.width = '8rem';
+				td.innerHTML = `
+				<a href="#modal-price" class="btn btn-primary w-100 link-modal-table" style="max-width: 120px">Заказать</a>
+			`;
+				trElement.appendChild(td);
+				trElement.addEventListener('click', function (event) {
+					let target = event.target.closest('.link-modal-table');
+					if (!target) return;
+					document.querySelector("#modal-price [name='servise-id']").value = trTitle;
+					document.querySelector("#modal-price [name='servise-price']").value = trPrice;
+					$.fancybox.open({
+						src: '#modal-price',
+						arrows: !1,
+						infobar: !1,
+						touch: !1,
+						type: 'inline',
+						i18n: {
+							en: {
+								CLOSE: 'Закрыть',
+								NEXT: 'Вперед',
+								PREV: 'Назад'
+							}
+						}
+					});
+				});
+			}
+		}
+	}
 });
-$("#modal-call-2 [name=\"form-id\"]").val("Не нашли, что искали?(форма, при выходе с сайте)");
-$(".toggle-list").click(function () {
-	$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();
+$('#modal-call-2 [name="form-id"]').val('Не нашли, что искали?(форма, при выходе с сайте)');
+$('.toggle-list').click(function () {
+	$(this).parents('.toggle-wrap').find('.toggle-block').fadeToggle();
 });
 
 // window.onload = function () {
