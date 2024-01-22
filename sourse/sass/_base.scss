@@ -53,13 +53,14 @@ html {
 
 		&::before,
 		&::after {
-
-			content: '';
-			top: rem(18);
-			width: em(30);
-			height: em(2);
-			border-radius: rem(3px);
-			position: absolute;
+			@include media-breakpoint-up(sm) {
+				content: '';
+				top: rem(18);
+				width: em(30);
+				height: em(2);
+				border-radius: rem(3px);
+				position: absolute;
+			}
 		}
 
 		&::before {

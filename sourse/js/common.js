@@ -749,11 +749,11 @@ function eventHandler() {
       clickable: true,
     },
   }); // ===================
-  ym(21984247, 'getClientID', function (clientID) {
-    $('.wpcf7 form .clientID').each(function () {
-      $(this).val(clientID);
-    });
-  });
+  // ym(21984247, 'getClientID', function (clientID) {
+  //   $('.wpcf7 form .clientID').each(function () {
+  //     $(this).val(clientID);
+  //   });
+  // });
   // window.on('load', function(){
   // })
 
@@ -834,6 +834,38 @@ function eventHandler() {
       typeSpeed: 50,
       loop: true,
     });
+  });
+
+  let menu2Slider = new Swiper('.s-menu__swiper--js', {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+  });
+
+  let sAdvantageSlider = new Swiper('.s-advantages__slider--js', {
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      998: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      }
+    },
+    navigation: {
+      nextEl: '.s-advantages .swiper-button-next',
+      prevEl: '.s-advantages .swiper-button-prev',
+    },
+    pagination: {
+      el: '.s-advantages .swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
   });
 }
 if (document.readyState !== 'loading') {
@@ -969,7 +1001,7 @@ $('.toggle-list').click(function () {
 // 	}, 500);
 // }
 
-fancybox.defaults.backFocus = false;
+// fancybox.defaults.backFocus = false;
 
-Fancybox.defaults.backdrop = false;
-Fancybox.defaults.placeFocusBack = false;
+// Fancybox.defaults.backdrop = false;
+// Fancybox.defaults.placeFocusBack = false;

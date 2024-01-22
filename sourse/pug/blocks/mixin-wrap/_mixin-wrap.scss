@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .soc {
 	margin: 0 rem(-5px);
 	display: flex;
@@ -217,7 +219,7 @@
 		&-title {
 			color: #5d646c;
 			font-size: 12px;
-			line-height: (14 / 12);
+			line-height: math.div(14, 12);
 		}
 		&-text {
 			font-weight: 600;

@@ -1,4 +1,6 @@
 // start .s-markups
+@use "sass:math";
+
 .s-markups {
 	padding-top: rem(30);
 	padding-bottom: rem(20);
@@ -74,7 +76,7 @@
 		bottom: 0;
 		font-weight: 500;
 		@include rfs(rem(18));
-		line-height: (20 / 15);
+		line-height: math.div(20, 15);
 		color: $white;
 		width: 100%;
 		min-height: rem(60);

@@ -185,10 +185,10 @@ mixin mnu2()
 			"азработка Транспортных Схем ":"8",
 			}
 	// меню  с иконками
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		 
 		each linkPatch, linkName in nav
-			li.menu-item(itemprop="item" )
+			li.menu-item.swiper-slide(itemprop="item" )
 				a(href='#' itemprop="url")
 					
 					img.img-svg(src=`img/svg/menu-${linkPatch}.svg`, alt="")
