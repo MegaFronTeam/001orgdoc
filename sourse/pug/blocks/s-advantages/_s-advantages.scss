@@ -144,6 +144,19 @@
 			}
 		}
 	}
+	&__btn {
+		background-image: radial-gradient(70.71% 70.71% at 50% 50%, rgba(255, 255, 255, 0.44) 0%, rgba(255, 255, 255, 0.00) 100%), #86B92D;
+		box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.21) inset, 0px 4px 0px 0px #86B92D;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1.87;
+		padding: rem(4) rem(16);
+		width: 100%;
+		
+		&:hover {
+			box-shadow: none;
+		}
+	}
 	&__title {
 		color: #2C3136;
 		font-size: rem(24);
