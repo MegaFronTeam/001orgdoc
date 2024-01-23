@@ -11,6 +11,12 @@
 	}
 	.section-title {
 		padding-bottom: rem(60);
+		h2 {
+			&:before, 
+			&:after {
+				content: unset;
+			}
+		}
 	}
 
 	.row {
@@ -161,6 +167,12 @@
 	// }
 	.control-wrap {
 		margin-top: rem(50);
+	}
+	.swiper-pagination-bullet {
+		background-color: #DCE4E8;
+		&.swiper-pagination-bullet-active {
+			background-color: #86B92D;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 

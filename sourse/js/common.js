@@ -865,6 +865,7 @@ function eventHandler() {
       el: '.s-advantages .swiper-pagination',
       type: 'bullets',
       clickable: true,
+      dynamicBullets: true,
     },
   });
 }

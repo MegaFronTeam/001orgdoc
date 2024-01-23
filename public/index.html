@@ -1102,6 +1102,30 @@
 				</div>
 			</section>
 			<!-- end s-advantages-->
+			<!-- start sMap-->
+			<section class="sMap section" id="sMap">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Проекты на карте</h2>
+					</div>
+				</div>
+				<div class="sMap__map-wrap">
+					<div class="sMap__map" id="map">
+					</div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+					<script type="text/javascript">
+						ymaps.ready(init);
+						function init () {
+							var center = [55.75380038320217,37.62071970898438];
+							var myMap = new ymaps.Map('map', {
+									center: center,
+									zoom: 10,
+									controls: ['zoomControl']
+							});
+						};
+					</script>
+				</div>
+			</section>
+			<!-- end sMap-->
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
