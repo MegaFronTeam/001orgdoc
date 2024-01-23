@@ -136,6 +136,7 @@
 				margin-right: rem(10) !important;
 			}
 			&:after {
+				flex: 0 0 auto;
 				width: rem(50);
 				height: rem(50);
 				border-radius: 7.47px;
