@@ -127,7 +127,7 @@
     .sTwoDays__inner:before {
       content: url(../img/clock.png);
       position: absolute;
-      right: 100%;
+      right: calc(100% - 120px);
       top: 0;
     }
     .menu-dropdown {
